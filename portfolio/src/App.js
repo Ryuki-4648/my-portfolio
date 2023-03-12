@@ -19,10 +19,10 @@ function App() {
             <a className="" href="/">T</a>
           </li>
           <li className="">
-            <a className="" href="/">G</a>
+            <a className="" href="https://github.com/Ryuki-4648">G</a>
           </li>
           <li className="">
-            <a className="" href="/">P</a>
+            <a className="" href="https://www.pinterest.jp/yuki_017/portfolio/">P</a>
           </li>
         </ul>
       </div>

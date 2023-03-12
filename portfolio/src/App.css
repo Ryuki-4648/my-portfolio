@@ -47,6 +47,8 @@ body, html, p {
   height: 100vh;
   background-color: #236e9d;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .content-sitename {
@@ -71,6 +73,68 @@ body, html, p {
   list-style: none;
 }
 
+.content-sns li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
 .wrap-work {
   background-color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: all .3s;
+}
+
+.wrap-work:hover {
+  background-color: #236e9d;
+  border: 1px solid #fff;
+}
+
+.wrap-work:hover p {
+  color: #fff;
+}
+
+.wrap-work p {
+  writing-mode: vertical-lr;
+  color: #236e9d;
+  font-size: 120px;
+  position: absolute;
+  font-weight: 700;
+  left: -32px;
+  top: 40px;
+}
+
+.wrap-work, .wrap-about {
+  width: 48%;
+  overflow: hidden;
+  height: 70vh;
+}
+
+.wrap-about {
+  border: 1px solid #fff;
+  position: relative;
+  transition: all .3s;
+}
+.wrap-about:hover {
+  background-color: #fff;
+  border: 1px solid #236e9d;
+}
+.wrap-about:hover p {
+  color: #236e9d;
+}
+
+.wrap-about p {
+  color: #fff;
+  font-size: 120px;
+  position: absolute;
+  font-weight: 700;
+  right: 40px;
+  bottom: -32px;
 }
