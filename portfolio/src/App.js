@@ -1,10 +1,32 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="content">
+        <p className="content-sitename">R.YUKI WORKS Portfolio - yuki017.com</p>
+        <div className="wrap">
+          <a className="wrap-work" href="/work">
+            <p>WORK</p>
+          </a>
+          <a className="wrap-about" href="/about">
+            <p>ABOUT</p>
+          </a>
+        </div>
+        <ul className="content-sns">
+          <li className="">
+            <a className="" href="/">T</a>
+          </li>
+          <li className="">
+            <a className="" href="/">G</a>
+          </li>
+          <li className="">
+            <a className="" href="/">P</a>
+          </li>
+        </ul>
+      </div>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +39,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }

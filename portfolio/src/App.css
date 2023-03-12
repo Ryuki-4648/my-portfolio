@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+body, html, p {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  position: relative;
+  height: 100vh;
+  background-color: #236e9d;
+  overflow: hidden;
+}
+
+.content-sitename {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  writing-mode: vertical-lr;
+  width: 100%;
+  display: block;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  font-weight: 500;
+}
+
+.content-sns {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  list-style: none;
+}
+
+.wrap-work {
+  background-color: #fff;
+}
