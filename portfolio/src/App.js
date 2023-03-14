@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
+import { MdMail } from 'react-icons/md';
 import './App.css';
-
+import { FaGithub, FaPinterest, FaTwitter } from 'react-icons/fa';
 function App() {
   return (
     <div className="App">
@@ -16,13 +17,18 @@ function App() {
         </div>
         <ul className="content-sns">
           <li className="">
-            <a className="" href="/">T</a>
+            <a className="" href="/"><FaTwitter /></a>
           </li>
           <li className="">
-            <a className="" href="https://github.com/Ryuki-4648">G</a>
+            <a className="" href="https://github.com/Ryuki-4648"><FaGithub height='50px' width='50px' /></a>
           </li>
           <li className="">
-            <a className="" href="https://www.pinterest.jp/yuki_017/portfolio/">P</a>
+            <a className="" href="https://www.pinterest.jp/yuki_017/portfolio/"><FaPinterest /></a>
+          </li>
+          <li className="">
+            <a className="" href="/">
+              <MdMail />
+            </a>
           </li>
         </ul>
       </div>
