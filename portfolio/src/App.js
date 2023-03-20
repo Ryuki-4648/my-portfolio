@@ -13,10 +13,13 @@ function App() {
 
   return (
     <div className="App">
+
       <Modal show={showAboutModal} modalCloseButton={modalCloseButton} />
 
       <div className="content">
-        <p className="content-sitename">R.YUKI WORKS Portfolio - yuki017.com</p>
+
+        <p className="content-sitename">R.YUKI WORKS Portfolio</p>
+
         <div className="wrap">
           <a className="wrap-work" href="/work">
             <p>WORK</p>
@@ -25,9 +28,10 @@ function App() {
             <p>ABOUT</p>
           </div>
         </div>
+
         <ul className="content-sns">
           <li className="">
-            <a className="" href="/"><FaTwitter /></a>
+            <a className="" href="https://twitter.com/Ryuki_4648" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
           </li>
           <li className="">
             <a className="" href="https://github.com/Ryuki-4648" target="_blank" rel="noopener noreferrer"><FaGithub height='50px' width='50px' /></a>
@@ -41,21 +45,9 @@ function App() {
             </a>
           </li>
         </ul>
+
       </div>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+
     </div>
   );
 }
