@@ -20,7 +20,7 @@ const Modal = ({ modalCloseButton, show }) => {
             </Text>
 
             <Heading fontSize='21px' className='index'>History</Heading>
-            <Link href='' className='modal-about-link' color='#236e9d' target="_blank" rel="noopener noreferrer" mb='15px'>職務経歴書はこちら(PDF)<FaExternalLinkAlt /></Link>
+            <Link href='./assets/pdf/timeline.pdf' className='modal-about-link' color='#236e9d' target="_blank" rel="noopener noreferrer" mb='15px'>職務経歴書はこちら(PDF)<FaExternalLinkAlt /></Link>
             <Text fontSize='14px' lineHeight='1.8' letterSpacing='0.05em'>小学生の頃にパソコンにハマり、自分のサイトを作成。<br />高校生のとき「何歳になっても働ける環境を作っておきたい」と考え、大学の看護学科へ進学。</Text>
             <Text fontSize='14px' lineHeight='1.8' letterSpacing='0.05em'>卒業後は病棟看護師として働き、独学でデザインとコーディングを勉強。<br />退職後はクリニックの看護師をしながら、個人でWeb制作を開始。</Text>
           </Box>
