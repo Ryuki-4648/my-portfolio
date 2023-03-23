@@ -36,7 +36,10 @@ const Modal = ({ modalCloseButton, show }) => {
             </UnorderedList>
             
             <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>Vision</Heading>
-            <Text fontSize='14px' lineHeight='1.8' letterSpacing='0.05em' mb='40px'>「デザインができるエンジニア」</Text>
+            <Text fontSize='14px' lineHeight='1.8' letterSpacing='0.05em' mb='40px'>「デザインできるエンジニア」</Text>
+
+            <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>Future</Heading>
+            <Text fontSize='14px' lineHeight='1.8' letterSpacing='0.05em' mb='40px'>エンジニア職をメインに、個人でデザインの仕事をする。</Text>
 
             <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>Find me on</Heading>
             <UnorderedList className='list-border' ml='0' mb='40px'>
@@ -54,7 +57,7 @@ const Modal = ({ modalCloseButton, show }) => {
             <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>Hobby</Heading>
           </Box>
         </Flex>
-        <Text className='modal-close-button' color='#236e9d' display='block' fontWeight='bold' fontSize='18px' textAlign='center' textTransform='uppercase' onClick={modalCloseButton}>Close</Text>
+        <Text className='modal-close-button' color='#236e9d' cursor='pointer' display='block' fontWeight='bold' fontSize='18px' textAlign='center' textTransform='uppercase' onClick={modalCloseButton}>Close</Text>
       </Box>
     </Box>
   );
