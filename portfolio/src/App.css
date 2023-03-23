@@ -1,19 +1,6 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-p {
+body, html, p {
+  margin: 0;
+  padding: 0;
 }
 
 p, a {
@@ -24,27 +11,13 @@ p, a {
 a {
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: none!important;
 }
 
 ul, li {
   list-style: none;
-}
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -56,42 +29,8 @@ ul, li {
   }
 }
 
-body, html, p {
-  margin: 0;
-  padding: 0;
-}
-
-.content {
-  position: relative;
-  height: 100vh;
-  background-color: #236e9d;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-
 .content-sitename {
-  position: absolute;
-  left: 30px;
-  top: 50%;
-  transform: translateY(-50%);
   writing-mode: vertical-lr;
-  width: 100%;
-  height: 100%;
-  display: block;
-  font-size: 14px;
-  letter-spacing: 0.1em;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.content-sns {
-  position: absolute;
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  list-style: none;
 }
 
 .content-sns li svg {
@@ -109,18 +48,8 @@ body, html, p {
   margin-bottom: 30px;
 }
 
-.wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 75%;
-  margin: 0 auto;
-}
-
 .wrap-work {
   background-color: #fff;
-  text-decoration: none;
-  position: relative;
   transition: all .3s;
   clip-path: polygon(0 100%, 100% 0, 0% 0%);
   left: 200px;
@@ -142,11 +71,8 @@ body, html, p {
 
 .wrap-about {
   border: 1px solid #fff;
-  position: relative;
   transition: all .3s;
-  cursor: pointer;
   clip-path: polygon(100% 0, 0 100%, 100% 100%);
-  right: 200px;
 }
 .wrap-about:hover {
   background-color: #fff;
@@ -184,12 +110,6 @@ body, html, p {
 }
 
 .modal-main {
-  position: fixed;
-  background-color: white;
-  border-radius: 50px;
-  width: 70%;
-  height: 80%;
-  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -231,22 +151,6 @@ body, html, p {
   margin: 0 0 0 5px;
 }
 
-.modal-about-left {
-  width: 48%;
-  text-align: left;
-  border-right: 2px solid #ededed;
-  padding: 0 30px 0 0;
-  height: 500px;
-  overflow-y: scroll;
-}
-.modal-about-right {
-  width: 48%;
-  text-align: left;
-  height: 500px;
-  overflow-y: scroll;
-  padding: 0 30px 0 0;
-}
-
 .list-border li {
   font-size: 13px;
   padding: 0 0 0 15px;
@@ -265,10 +169,6 @@ body, html, p {
 }
 
 .modal-close-button {
-  color: #236e9d;
-  font-weight: bold;
-  font-size: 18px;
-  text-transform: uppercase;
   margin: 40px auto 0;
   transition: all .3s;
 }
@@ -277,10 +177,7 @@ body, html, p {
 }
 
 .index {
-  color: #777;
   border-left: 6px solid #236e9d;
-  padding: 0 0 0 10px;
-  letter-spacing: 0.08em;
   font-size: 21px;
   line-height: 1;
   font-weight: bold;

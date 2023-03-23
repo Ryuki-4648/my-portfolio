@@ -7,26 +7,26 @@ const Modal = ({ modalCloseButton, show }) => {
 
   return (
     <Box className={showHideClassName}>
-      <Box className="modal-main">
+      <Box className="modal-main" backgroundColor='#fff' borderRadius='50px' height='auto' position='fixed' width='70%'>
         <Flex justifyContent='space-between'>
-          <Box className='modal-about-left'>
+          <Box borderRight='2px solid #ededed' textAlign='left' overflowY='scroll' padding='0 30px 0 0' height='500px' width='48%'>
             <Link href='https://twitter.com/Ryuki_4648' color='#236e9d' display='inline-block' fontSize='32px' fontWeight='bold' textDecoration='none' mb='42px' transition='3s'>@<Text borderBottom='3px solid #236e9d' color='#236e9d' display='inline-block'>Ryuki_4648</Text></Link>
             
-            <Heading fontSize='21px' className='index'>Profile</Heading>
+            <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>Profile</Heading>
             <Text fontSize='14px' lineHeight='1.8' letterSpacing='0.05em'>1993年生まれ</Text>
             <Text fontSize='14px' lineHeight='1.8' letterSpacing='0.05em' mb='40px'>現在、神戸のWeb制作会社で働いています。<br />
             業務外では、ReactやTypeScriptなどを用いた開発もしています。<br />
             今後のキャリアを考え、モダンなフロントエンド技術を用いたシステム・アプリ開発への転職を考えています。
             </Text>
 
-            <Heading fontSize='21px' className='index'>History</Heading>
+            <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>History</Heading>
             <Link href='./assets/pdf/timeline.pdf' className='modal-about-link' color='#236e9d' target="_blank" rel="noopener noreferrer" mb='15px'>職務経歴書はこちら(PDF)<FaExternalLinkAlt /></Link>
             <Text fontSize='14px' lineHeight='1.8' letterSpacing='0.05em'>小学生の頃にパソコンにハマり、自分のサイトを作成。<br />高校生のとき「何歳になっても働ける環境を作っておきたい」と考え、大学の看護学科へ進学。</Text>
             <Text fontSize='14px' lineHeight='1.8' letterSpacing='0.05em'>卒業後は病棟看護師として働き、独学でデザインとコーディングを勉強。<br />退職後はクリニックの看護師をしながら、個人でWeb制作を開始。</Text>
           </Box>
 
-          <Box className='modal-about-right'>
-            <Heading fontSize='21px' className='index'>Skill</Heading>
+          <Box textAlign='left' overflowY='scroll' height='500px' padding='0 30px 0 0' width='48%'>
+            <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>Skill</Heading>
             <UnorderedList ml='0' mb='40px' className='list-border' fontSize="13px">
               <ListItem>HTML5/CSS3 , JavaScript, React.js , TypeScript, Node.js, Gulp</ListItem>
               <ListItem>GitHubを使ったチーム開発（業務システム）</ListItem>
@@ -35,10 +35,10 @@ const Modal = ({ modalCloseButton, show }) => {
               <ListItem>WordPress, MovableType</ListItem>
             </UnorderedList>
             
-            <Heading fontSize='21px' className='index'>Vision</Heading>
+            <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>Vision</Heading>
             <Text fontSize='14px' lineHeight='1.8' letterSpacing='0.05em' mb='40px'>「デザインができるエンジニア」</Text>
 
-            <Heading className='index' fontSize='21px'>Find me on</Heading>
+            <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>Find me on</Heading>
             <UnorderedList className='list-border' ml='0' mb='40px'>
               <ListItem>
                 <Link href='https://github.com/Ryuki-4648' target="_blank" rel="noopener noreferrer">GitHub</Link>
@@ -51,10 +51,10 @@ const Modal = ({ modalCloseButton, show }) => {
               </ListItem>
             </UnorderedList>
 
-            <Heading className='index' fontSize='21px'>Hobby</Heading>
+            <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>Hobby</Heading>
           </Box>
         </Flex>
-        <button className='modal-close-button' onClick={modalCloseButton}>Close</button>
+        <Text className='modal-close-button' color='#236e9d' display='block' fontWeight='bold' fontSize='18px' textAlign='center' textTransform='uppercase' onClick={modalCloseButton}>Close</Text>
       </Box>
     </Box>
   );
