@@ -3,6 +3,9 @@ import { useState } from 'react';
 import Modal from './modal/modal_about';
 import AccountList from './components/accountList/index';
 import { Box, Flex, Link, Text } from '@chakra-ui/react';
+import Work from './routes/work';
+import { Route, Routes } from 'react-router-dom';
+import NoFound from './routes/nofound';
 
 function App() {
 
@@ -12,6 +15,10 @@ function App() {
 
   return (
     <Box className="App">
+      <Routes>
+        <Route path="/work" element={<Work />} />
+        <Route path="*" element={<NoFound/>} />
+      </Routes>
 
       <Modal show={showAboutModal} modalCloseButton={modalCloseButton} />
 
