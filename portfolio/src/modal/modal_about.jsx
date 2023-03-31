@@ -9,7 +9,7 @@ const ModalAbout = () => {
   return (
 
     <>
-      <Box className="modal-main" backgroundColor='#fff' borderRadius='50px' height='auto' position='fixed' width='70%'>
+      <Box className="modal-main" backgroundColor='#fff' borderRadius='50px'>
         <Flex justifyContent='space-between'>
           <Box borderRight='2px solid #ededed' textAlign='left' overflowY='scroll' padding='0 30px 0 0' height='500px' width='48%'>
             <Link href='https://twitter.com/Ryuki_4648' color='#236e9d' display='inline-block' fontSize='32px' fontWeight='bold' textDecoration='none' mb='42px' transition='3s'>@<Text borderBottom='3px solid #236e9d' color='#236e9d' display='inline-block'>Ryuki_4648</Text></Link>

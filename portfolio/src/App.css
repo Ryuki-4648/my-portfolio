@@ -110,9 +110,9 @@ ul, li {
 }
 
 .modal-main {
-  top: 50%;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   padding: 60px 40px 30px 40px;
 }
 
@@ -174,6 +174,10 @@ ul, li {
 }
 .modal-close-button:hover {
   color: #124e73;
+}
+
+.modal-content {
+  transform: translateY(-50%)!important;
 }
 
 .index {

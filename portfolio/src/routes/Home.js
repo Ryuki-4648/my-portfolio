@@ -26,7 +26,7 @@ function Home() {
 
           <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
-            <ModalContent  maxWidth="100%" top="50%" transform={"translateY(-50%)"}>
+            <ModalContent className="modal-content" height='auto' width='70%' maxWidth="70%" margin="0 auto" top="50%">
               <ModalAbout />
             </ModalContent>
           </Modal>
