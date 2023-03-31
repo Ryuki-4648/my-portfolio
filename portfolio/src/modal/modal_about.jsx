@@ -1,12 +1,14 @@
-import { Box, Flex, Heading, Link, ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Link, ListItem, Text, UnorderedList, useDisclosure } from '@chakra-ui/react';
 import React from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-const Modal = ({ modalCloseButton, show }) => {
-  const showHideClassName = show ? "modal display-block" : "modal display-none";
+const ModalAbout = () => {
+
+  const { onClose } = useDisclosure()
 
   return (
-    <Box className={showHideClassName}>
+
+    <>
       <Box className="modal-main" backgroundColor='#fff' borderRadius='50px' height='auto' position='fixed' width='70%'>
         <Flex justifyContent='space-between'>
           <Box borderRight='2px solid #ededed' textAlign='left' overflowY='scroll' padding='0 30px 0 0' height='500px' width='48%'>
@@ -57,10 +59,11 @@ const Modal = ({ modalCloseButton, show }) => {
             <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>Hobby</Heading>
           </Box>
         </Flex>
-        <Text className='modal-close-button' color='#236e9d' cursor='pointer' display='block' fontWeight='bold' fontSize='18px' textAlign='center' textTransform='uppercase' onClick={modalCloseButton}>Close</Text>
+        <Button color="#236e9d" position="absolute" right="60px" top="20px" backgroundColor="transparent" zIndex="100" onClick={onClose}>Close</Button>
       </Box>
-    </Box>
+    </>
+    
   );
 };
 
-export default Modal;
+export default ModalAbout;
