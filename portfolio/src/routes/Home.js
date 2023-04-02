@@ -26,7 +26,7 @@ function Home() {
 
           <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
-            <ModalContent className="modal-content" height='auto' width='70%' maxWidth="70%" margin="0 auto" top="50%">
+            <ModalContent borderRadius="20px" className="modal-content" height='auto' width='70%' maxWidth="70%" margin="0 auto" top="50%">
               <ModalAbout />
             </ModalContent>
           </Modal>
