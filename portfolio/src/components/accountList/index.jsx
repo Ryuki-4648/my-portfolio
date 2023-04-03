@@ -8,7 +8,16 @@ const AccountList = () => {
   return(
 
     <Box>
-      <UnorderedList className="content-sns" margin='0' display={['flex', 'unset']} position='absolute' left={['50%', 'unset']} bottom={['20px', 'unset']} right={['unset', '15px', '30px']} top={['unset', '50%']} transform={['translateX(-50%)', 'translateY(-50%)']}>
+      <UnorderedList 
+        className="content-sns" 
+        margin='0' 
+        display={{base: 'flex', md: 'unset'}} 
+        position='absolute' 
+        left={{base: '50%', md: 'unset'}} 
+        bottom={{base: '20px', md: 'unset'}} 
+        right={{ base: 'unset', md: '15px', lg: '30px'}} 
+        top={{base: 'unset', md: '50%'}} 
+        transform={{base: 'translateX(-50%)', md: 'translateY(-50%)'}}>
         <ListItem className="">
           <Link className="" href="https://twitter.com/Ryuki_4648" target="_blank" rel="noopener noreferrer"><FaTwitter /></Link>
         </ListItem>

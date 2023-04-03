@@ -32,7 +32,7 @@ ul, li {
 .content-sitename {
   writing-mode: vertical-lr;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .content-sitename {
     writing-mode: horizontal-tb;
   }
@@ -52,7 +52,7 @@ ul, li {
 .content-sns li:not(:last-child) {
   margin-bottom: 30px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .content-sns li {
     margin-bottom: 0;
   }
