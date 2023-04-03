@@ -32,6 +32,11 @@ ul, li {
 .content-sitename {
   writing-mode: vertical-lr;
 }
+@media screen and (max-width: 480px) {
+  .content-sitename {
+    writing-mode: horizontal-tb;
+  }
+}
 
 .content-sns li svg {
   width: 20px;
@@ -47,12 +52,19 @@ ul, li {
 .content-sns li:not(:last-child) {
   margin-bottom: 30px;
 }
+@media screen and (max-width: 480px) {
+  .content-sns li {
+    margin-bottom: 0;
+  }
+  .content-sns li:not(:last-child) {
+    margin: 0 20px 0 0;
+  }
+}
 
 .wrap-work {
   background-color: #fff;
   transition: all .3s;
   clip-path: polygon(0 100%, 100% 0, 0% 0%);
-  left: 200px;
 }
 
 .wrap-work:hover {
@@ -84,11 +96,8 @@ ul, li {
 
 .wrap-about p {
   color: #fff;
-  font-size: 120px;
   position: absolute;
   font-weight: 700;
-  right: 40px;
-  bottom: -48px;
 }
 
 .modal {
