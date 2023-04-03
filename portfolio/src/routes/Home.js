@@ -1,4 +1,4 @@
-import { Box, Link, Flex, Text, useDisclosure, Modal, ModalOverlay, ModalContent } from "@chakra-ui/react";
+import { Box, Link, Flex, Text, useDisclosure, Modal, ModalOverlay, ModalContent, Button } from "@chakra-ui/react";
 import { React } from 'react';
 import AccountList from "../components/accountList";
 import ModalAbout from "../modal/modal_about";
@@ -28,9 +28,9 @@ function Home() {
             <ModalOverlay />
             <ModalContent borderRadius="20px" className="modal-content" height='auto' width='70%' maxWidth="70%" margin="0 auto" top="50%">
               <ModalAbout />
+              <Button color="#236e9d" position="absolute" right="30px" top="20px" backgroundColor="transparent" zIndex="100" _hover={{ backgroundColor: "transparent", color: "#124e73" }} onClick={onClose}>Close</Button>
             </ModalContent>
           </Modal>
-
           <AccountList />
           
         </Box>

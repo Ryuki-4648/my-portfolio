@@ -1,10 +1,9 @@
-import { Box, Button, Flex, Heading, Link, ListItem, Text, UnorderedList, useDisclosure } from '@chakra-ui/react';
+import { Box, Flex, Heading, Link, ListItem, Text, UnorderedList, useDisclosure } from '@chakra-ui/react';
 import React from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const ModalAbout = () => {
 
-  const { onClose } = useDisclosure()
 
   return (
 
@@ -59,7 +58,6 @@ const ModalAbout = () => {
             <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>Hobby</Heading>
           </Box>
         </Flex>
-        <Button color="#236e9d" position="absolute" right="60px" top="20px" backgroundColor="transparent" zIndex="100" onClick={onClose}>Close</Button>
       </Box>
     </>
     
