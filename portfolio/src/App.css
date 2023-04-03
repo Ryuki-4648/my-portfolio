@@ -62,14 +62,8 @@ ul, li {
 }
 
 .wrap-work {
-  background-color: #fff;
   transition: all .3s;
   clip-path: polygon(0 100%, 100% 0, 0% 0%);
-}
-
-.wrap-work:hover {
-  background-color: #236e9d;
-  border: 1px solid #fff;
 }
 
 .wrap-work:hover p {
@@ -100,40 +94,6 @@ ul, li {
   font-weight: 700;
 }
 
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .6);
-  z-index: 100;
-}
-
-.display-block {
-  display: block;
-}
-
-.display-none {
-  display: none;
-}
-
-
-.modal-about-sns-link {
-  font-weight: bold;
-  display: inline-block;
-}
-.modal-about-sns-link span {
-  border-bottom: 2px solid #236e9d;
-  padding: 0 0 5px 0;
-}
-.modal-about-sns-link:hover {
-  color: #1da1f2;
-}
-.modal-about-sns-link:hover span {
-  border-bottom: 2px solid #1da1f2;
-}
-
 .modal-about-link {
   color: #236e9d;
   border-bottom: 1px solid #236e9d;
@@ -155,7 +115,6 @@ ul, li {
 }
 
 .list-border li {
-  font-size: 13px;
   padding: 0 0 0 15px;
   position: relative;
   letter-spacing: 0.08em;

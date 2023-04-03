@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Link, ListItem, Text, UnorderedList, useDisclosure } from '@chakra-ui/react';
+import { Box, Flex, Heading, Link, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import React from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
@@ -43,7 +43,7 @@ const ModalAbout = () => {
             <Text fontSize='14px' lineHeight='1.8' letterSpacing='0.05em' mb='40px'>エンジニア職をメインに、個人でデザインの仕事をする。</Text>
 
             <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>Find me on</Heading>
-            <UnorderedList className='list-border' ml='0' mb='40px'>
+            <UnorderedList className='list-border' fontSize='13px' ml='0' mb='40px'>
               <ListItem>
                 <Link href='https://github.com/Ryuki-4648' target="_blank" rel="noopener noreferrer">GitHub</Link>
               </ListItem>

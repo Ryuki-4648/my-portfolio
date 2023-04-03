@@ -24,7 +24,7 @@ function Home() {
           <Text color='#fff' className="content-sitename" fontSize='14px' textAlign='center' fontWeight='bold' display='block' transform={['translateX(-50%)', 'translateY(-50%)']} position='absolute' letterSpacing='0.1em' left={['50%', '15px', '30px']} top={['20px', '50%']} textTransform='uppercase' w='100%'>R.YUKI WORKS Portfolio</Text>
 
           <Flex alignItems='center' display='flex' justifyContent='center' h={['70vh', '80vh', 'unset']} flexWrap={['wrap', 'wrap', 'unset']}  margin='0 auto' w={['100%', '95%', '100%', '100%', '80%']}>
-            <Link className="wrap-work" overflow='hidden' h={['35vh', '40vh', '70vh', '70vh']} left={['0px', '0px', '110px', '200px']} position='relative' w={['85%','90%','100%','48%']} href="/work">
+            <Link backgroundColor='#fff' className="wrap-work" overflow='hidden' h={['35vh', '40vh', '70vh', '70vh']} left={['0px', '0px', '110px', '200px']} position='relative' w={['85%','90%','100%','48%']} _hover={{"backgroundColor": "#236e9d", "border": "1px solid #fff"}} href="/work">
               <Text fontSize={['60px', '80px', '100px', '120px']} fontWeight='bold' position='absolute' left={['-30px', '-48px']} top={['25px', '40px']}>WORK</Text>
             </Link>
             <Box cursor='pointer' className="wrap-about" overflow='hidden' h={['35vh', '40vh', '70vh', '70vh']} right={['0px', '0px', '110px', '200px']} position='relative' w={['85%','90%','100%','48%']} onClick={onOpen}>
