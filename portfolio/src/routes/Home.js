@@ -2,25 +2,17 @@ import { Box, Link, Flex, Text, useDisclosure, Modal, ModalOverlay, ModalContent
 import { React } from 'react';
 import AccountList from "../components/accountList";
 import ModalAbout from "../modal/modal_about";
-import { createBreakpoints } from '@chakra-ui/theme-tools';
 
 function Home() {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const breakpoints = createBreakpoints({
-    sm: "30em", // 480px (16pxの場合。以下同)
-    md: "48em", // 768px
-    lg: "62em", // 992px
-    xl: "80em", // 1280px
-    '2xl': '96em',
-  })
 
   return (
     <>
       <Box className="App">
 
         <Box 
-          alignItems='center' 
+          alignItems='center'
           className="content" 
           position='relative' 
           height='100vh' 
