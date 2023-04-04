@@ -1,15 +1,44 @@
-import { Box, Container, Heading, Link, ListItem, Text, UnorderedList } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, Img, Link, ListItem, Modal, ModalContent, ModalOverlay, Table, Text, UnorderedList, useDisclosure } from "@chakra-ui/react";
 import '../App.css';
+import jsonWorkListData from '../list/workDesignList.json';
 
 function Work() {
+
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
   return (
     <>
-      <Container paddingTop="4rem" position="relative">
+      <Container paddingTop="4rem" position="relative" maxW={{base:'90%', md:'1024px'}}>
         <Box>
-          <Heading fontSize="4.5rem" textAlign="center">WORKS</Heading>
-          <Text textAlign="center">制作実績</Text>
+          <Heading color="#236e9d" fontSize="4.5rem" textAlign="center">WORKS</Heading>
+          <Text textAlign="center" margin="0 auto 50px">制作実績</Text>
 
-          <Heading textAlign="center">Web System</Heading>
+          <Heading color="#236e9d" textAlign="center" margin="0 auto 20px">Web System</Heading>
+          <Flex justifyContent="space-between" flexWrap="wrap">
+          {jsonWorkListData.map((workListData) => (
+            <Box key={workListData.id} margin="0 0 40px" w={{base: '100%', md:'30%'}} onClick={onOpen}>
+              <Img margin="0 auto 10px" src={workListData.thumbnail} alt={workListData.name} />
+              <Text>{workListData.name}</Text>
+              <Modal isOpen={isOpen} onClose={onClose}>
+                <ModalOverlay />
+                <ModalContent>
+                  <Table>
+                  <tbody>
+                    <tr>
+                      <th>サイト名</th>
+                      <td>{workListData.name}</td>
+                    </tr>
+                    <tr>
+                      <th>URL</th>
+                      <td><Link href={workListData.url}>{workListData.url}</Link></td>
+                    </tr>
+                  </tbody>
+                </Table>
+                </ModalContent>
+              </Modal>
+            </Box>
+          ))}
+          </Flex>
 
           <Heading textAlign="center">Web App</Heading>
 
