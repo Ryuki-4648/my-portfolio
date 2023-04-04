@@ -12,19 +12,23 @@ function Work() {
     モーダルが開かれたときに表示する内容を動的に変更
   */
   const [selectedWork, setSelectedWork] = useState(null);
-  
+
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   return (
     <>
       <Container 
-        paddingTop="4rem" 
+        padding="4rem 0 0" 
         position="relative" 
-        maxW={{base:'90%', md:'1024px'}}>
-        <Box>
+        maxW="100%"
+        margin="0"
+        marginInlineEnd="0"
+        paddingInlineEnd="0"
+        >
+        <Box maxW={{base:'90%', md:'1024px'}} margin="0 auto">
           <Heading 
             color="#236e9d" 
-            fontSize="4.5rem" 
+            fontSize="5.2rem" 
             textAlign="center">WORKS
           </Heading>
           <Text 
@@ -32,9 +36,8 @@ function Work() {
             margin="0 auto 50px">制作実績
           </Text>
 
-          <Heading 
-            color="#236e9d" 
-            textAlign="center" 
+          <Heading
+            textAlign="center"
             margin="0 auto 20px">Web System
           </Heading>
           <Flex 
@@ -43,6 +46,7 @@ function Work() {
           {jsonWorkListData.map((workListData) => (
             <Box 
               key={workListData.id} 
+              cursor="pointer"
               margin="0 0 40px" 
               w={{base: '100%', md:'30%'}} 
               onClick={() => {setSelectedWork(workListData); setIsOpenModal(true)}}>
@@ -88,7 +92,17 @@ function Work() {
             </ListItem>
           </UnorderedList>
         </Box>
-        <Link href="/" position="absolute" left="0">Back to top</Link>
+        <Link
+          color="#236e9d"
+          fontSize="2.8rem"
+          fontWeight="bold"
+          href="/" 
+          position="absolute" 
+          left="-140px" 
+          textTransform="uppercase" 
+          top="130px" 
+          transform="rotate(90deg)">Back to top
+        </Link>
       </Container>
     </>
   )

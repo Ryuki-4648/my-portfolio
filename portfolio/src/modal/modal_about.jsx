@@ -4,14 +4,43 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const ModalAbout = () => {
 
+  // Color
+  const mainColor = "#236e9d";
 
   return (
 
     <>
-      <Box backgroundColor='#fff' borderRadius='50px' padding={{base: '25px 20px 30px 20px', md: '80px 40px 50px 40px'}} h={{base: '700px', md: 'auto'}} overflowY={{base: 'scroll', md: 'unset'}}>
-        <Flex justifyContent='space-between' flexWrap={['wrap', 'wrap', 'wrap', 'unset']}>
-          <Box borderRight='2px solid #ededed' textAlign='left' overflowY={{ base: 'unset', md: 'scroll' }} padding={{base: '0 0 30px 0', md: '0 30px 0 0'}} h={{ base: 'auto', md: '500px' }} w={{ base: '100%', md: '48%'}}>
-            <Link href='https://twitter.com/Ryuki_4648' color='#236e9d' display='inline-block' fontSize={{base: '24px', md: '32px'}} fontWeight='bold' textDecoration='none' mb={{base: '25px', md: '42px'}} transition='3s'>@<Text borderBottom='3px solid #236e9d' color='#236e9d' display='inline-block'>Ryuki_4648</Text></Link>
+      <Box 
+        backgroundColor='#fff' 
+        borderRadius='50px' 
+        padding={{base: '25px 20px 30px 20px', md: '80px 40px 50px 40px'}} 
+        h={{base: '700px', md: 'auto'}} 
+        overflowY={{base: 'scroll', md: 'unset'}}>
+        <Flex 
+          justifyContent='space-between'
+          flexWrap={['wrap', 'wrap', 'wrap', 'unset']}>
+          <Box 
+            borderRight='2px solid #ededed' 
+            textAlign='left' 
+            overflowY={{ base: 'unset', md: 'scroll' }} 
+            padding={{base: '0 0 30px 0', md: '0 30px 0 0'}} 
+            h={{ base: 'auto', md: '500px' }} 
+            w={{ base: '100%', md: '48%'}}>
+            <Link 
+              href='https://twitter.com/Ryuki_4648' 
+              color={mainColor} 
+              display='inline-block' 
+              fontSize={{base: '24px', md: '32px'}} 
+              fontWeight='bold' 
+              textDecoration='none' 
+              mb={{base: '25px', md: '42px'}} 
+              transition='3s'>@
+              <Text 
+                borderBottom='3px solid #236e9d' 
+                color={mainColor} 
+                display='inline-block'>Ryuki_4648
+              </Text>
+            </Link>
             
             <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>Profile</Heading>
             <Text fontSize={{base: '13px', md: '14px'}} lineHeight='1.8' letterSpacing='0.05em'>1993年生まれ</Text>
@@ -21,7 +50,7 @@ const ModalAbout = () => {
             </Text>
 
             <Heading className='index' color='#777' padding='0 0 0 10px' fontSize='21px' letterSpacing='0.08em'>History</Heading>
-            <Link href='./assets/pdf/timeline.pdf' className='modal-about-link' color='#236e9d' target="_blank" rel="noopener noreferrer" mb='15px'>職務経歴書はこちら(PDF)<FaExternalLinkAlt /></Link>
+            <Link href='./assets/pdf/timeline.pdf' className='modal-about-link' color={mainColor} target="_blank" rel="noopener noreferrer" mb='15px'>職務経歴書はこちら(PDF)<FaExternalLinkAlt /></Link>
             <Text fontSize={{base: '13px', md: '14px'}} lineHeight='1.8' letterSpacing='0.05em'>小学生の頃にパソコンにハマり、自分のサイトを作成。<br />高校生のとき「何歳になっても働ける環境を作っておきたい」と考え、大学の看護学科へ進学。</Text>
             <Text fontSize={{base: '13px', md: '14px'}} lineHeight='1.8' letterSpacing='0.05em'>卒業後は病棟看護師として働き、独学でデザインとコーディングを勉強。<br />退職後はクリニックの看護師をしながら、個人でWeb制作を開始。</Text>
           </Box>

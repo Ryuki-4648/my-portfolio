@@ -7,6 +7,9 @@ function Home() {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
 
+  // Color
+  const mainColor = "#236e9d";
+
   return (
     <>
       <Box className="App">
@@ -16,7 +19,7 @@ function Home() {
           className="content" 
           position='relative' 
           height='100vh' 
-          bgColor='#236e9d' 
+          bgColor={mainColor} 
           overflow='hidden' 
           display='flex'>
 
@@ -68,6 +71,7 @@ function Home() {
               right={['0px', '0px', '110px', '200px']} 
               position='relative' 
               w={['85%','90%','100%','48%']} 
+              _hover={{"backgroundColor": "#fff", "border": "1px solid #236e9d"}} 
               onClick={onOpen}>
               <Text 
                 fontSize={['58px', '80px', '100px', '120px']} 
@@ -91,13 +95,13 @@ function Home() {
               top="50%">
               <ModalAbout />
               <Button 
-                color="#236e9d" 
+                color={mainColor} 
                 position="absolute" 
                 right={{base: '20px', md: '30px'}} 
                 top={{base: '10px', md: '20px'}} 
                 backgroundColor="transparent" 
                 zIndex="100" 
-                _hover={{ backgroundColor: "transparent", color: "#124e73" }} 
+                _hover={{ backgroundColor: "transparent", color: {mainColor} }} 
                 onClick={onClose}>Close
               </Button>
             </ModalContent>

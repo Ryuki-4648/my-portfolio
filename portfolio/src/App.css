@@ -80,10 +80,7 @@ ul, li {
   transition: all .3s;
   clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
-.wrap-about:hover {
-  background-color: #fff;
-  border: 1px solid #236e9d;
-}
+
 .wrap-about:hover p {
   color: #236e9d;
 }
