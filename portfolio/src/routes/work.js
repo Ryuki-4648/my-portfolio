@@ -5,26 +5,56 @@ import jsonWorkListData from '../list/workDesignList.json';
 
 function Work() {
 
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  // const { isOpen, onOpen, onClose } = useDisclosure()
+
+  /* 
+    クリックされた要素のデータをStateに保存 
+    モーダルが開かれたときに表示する内容を動的に変更
+  */
   const [selectedWork, setSelectedWork] = useState(null);
+  
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   return (
     <>
-      <Container paddingTop="4rem" position="relative" maxW={{base:'90%', md:'1024px'}}>
+      <Container 
+        paddingTop="4rem" 
+        position="relative" 
+        maxW={{base:'90%', md:'1024px'}}>
         <Box>
-          <Heading color="#236e9d" fontSize="4.5rem" textAlign="center">WORKS</Heading>
-          <Text textAlign="center" margin="0 auto 50px">制作実績</Text>
+          <Heading 
+            color="#236e9d" 
+            fontSize="4.5rem" 
+            textAlign="center">WORKS
+          </Heading>
+          <Text 
+            textAlign="center" 
+            margin="0 auto 50px">制作実績
+          </Text>
 
-          <Heading color="#236e9d" textAlign="center" margin="0 auto 20px">Web System</Heading>
-          <Flex justifyContent="space-between" flexWrap="wrap">
+          <Heading 
+            color="#236e9d" 
+            textAlign="center" 
+            margin="0 auto 20px">Web System
+          </Heading>
+          <Flex 
+            justifyContent="space-between" 
+            flexWrap="wrap">
           {jsonWorkListData.map((workListData) => (
-            <Box key={workListData.id} margin="0 0 40px" w={{base: '100%', md:'30%'}} onClick={() => setSelectedWork(workListData)}>
-              <Img margin="0 auto 10px" src={workListData.thumbnail} alt={workListData.name} />
+            <Box 
+              key={workListData.id} 
+              margin="0 0 40px" 
+              w={{base: '100%', md:'30%'}} 
+              onClick={() => {setSelectedWork(workListData); setIsOpenModal(true)}}>
+              <Img 
+                margin="0 auto 10px" 
+                src={workListData.thumbnail} 
+                alt={workListData.name} />
               <Text>{workListData.name}</Text>
             </Box>
           ))}
           {selectedWork && (
-            <Modal isOpen={isOpen} onClose={onClose}>
+            <Modal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
             <ModalOverlay />
             <ModalContent>
               <Table>
