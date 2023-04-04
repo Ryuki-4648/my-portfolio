@@ -34,8 +34,24 @@ function Home() {
             w='100%'>R.YUKI WORKS Portfolio
           </Text>
 
-          <Flex alignItems='center' display='flex' justifyContent='center' h={{base: '80vh', lg: 'unset'}} flexWrap={['wrap', 'wrap', 'unset']}  margin='0 auto' w={{base: '100%', md :'80%'}}>
-            <Link backgroundColor='#fff' className="wrap-work" overflow='hidden' h={['35vh', '40vh', '70vh', '70vh']} left={['0px', '0px', '110px', '200px']} position='relative' w={['85%','90%','100%','48%']} _hover={{"backgroundColor": "#236e9d", "border": "1px solid #fff"}} href="/work">
+          <Flex 
+            alignItems='center' 
+            display='flex' 
+            justifyContent='center' 
+            h={{base: '80vh', lg: 'unset'}} 
+            flexWrap={['wrap', 'wrap', 'unset']} 
+            margin='0 auto' 
+            w={{base: '100%', md :'80%'}}>
+            <Link 
+              backgroundColor='#fff' 
+              className="wrap-work" 
+              overflow='hidden' 
+              h={['35vh', '40vh', '70vh', '70vh']} 
+              left={['0px', '0px', '110px', '200px']} 
+              position='relative' 
+              w={['85%','90%','100%','48%']} 
+              _hover={{"backgroundColor": "#236e9d", "border": "1px solid #fff"}} 
+              href="/work">
               <Text 
                 fontSize={['58px', '80px', '100px', '120px']} 
                 fontWeight='bold' 
@@ -44,7 +60,15 @@ function Home() {
                 top={{ base: '15px', md: '40px'}}>WORK
               </Text>
             </Link>
-            <Box cursor='pointer' className="wrap-about" overflow='hidden' h={['35vh', '40vh', '70vh', '70vh']} right={['0px', '0px', '110px', '200px']} position='relative' w={['85%','90%','100%','48%']} onClick={onOpen}>
+            <Box 
+              cursor='pointer' 
+              className="wrap-about" 
+              overflow='hidden' 
+              h={['35vh', '40vh', '70vh', '70vh']} 
+              right={['0px', '0px', '110px', '200px']} 
+              position='relative' 
+              w={['85%','90%','100%','48%']} 
+              onClick={onOpen}>
               <Text 
                 fontSize={['58px', '80px', '100px', '120px']} 
                 fontWeight='bold' 
@@ -57,9 +81,25 @@ function Home() {
 
           <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
-            <ModalContent borderRadius="20px" className="modal-content" h={{base: '85vh', md: 'auto'}} w={{base: '90%', md:'80%', lg: '70%'}} maxWidth="unset" margin="0 auto" top="50%">
+            <ModalContent 
+              borderRadius="20px" 
+              className="modal-content" 
+              h={{base: '85vh', md: 'auto'}} 
+              w={{base: '90%', md:'80%', lg: '70%'}} 
+              maxWidth="unset" 
+              margin="0 auto" 
+              top="50%">
               <ModalAbout />
-              <Button color="#236e9d" position="absolute" right={{base: '20px', md: '30px'}} top={{base: '10px', md: '20px'}} backgroundColor="transparent" zIndex="100" _hover={{ backgroundColor: "transparent", color: "#124e73" }} onClick={onClose}>Close</Button>
+              <Button 
+                color="#236e9d" 
+                position="absolute" 
+                right={{base: '20px', md: '30px'}} 
+                top={{base: '10px', md: '20px'}} 
+                backgroundColor="transparent" 
+                zIndex="100" 
+                _hover={{ backgroundColor: "transparent", color: "#124e73" }} 
+                onClick={onClose}>Close
+              </Button>
             </ModalContent>
           </Modal>
           <AccountList />
