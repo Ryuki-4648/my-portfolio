@@ -1,11 +1,12 @@
-import { Box, Container, Flex, Heading, Img, Link, ListItem, Modal, ModalContent, ModalOverlay, Table, Text, UnorderedList, useDisclosure } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, Img, Link, ListItem, Modal, ModalContent, ModalOverlay, Table, Text, UnorderedList, useDisclosure } from "@chakra-ui/react";
 import { useState } from "react";
 import '../App.css';
 import jsonWorkListData from '../list/workDesignList.json';
 
 function Work() {
 
-  // const { isOpen, onOpen, onClose } = useDisclosure()
+    // Color
+    const mainColor = "#236e9d";
 
   /* 
     クリックされた要素のデータをStateに保存 
@@ -17,23 +18,35 @@ function Work() {
 
   return (
     <>
-      <Container 
-        padding="4rem 0 0" 
+      <Container
+        backgroundColor={mainColor}
+        padding="80px 0 0" 
         position="relative" 
         maxW="100%"
         margin="0"
         marginInlineEnd="0"
         paddingInlineEnd="0"
         >
-        <Box maxW={{base:'90%', md:'1024px'}} margin="0 auto">
+        <Box
+          backgroundColor="#fff"
+          borderRadius="30px"
+          maxW={{base:'90%', xl: '1024px', '2xl': '1400px'}} 
+          margin="0 auto"
+          padding="60px 40px">
           <Heading 
             color="#236e9d" 
             fontSize="5.2rem" 
             textAlign="center">WORKS
           </Heading>
-          <Text 
+          <Text
+            fontWeight="bold"
             textAlign="center" 
-            margin="0 auto 50px">制作実績
+            margin="0 auto 20px">制作実績
+          </Text>
+          <Text
+            fontSize="15px"
+            textAlign="center"
+            margin="0 auto 60px">クリックするとモーダルウィンドウが開き、サービスの詳細が表示されます
           </Text>
 
           <Heading
@@ -48,7 +61,7 @@ function Work() {
               key={workListData.id} 
               cursor="pointer"
               margin="0 0 40px" 
-              w={{base: '100%', md:'30%'}} 
+              w={{base: '100%', md: '48%' , xl:'30%'}} 
               onClick={() => {setSelectedWork(workListData); setIsOpenModal(true)}}>
               <Img 
                 margin="0 auto 10px" 
@@ -60,19 +73,50 @@ function Work() {
           {selectedWork && (
             <Modal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)}>
             <ModalOverlay />
-            <ModalContent>
+            <ModalContent padding="40px" maxWidth={{base: '80%', md: '70%'}}>
+              <Img src={selectedWork.thumbnail} h="250px" margin="0 auto 20px" />
               <Table>
-              <tbody>
-                <tr>
-                  <th>サイト名</th>
-                  <td>{selectedWork.name}</td>
-                </tr>
-                <tr>
-                  <th>URL</th>
-                  <td><Link href={selectedWork.url}>{selectedWork.url}</Link></td>
-                </tr>
-              </tbody>
-            </Table>
+                <tbody>
+                  <tr>
+                    <th>サイト名</th>
+                    <td>{selectedWork.name}</td>
+                  </tr>
+                  <tr>
+                    <th>URL</th>
+                    <td><Link href={selectedWork.url}>{selectedWork.url}</Link></td>
+                  </tr>
+                  <tr>
+                    <th>制作期間</th>
+                    <td>{selectedWork.period}</td>
+                  </tr>
+                  <tr>
+                    <th>作成箇所</th>
+                    <td>{selectedWork.page}</td>
+                  </tr>
+                  <tr>
+                    <th>使用ツール・言語</th>
+                    <td>{selectedWork.tool}</td>
+                  </tr>
+                  <tr>
+                    <th>サイトの説明</th>
+                    <td>{selectedWork.explain}</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </Table>
+              <Button
+                color={mainColor}
+                position="absolute" 
+                right={{base: '20px', md: '30px'}} 
+                top={{base: '10px', md: '20px'}} 
+                backgroundColor="transparent" 
+                zIndex="100"
+                _hover={{backgroundColor: 'transparent'}}
+                onClick={() => setIsOpenModal(false)}>Close
+              </Button>
             </ModalContent>
           </Modal>
           )}
@@ -83,8 +127,16 @@ function Work() {
           <Heading textAlign="center">Web Site</Heading>
 
           <Heading textAlign="center">Design</Heading>
-          <Text>個人制作</Text>
-          <Link href='https://www.pinterest.jp/yuki_017/portfolio/' target="_blank" rel="noopener noreferrer">Pinterestを見る</Link>
+          <Link
+            color={mainColor}
+            display="block"
+            fontWeight="bold"
+            textAlign="center"
+            href='https://www.pinterest.jp/yuki_017/portfolio/'
+            target="_blank"
+            margin="0 auto"
+            rel="noopener noreferrer">Pinterestを見る
+          </Link>
 
           <UnorderedList>
             <ListItem>
@@ -93,14 +145,14 @@ function Work() {
           </UnorderedList>
         </Box>
         <Link
-          color="#236e9d"
+          color="#fff"
           fontSize="2.8rem"
           fontWeight="bold"
-          href="/" 
-          position="absolute" 
+          href="/"
           left="-140px" 
           textTransform="uppercase" 
-          top="130px" 
+          top="140px"
+          position="fixed"
           transform="rotate(90deg)">Back to top
         </Link>
       </Container>
