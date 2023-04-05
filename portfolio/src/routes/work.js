@@ -1,5 +1,6 @@
 import { Box, Button, Container, Flex, Heading, Img, Link, ListItem, Modal, ModalContent, ModalOverlay, Table, Text, UnorderedList, useDisclosure } from "@chakra-ui/react";
 import { useState } from "react";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import '../App.css';
 import jsonWorkListData from '../list/workDesignList.json';
 
@@ -20,7 +21,7 @@ function Work() {
     <>
       <Container
         backgroundColor={mainColor}
-        padding="80px 0 0" 
+        padding={{base: '60px 0', md: '100px 0'}} 
         position="relative" 
         maxW="100%"
         margin="0"
@@ -39,6 +40,7 @@ function Work() {
             textAlign="center">WORKS
           </Heading>
           <Text
+            fontSize={{base: '15px', md: '16px'}}
             fontWeight="bold"
             textAlign="center" 
             margin="0 auto 20px">制作実績
@@ -46,13 +48,14 @@ function Work() {
           <Text
             fontSize="15px"
             textAlign="center"
-            margin="0 auto 60px">クリックするとモーダルウィンドウが開き、サービスの詳細が表示されます
+            margin="0 auto 60px">クリックするとモーダルが開き、詳細が表示されます
           </Text>
 
           <Heading
             textAlign="center"
-            margin="0 auto 20px">Web System
+            margin="0 auto 20px">System / App / Site
           </Heading>
+
           <Flex 
             justifyContent="space-between" 
             flexWrap="wrap">
@@ -67,7 +70,8 @@ function Work() {
                 margin="0 auto 10px" 
                 src={workListData.thumbnail} 
                 alt={workListData.name} />
-              <Text>{workListData.name}</Text>
+              <Text fontSize={{base: '15px', md: '16px'}} fontWeight="bold">{workListData.name}</Text>
+              <Text fontSize={{base: '13px', md: '14px'}}>{workListData.type}</Text>
             </Box>
           ))}
           {selectedWork && (
@@ -83,7 +87,7 @@ function Work() {
                   </tr>
                   <tr>
                     <th>URL</th>
-                    <td><Link href={selectedWork.url}>{selectedWork.url}</Link></td>
+                    <td><Link color={mainColor} textDecoration="underline" href={selectedWork.url}>{selectedWork.url}</Link></td>
                   </tr>
                   <tr>
                     <th>制作期間</th>
@@ -122,20 +126,28 @@ function Work() {
           )}
           </Flex>
 
-          <Heading textAlign="center">Web App</Heading>
 
-          <Heading textAlign="center">Web Site</Heading>
-
-          <Heading textAlign="center">Design</Heading>
+          <Heading
+            textAlign="center"
+            margin="0 auto 20px">Design
+          </Heading>
           <Link
             color={mainColor}
             display="block"
+            fontSize={{base: '17px', md: '18px'}}
             fontWeight="bold"
             textAlign="center"
             href='https://www.pinterest.jp/yuki_017/portfolio/'
             target="_blank"
             margin="0 auto"
-            rel="noopener noreferrer">Pinterestを見る
+            rel="noopener noreferrer">Pinterest
+            <Text 
+              color={mainColor}
+              display="inline" 
+              fontSize={{base: '12px', md: '13px'}} 
+              margin="0 2px">を
+            </Text>見る
+            <FaExternalLinkAlt display="inline" fontSize="15px" />
           </Link>
 
           <UnorderedList>
@@ -146,14 +158,14 @@ function Work() {
         </Box>
         <Link
           color="#fff"
-          fontSize="2.8rem"
+          fontSize={{base: '2rem', md: '2.8rem'}}
           fontWeight="bold"
           href="/"
-          left="-140px" 
+          left={{base: '0', md: '-140px'}} 
           textTransform="uppercase" 
-          top="140px"
-          position="fixed"
-          transform="rotate(90deg)">Back to top
+          top={{base: '-12px', md: '140px'}}
+          position={{base: 'absolute', md: 'fixed'}}
+          transform={{base: 'unset', md: 'rotate(90deg)'}}>Back to top
         </Link>
       </Container>
     </>

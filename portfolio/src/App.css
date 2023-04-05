@@ -8,6 +8,10 @@ p, a {
   color: #333;
 }
 
+svg {
+  display: inline;
+}
+
 a {
   text-decoration: none;
 }
