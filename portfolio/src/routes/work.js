@@ -2,7 +2,7 @@ import { Box, Button, Container, Flex, Heading, Img, Link, ListItem, Modal, Moda
 import { useState } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import '../App.css';
-import jsonWorkListData from '../list/workDesignList.json';
+import jsonWorkListData from '../list/workList.json';
 
 function Work() {
 
@@ -131,24 +131,26 @@ function Work() {
             textAlign="center"
             margin="0 auto 20px">Design
           </Heading>
-          <Link
-            color={mainColor}
-            display="block"
-            fontSize={{base: '17px', md: '18px'}}
-            fontWeight="bold"
-            textAlign="center"
-            href='https://www.pinterest.jp/yuki_017/portfolio/'
-            target="_blank"
-            margin="0 auto"
-            rel="noopener noreferrer">Pinterest
-            <Text 
+          <Box textAlign="center">
+            <Link
+              borderBottom="2px solid #236e9d"
               color={mainColor}
-              display="inline" 
-              fontSize={{base: '12px', md: '13px'}} 
-              margin="0 2px">を
-            </Text>見る
-            <FaExternalLinkAlt display="inline" fontSize="15px" />
-          </Link>
+              display="inline-block"
+              fontSize={{base: '17px', md: '18px'}}
+              fontWeight="bold"
+              href='https://www.pinterest.jp/yuki_017/portfolio/'
+              target="_blank"
+              margin="0 auto"
+              rel="noopener noreferrer">Pinterest
+              <Text 
+                color={mainColor}
+                display="inline" 
+                fontSize={{base: '12px', md: '13px'}} 
+                margin="0 2px">をみる
+              </Text>
+              <FaExternalLinkAlt display="inline" fontSize="15px" />
+            </Link>
+          </Box>
 
           <UnorderedList>
             <ListItem>
