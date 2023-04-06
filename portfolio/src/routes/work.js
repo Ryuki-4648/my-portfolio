@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, Heading, Img, Link, ListItem, Modal, ModalContent, ModalOverlay, Table, Text, UnorderedList, useDisclosure } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, Img, Link, Modal, ModalContent, ModalOverlay, Table, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import '../App.css';
@@ -36,24 +36,25 @@ function Work() {
           padding="60px 40px">
           <Heading 
             color="#236e9d" 
-            fontSize="5.2rem" 
+            fontSize={{base: '4.2rem', md: '6.8rem'}}
             textAlign="center">WORKS
           </Heading>
           <Text
-            fontSize={{base: '15px', md: '16px'}}
+            fontSize={{base: '1.5rem', md: '1.6rem'}}
             fontWeight="bold"
             textAlign="center" 
             margin="0 auto 20px">制作実績
           </Text>
           <Text
-            fontSize="15px"
+            fontSize={{base: '1.4rem', md: '1.5rem'}}
             textAlign="center"
-            margin="0 auto 60px">クリックするとモーダルが開き、詳細が表示されます
+            margin={{base: '0 auto 40px', md: '0 auto 80px'}}>クリックするとモーダルが開き、詳細が表示されます
           </Text>
 
           <Heading
+            fontSize={{base: '2rem', md: '2.8rem'}}
             textAlign="center"
-            margin="0 auto 20px">System / App / Site
+            margin="0 auto 30px">System / App / Site
           </Heading>
 
           <Flex 
@@ -63,15 +64,28 @@ function Work() {
             <Box 
               key={workListData.id} 
               cursor="pointer"
-              margin="0 0 40px" 
+              margin={{base: '0 auto 40px', md: '0 0 60px'}} 
               w={{base: '100%', md: '48%' , xl:'30%'}} 
               onClick={() => {setSelectedWork(workListData); setIsOpenModal(true)}}>
               <Img 
                 margin="0 auto 10px" 
                 src={workListData.thumbnail} 
                 alt={workListData.name} />
-              <Text fontSize={{base: '15px', md: '16px'}} fontWeight="bold">{workListData.name}</Text>
-              <Text fontSize={{base: '13px', md: '14px'}}>{workListData.type}</Text>
+              <Text
+                fontSize={{base: '1.2rem', md: '1.3rem'}}
+                borderColor={workListData.label}
+                borderWidth="1px"
+                w="120px"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                margin="0 0 15px"
+                borderRadius="15px">{workListData.type}
+              </Text>
+              <Text 
+                fontSize={{base: '1.5rem', md: '1.6rem'}} 
+                fontWeight="bold">{workListData.name}
+              </Text>
             </Box>
           ))}
           {selectedWork && (
@@ -128,6 +142,7 @@ function Work() {
 
 
           <Heading
+            fontSize={{base: '2rem', md: '2.8rem'}}
             textAlign="center"
             margin="0 auto 20px">Design
           </Heading>
@@ -136,7 +151,7 @@ function Work() {
               borderBottom="2px solid #236e9d"
               color={mainColor}
               display="inline-block"
-              fontSize={{base: '17px', md: '18px'}}
+              fontSize={{base: '1.7rem', md: '1.8rem'}}
               fontWeight="bold"
               href='https://www.pinterest.jp/yuki_017/portfolio/'
               target="_blank"
@@ -145,27 +160,22 @@ function Work() {
               <Text 
                 color={mainColor}
                 display="inline" 
-                fontSize={{base: '12px', md: '13px'}} 
+                fontSize={{base: '1.2rem', md: '1.3rem'}} 
                 margin="0 2px">をみる
               </Text>
               <FaExternalLinkAlt display="inline" fontSize="15px" />
             </Link>
           </Box>
-
-          <UnorderedList>
-            <ListItem>
-
-            </ListItem>
-          </UnorderedList>
         </Box>
+
         <Link
           color="#fff"
-          fontSize={{base: '2rem', md: '2.8rem'}}
+          fontSize={{base: '2rem', md: '4.2rem'}}
           fontWeight="bold"
           href="/"
-          left={{base: '0', md: '-140px'}} 
+          left={{base: '0', md: '-130px'}} 
           textTransform="uppercase" 
-          top={{base: '-12px', md: '140px'}}
+          top={{base: '-12px', md: '160px'}}
           position={{base: 'absolute', md: 'fixed'}}
           transform={{base: 'unset', md: 'rotate(90deg)'}}>Back to top
         </Link>
