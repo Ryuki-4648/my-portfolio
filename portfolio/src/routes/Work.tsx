@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import '../App.css';
 import jsonWorkListData from '../list/workList.json';
+import React from 'react';
 
 function Work() {
 
@@ -13,7 +14,7 @@ function Work() {
     クリックされた要素のデータをStateに保存 
     モーダルが開かれたときに表示する内容を動的に変更
   */
-  const [selectedWork, setSelectedWork] = useState(null);
+  const [selectedWork, setSelectedWork] = useState<any>(null);
 
   const [isOpenModal, setIsOpenModal] = useState(false);
 
