@@ -19,7 +19,6 @@ const AccountList: React.FC = () => {
       >
         <ListItem>
           <Link
-            
             href="https://twitter.com/Ryuki_4648"
             target="_blank"
             rel="noopener noreferrer"
@@ -29,7 +28,6 @@ const AccountList: React.FC = () => {
         </ListItem>
         <ListItem>
           <Link
-            
             href="https://github.com/Ryuki-4648"
             target="_blank"
             rel="noopener noreferrer"
@@ -49,7 +47,6 @@ const AccountList: React.FC = () => {
         </ListItem>
         <ListItem>
           <Link
-            
             href="https://docs.google.com/forms/d/e/1FAIpQLSe5RJxhW1gDHo5JDDYZaLQrQS8Ip2kTloIIk4l9EhR2yrfHUA/viewform?usp=sf_link"
             target="_blank"
             rel="noopener noreferrer"
