@@ -1,7 +1,7 @@
 import { Box, Link, Flex, Text, useDisclosure, Modal, ModalOverlay, ModalContent, Button } from "@chakra-ui/react";
 import React from 'react';
-import AccountList from "../components/accountList";
 import ModalAbout from "../modal/modal_about";
+import AccountList from "../components/accountList";
 
 function Home() {
 
