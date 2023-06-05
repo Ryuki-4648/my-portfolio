@@ -14,13 +14,29 @@ function Work() {
     クリックされた要素のデータをStateに保存 
     モーダルが開かれたときに表示する内容を動的に変更
   */
-  const [selectedWork, setSelectedWork] = useState<any>(null);
+  // const [selectedWork, setSelectedWork] = useState<any>(null);
 
-  const [isOpenModal, setIsOpenModal] = useState(false);
+  // const [isOpenModal, setIsOpenModal] = useState(false);
 
   return (
     <>
-      <Container
+    <div>
+      <div>
+        <h1>WORKS</h1>
+        <h2>制作実績</h2>
+        <p>クリックするとモーダルが開き、詳細が表示されます</p>
+
+        <h3>System / App / Site</h3>
+        <ul>
+          <li>
+            <img src="" alt="" />
+            <p></p>
+            <p></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+      {/* <Container
         backgroundColor={mainColor}
         padding={{base: '60px 0', md: '100px 0'}} 
         position="relative" 
@@ -180,7 +196,7 @@ function Work() {
           position={{base: 'absolute', md: 'fixed'}}
           transform={{base: 'unset', md: 'rotate(90deg)'}}>Back to top
         </Link>
-      </Container>
+      </Container> */}
     </>
   )
 }

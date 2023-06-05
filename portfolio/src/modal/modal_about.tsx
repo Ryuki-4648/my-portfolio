@@ -10,16 +10,16 @@ const ModalAbout = () => {
   return (
 
     <>
-      <Box 
+      <Box
         backgroundColor='#fff' 
         borderRadius='50px' 
         padding={{base: '25px 20px 30px 20px', md: '80px 40px 50px 40px'}} 
         h={{base: '700px', md: 'auto'}} 
         overflowY={{base: 'scroll', md: 'unset'}}>
-        <Flex 
+        <Flex
           justifyContent='space-between'
           flexWrap={['wrap', 'wrap', 'wrap', 'unset']}>
-          <Box 
+          <Box
             borderRight='2px solid #ededed' 
             textAlign='left' 
             overflowY={{ base: 'unset', md: 'scroll' }} 

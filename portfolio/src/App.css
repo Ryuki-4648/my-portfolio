@@ -37,13 +37,65 @@ ul, li {
   }
 }
 
+.content .box01 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: unset;
+  /* base: '80vh', lg: 'unset' */
+  flex-wrap: unset; /* 'wrap', 'wrap', 'unset' */
+  margin: 0 auto;
+  width: 80%; /* base: '100%', md :'80%' */
+}
+
 .content-sitename {
   writing-mode: vertical-lr;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  position: absolute;
+  letter-spacing: .1em;
+  left: 30px;
+  transform: translateY(-50%);
+  /* transform base: 'translateX(-50%)' md: 'translateY(-50%)'}}
+  letterSpacing '0.1em'
+  left base: '50%', md: '15px', lg: '30px*/
+  text-transform: uppercase;
+  width: 100%;
+  top: 50%;
+  /* top base: '20px', md: '50%' */
 }
 @media screen and (max-width: 768px) {
   .content-sitename {
     writing-mode: horizontal-tb;
   }
+}
+
+
+.content-sns {
+  margin: 0;
+  display: unset; /* base: 'flex', md: 'unset' */
+  position: absolute;
+  left: unset;
+  bottom: unset; /* base: '20px', md: 'unset' */
+  right: 30px; /* base: 'unset', md: '15px', lg: '30px' */
+  top: 50%;
+  transform: translateY(-50%);
+  /*
+  margin="0"
+  display={{ base: 'flex', md: 'unset' }}
+  position="absolute"
+  left={{ base: '50%', md: 'unset' }}
+  bottom={{ base: '20px', md: 'unset' }}
+  right={{ base: 'unset', md: '15px', lg: '30px' }}
+  top={{ base: 'unset', md: '50%' }}
+  transform={{ base: 'translateX(-50%)', md: 'translateY(-50%)' }}*/
+}
+
+.content-sns li {
+  
 }
 
 .content-sns li svg {
@@ -72,6 +124,17 @@ ul, li {
 .wrap-work {
   transition: all .3s;
   clip-path: polygon(0 100%, 100% 0, 0% 0%);
+  background-color: #fff;
+  overflow: hidden;
+  height: 70vh; /* 35vh', '40vh', '70vh', '70vh' */
+  left: 200px; /* '0px', '0px', '110px', '200px' */
+  position: relative;
+  width: 48%; /* 85%','90%','100%','48%' */
+}
+
+.wrap-work:hover {
+  background-color: #236e9d;
+  border: 1px solid #fff;
 }
 
 .wrap-work:hover p {
@@ -81,12 +144,28 @@ ul, li {
 .wrap-work p {
   writing-mode: vertical-lr;
   color: #236e9d;
+  font-weight: bold;
+  position: absolute;
+  left: -48px; /* base: '-30px', md: '-48px' */
+  top: 40px; /* base: '15px', md: '40px' */
+  font-size: 120px; /* '58px', '80px', '100px', '120px' */
 }
 
 .wrap-about {
   border: 1px solid #fff;
   transition: all .3s;
   clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  cursor: pointer;
+  overflow: hidden;
+  height: 70vh; /* 35vh', '40vh', '70vh', '70vh' */
+  right: 200px; /* '0px', '0px', '110px', '200px' */
+  position: relative;
+  width: 48%; /* '85%','90%','100%','48%' */ 
+}
+
+.wrap-about:hover {
+  background-color: #fff;
+  border: 1px solid #236e9d;
 }
 
 .wrap-about:hover p {
@@ -96,7 +175,12 @@ ul, li {
 .wrap-about p {
   color: #fff;
   position: absolute;
+  font-weight: bold;
+  position: absolute;
   font-weight: 700;
+  right: 40px; /* base: '20px', md: '40px' */
+  bottom: -48px; /* base: '-26px', sm: '-35px', md: '-48px' */
+  font-size: 120px; /* '58px', '80px', '100px', '120px' */
 }
 
 .modal-about-link {
@@ -126,7 +210,7 @@ ul, li {
   line-height: 1.8;
 }
 .list-border li:before {
-  content: '';
+  content: "";
   width: 8px;
   height: 2px;
   background-color: #236e9d;
@@ -143,8 +227,40 @@ ul, li {
   color: #124e73;
 }
 
+.modal-overlay {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .modal-content {
-  transform: translateY(-50%)!important;
+  //transform: translateY(-50%)!important;
+  border-radius: 20px;
+  height: auto; /* base: '85vh', md: 'auto' */
+  width: 70%; /* ase: '90%', md:'80%', lg: '70%' */
+  max-width: unset;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 100;
+}
+
+.modal-content button {
+  position: absolute;
+  right: 30px; /* base: '20px', md: '30px' */
+  top: 20px; /* base: '10px', md: '20px' */
+  background-color: transparent;
+  z-index: 100;
+}
+
+.modal-content button:hover {
+  background-color: transparent;
+  color: #236e9d;
 }
 
 .index {
