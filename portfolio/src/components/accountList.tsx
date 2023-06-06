@@ -1,12 +1,16 @@
-import { Box, Icon } from '@chakra-ui/react';
+import { Icon } from '@chakra-ui/react';
 import React from 'react';
 import { FaGithub, FaPinterest, FaTwitter } from 'react-icons/fa';
 import { MdMail } from 'react-icons/md';
 
 const AccountList: React.FC = () => {
   return (
-    <Box>
-      <ul className="content-sns">
+    <>
+      <ul className="content-sns"
+      style={{
+        margin: '0',
+        position: 'absolute',
+      }}>
         <li>
           <a href="https://twitter.com/Ryuki_4648" target="_blank" rel="noopener noreferrer">
             <Icon as={FaTwitter} />
@@ -28,7 +32,7 @@ const AccountList: React.FC = () => {
           </a>
         </li>
       </ul>
-    </Box>
+    </>
   );
 };
 

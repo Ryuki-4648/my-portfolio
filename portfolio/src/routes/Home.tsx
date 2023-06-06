@@ -27,25 +27,69 @@ function Home() {
 
           <div className="box01">
             <a
+              style={{ overflow: 'hidden', position: 'relative' }}
               className="wrap-work"
               href="/work">
-              <p>WORK</p>
+              <p 
+                style={{ 
+                  fontWeight: 'bold', 
+                  position: 'absolute',
+                  writingMode: 'vertical-rl',
+                }}>
+                WORK
+              </p>
             </a>
             <div
               className="wrap-about"
+              style={{
+                border: '1px solid #fff',
+                clipPath: 'polygon(100% 0, 0 100%, 100% 100%)',
+                cursor: 'pointer',
+                overflow: 'hidden',
+                position: 'relative',
+                transition: ' all .3s;'
+              }}
               onClick={onOpen}>
-              <p>ABOUT</p>
+              <p 
+                style={{ 
+                fontWeight: 'bold',
+                position: 'absolute'
+              }}>ABOUT</p>
             </div>
           </div>
 
           <Modal isOpen={isOpen} onClose={onClose}>
             {/* <ModalOverlay /> */}
-            <div className="modal-overlay"></div>
+            <div className="modal-overlay"
+              style={{
+                position: 'fixed',
+                left: '0',
+                top: '0',
+                width: '100vw',
+                height: '100vh',
+                backgroundColor: 'rgba(0, 0, 0, 0.4)'
+              }}></div>
             <div 
-              className="modal-content">
+              className="modal-content"
+              style={{
+                borderRadius: '20px',
+                maxWidth: 'unset',
+                margin: '0 auto',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                position: 'absolute',
+                zIndex: 100,
+              }}>
               <ModalAbout />
-              <button 
-                color={mainColor}
+              <button
+                style={{
+                  color: mainColor,
+                  fontSize: '18px',
+                  fontWeight: 'bold',
+                  transition: 'all .3s',
+                  position: 'absolute',
+                }}
                 onClick={onClose}>Close
               </button>
             </div>
