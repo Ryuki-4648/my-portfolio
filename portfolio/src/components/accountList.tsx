@@ -7,10 +7,10 @@ const AccountList: React.FC = () => {
   return (
     <>
       <ul className="content-sns"
-      style={{
-        margin: '0',
-        position: 'absolute',
-      }}>
+        style={{
+          margin: '0',
+          position: 'absolute',
+        }}>
         <li>
           <a href="https://twitter.com/Ryuki_4648" target="_blank" rel="noopener noreferrer">
             <Icon as={FaTwitter} />

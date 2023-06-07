@@ -54,7 +54,9 @@ const ModalAbout = () => {
               <p style={{ fontSize: '14px', lineHeight: '1.8', letterSpacing: '0.05em' }}>1993年生まれ</p>
               <p style={{ fontSize: '14px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '40px' }}>
                 現在、神戸のWeb制作会社で働いています。<br />
-                業務外では、ReactやTypeScriptなどを用いた開発もしています。<br />
+                企業サイトのコーディング、CMS組み込みがメインです。<br />デザインが好きなので、バナー制作をすることもあります。<br />
+                新人研修・未経験で入社した方の教育も行っています。<br /><br />
+                社外では、ReactやTypeScriptなどを用いた開発もしています。<br />
                 今後のキャリアを考え、モダンなフロントエンド技術を用いたシステム・アプリ開発への転職を考えています。
               </p>
 
@@ -65,7 +67,7 @@ const ModalAbout = () => {
                 marginBottom: '15px',
                 fontSize: '13px',
                 textDecoration: 'none',
-                margin: '0 auto 40px',
+                margin: '0 auto 20px',
                 fontWeight: 'bold',
                 letterSpacing: '0.05em',
                 display: 'inline-block',
@@ -74,8 +76,8 @@ const ModalAbout = () => {
                 職務経歴書はこちら(PDF)
                 <FaExternalLinkAlt />
               </a>
-              <p style={{ fontSize: '14px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '15px' }}>小学生の頃にパソコンにハマり、自分のサイトを作成。<br />高校生のとき「何歳になっても働ける環境を作っておきたい」と考え、大学の看護学科へ進学。</p>
-              <p style={{ fontSize: '14px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '40px' }}>卒業後は病棟看護師として働き、独学でデザインとコーディングを勉強。<br />退職後はクリニックの看護師をしながら、個人でWeb制作を開始。</p>
+              <p style={{ fontSize: '14px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '15px' }}>小学生の頃にパソコンにハマり、自分のサイトを作成したり絵を描いていました。</p>
+              <p style={{ fontSize: '14px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '40px' }}>卒業後は病棟看護師として働き、独学でデザインとコーディングを勉強。<br />退職後はクリニックの看護師をしながら、個人でWeb制作を開始しました。</p>
 
               <h2 className='index' style={{ color: '#777', padding: '0 0 0 10px', fontSize: '21px', letterSpacing: '0.08em' }}>Skill</h2>
               <ul className='list-border' style={{ listStyleType: 'none', marginLeft: '0', marginBottom: '40px', fontSize: '14px' }}>
@@ -86,11 +88,28 @@ const ModalAbout = () => {
                 <li>CMS（WordPress, MovableType）</li>
               </ul>
 
-              <h2 className="index" style={{ color: '#777', padding: '0 0 0 10px', fontSize: '21px', letterSpacing: '0.08em' }}>Vision</h2>
-              <p style={{ fontSize: '13px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '40px' }}>「デザインもできるエンジニア」</p>
+              <h2 className="index" style={{ color: '#777', padding: '0 0 0 10px', fontSize: '21px', letterSpacing: '0.08em' }}>Strength</h2>
+              <p style={{ fontSize: '13px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '10px' }}>
+                Web制作やデザイン、モダンなフロントエンド技術を独学で勉強してきました。<br />
+                休日は大阪や神戸の勉強会に参加し、他社のエンジニアの方と交流をしています。<br />
+                また、エンジニアコミュニティの運営やSNS運用を行っています。
+              </p>
+              <ul className='list-border' style={{ listStyleType: 'none', marginLeft: '0', marginBottom: '40px', fontSize: '13px' }}>
+                <li>独学</li>
+                <li>デザイン力</li>
+              </ul>
 
               <h2 className="index" style={{ color: '#777', padding: '0 0 0 10px', fontSize: '21px', letterSpacing: '0.08em' }}>Future</h2>
-              <p style={{ fontSize: '13px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '40px' }}>エンジニア職をメインに、個人でデザインの仕事をする。</p>
+              <p style={{ fontSize: '13px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '10px' }}>
+              デザインに強いエンジニア<br />
+              </p>
+              <ul className='list-border' style={{ listStyleType: 'none', marginLeft: '0', marginBottom: '40px', fontSize: '13px' }}>
+                <li>個人でデザインの仕事をする</li>
+                <li>モダンなフロントエンド技術を用いたシステムやアプリの開発</li>
+                <li>社内外問わず情報発信していく</li>
+                <li>自社サービスの企画と開発</li>
+                <li>勉強会で知り合ったメンバーと開発を行う</li>
+              </ul>
 
               <h2 className="index" style={{ color: '#777', padding: '0 0 0 10px', fontSize: '21px', letterSpacing: '0.08em' }}>Find me on</h2>
               <ul className='list-border' style={{ listStyleType: 'none', marginLeft: '0', marginBottom: '40px', fontSize: '13px' }}>

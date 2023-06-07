@@ -16,7 +16,7 @@ function Home() {
 
         <Box
           alignItems='center'
-          className="content" 
+          className='content'
           position='relative' 
           height='100vh' 
           bgColor={mainColor} 
@@ -47,7 +47,7 @@ function Home() {
                 cursor: 'pointer',
                 overflow: 'hidden',
                 position: 'relative',
-                transition: ' all .3s;'
+                transition: 'all .3s;'
               }}
               onClick={onOpen}>
               <p 
