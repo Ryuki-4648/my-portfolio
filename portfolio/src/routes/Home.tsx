@@ -77,6 +77,8 @@ function Home() {
                 margin: '0 auto',
                 top: '50%',
                 left: '50%',
+                height: 'auto',
+                width: '70%',
                 transform: 'translate(-50%, -50%)',
                 position: 'absolute',
                 zIndex: 100,
@@ -85,10 +87,12 @@ function Home() {
               <button
                 style={{
                   color: mainColor,
-                  fontSize: '18px',
+                  fontSize: '36px',
                   fontWeight: 'bold',
                   transition: 'all .3s',
                   position: 'absolute',
+                  right: '60px',
+                  top: '-15px'
                 }}
                 onClick={onClose}>Close
               </button>

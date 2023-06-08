@@ -14,10 +14,10 @@ const ModalAbout = () => {
           backgroundColor: '#fff',
           borderRadius: '50px',
           padding: '60px 50px 100px',
-          height: '700px'
+          height: '80vh'
         }}
       >
-        <div style={{height: '600px',overflowY: 'scroll'}}>
+        <div className='scroll' style={{height: '65vh',overflowY: 'scroll'}}>
           <div
             style={{
               justifyContent: 'space-between',
@@ -106,8 +106,7 @@ const ModalAbout = () => {
               <ul className='list-border' style={{ listStyleType: 'none', marginLeft: '0', marginBottom: '40px', fontSize: '13px' }}>
                 <li>個人でデザインの仕事をする</li>
                 <li>モダンなフロントエンド技術を用いたシステムやアプリの開発</li>
-                <li>社内外問わず情報発信していく</li>
-                <li>自社サービスの企画と開発</li>
+                <li>社内外問わず技術とデザインの情報を発信していく</li>
                 <li>勉強会で知り合ったメンバーと開発を行う</li>
               </ul>
 

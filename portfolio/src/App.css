@@ -197,10 +197,21 @@ ul, li {
   height: auto; /* base: '85vh', md: 'auto' */
   width: 70%; /* ase: '90%', md:'80%', lg: '70%' */
 }
+@media screen and (min-width: 768px) {
+  .modal-content {
+    width: 80%;
+    height: 85vh;
+  }
+}
+@media screen and (min-width: 599px) {
+  .modal-content {
+    width: 90%;
+  }
+}
 
 .modal-content button {
-  right: 30px; /* base: '20px', md: '30px' */
-  top: 20px; /* base: '10px', md: '20px' */
+  /* base: '20px', md: '30px' */
+  /* base: '10px', md: '20px' */
   background-color: transparent;
 }
 
@@ -216,4 +227,14 @@ ul, li {
   font-weight: bold;
   margin: 0 auto 20px;
   text-transform: uppercase;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 14px;
+}
+.scroll::-webkit-scrollbar-track {
+  background-color: #ddd;
+}
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #236e9d;
 }
