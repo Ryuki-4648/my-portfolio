@@ -31,7 +31,7 @@ const ModalAbout = () => {
                 style={{
                   color: mainColor,
                   display: 'inline-block',
-                  fontSize: '28px',
+                  fontSize: '36px',
                   fontWeight: 'bold',
                   textDecoration: 'none',
                   marginBottom: '40px',
@@ -54,9 +54,8 @@ const ModalAbout = () => {
               <p style={{ fontSize: '14px', lineHeight: '1.8', letterSpacing: '0.05em' }}>1993年生まれ</p>
               <p style={{ fontSize: '14px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '40px' }}>
                 現在、神戸のWeb制作会社で働いています。<br />
-                企業サイトのコーディング、CMS組み込みがメインです。<br />デザインが好きなので、バナー制作をすることもあります。<br />
-                新人研修・未経験で入社した方の教育も行っています。<br /><br />
-                社外では、ReactやTypeScriptなどを用いた開発もしています。<br />
+                企業サイトのコーディング、CMS組み込み、バナー制作のほか、コーダーの新人教育を行っています。<br /><br />
+                社外では、ReactやTypeScriptなどを用いたシステム開発の経験があります。<br />
                 今後のキャリアを考え、モダンなフロントエンド技術を用いたシステム・アプリ開発への転職を考えています。
               </p>
 
@@ -76,16 +75,21 @@ const ModalAbout = () => {
                 職務経歴書はこちら(PDF)
                 <FaExternalLinkAlt />
               </a>
-              <p style={{ fontSize: '14px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '15px' }}>小学生の頃にパソコンにハマり、自分のサイトを作成したり絵を描いていました。</p>
-              <p style={{ fontSize: '14px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '40px' }}>卒業後は病棟看護師として働き、独学でデザインとコーディングを勉強。<br />退職後はクリニックの看護師をしながら、個人でWeb制作を開始しました。</p>
+              <p style={{ fontSize: '14px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '15px' }}>
+                小学生の頃にパソコンにハマり、自分のサイトを作成したり絵を描いていました。
+                </p>
+              <p style={{ fontSize: '14px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '40px' }}>
+                卒業後は病棟看護師として働き、独学でデザインとコーディングの勉強を始めました。<br />
+                退職後は、クリニックの看護師をしながら個人でWeb制作を行い、現在に至ります。
+              </p>
 
               <h2 className='index' style={{ color: '#777', padding: '0 0 0 10px', fontSize: '21px', letterSpacing: '0.08em' }}>Skill</h2>
               <ul className='list-border' style={{ listStyleType: 'none', marginLeft: '0', marginBottom: '40px', fontSize: '14px' }}>
-                <li>HTML5/CSS3, JavaScript, React.js, TypeScript, Next.js, Node.js, Gulp</li>
-                <li>GitHubを使ったチーム開発（業務システム）</li>
+                <li>HTML5/CSS3, JavaScript, jQuery, React.js, TypeScript, Next.js, Node.js, Gulp</li>
+                <li>GitHubやGitLabを使ったチーム開発（業務システム等）</li>
                 <li>Figma, Adobe (Photoshop, Illustrator, XD, PremirePro)</li>
-                <li>デザイン（Webサイト、広告バナー、素材）</li>
-                <li>CMS（WordPress, MovableType）</li>
+                <li>デザイン（Webサイト、広告バナー、素材、イラスト）</li>
+                <li>CMS組み込み（WordPress, MovableType, PowerCMS）</li>
               </ul>
 
               <h2 className="index" style={{ color: '#777', padding: '0 0 0 10px', fontSize: '21px', letterSpacing: '0.08em' }}>Strength</h2>
@@ -97,15 +101,16 @@ const ModalAbout = () => {
               <ul className='list-border' style={{ listStyleType: 'none', marginLeft: '0', marginBottom: '40px', fontSize: '13px' }}>
                 <li>独学</li>
                 <li>デザイン力</li>
+                <li>人との関わり</li>
               </ul>
 
               <h2 className="index" style={{ color: '#777', padding: '0 0 0 10px', fontSize: '21px', letterSpacing: '0.08em' }}>Future</h2>
               <p style={{ fontSize: '13px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '10px' }}>
-              デザインに強いエンジニア<br />
+              デザインに強いエンジニアになりたいです。<br />
               </p>
               <ul className='list-border' style={{ listStyleType: 'none', marginLeft: '0', marginBottom: '40px', fontSize: '13px' }}>
                 <li>個人でデザインの仕事をする</li>
-                <li>モダンなフロントエンド技術を用いたシステムやアプリの開発</li>
+                <li>モダンな技術を用いたシステムやアプリの開発</li>
                 <li>社内外問わず技術とデザインの情報を発信していく</li>
                 <li>勉強会で知り合ったメンバーと開発を行う</li>
               </ul>
@@ -124,7 +129,16 @@ const ModalAbout = () => {
               </ul>
 
               <h2 className='index' style={{ color: '#777', padding: '0 0 0 10px', fontSize: '21px', letterSpacing: '0.08em' }}>Hobby</h2>
+              <p style={{ fontSize: '13px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '10px' }}>
 
+              </p>
+              <ul className='list-border' style={{ listStyleType: 'none', marginLeft: '0', marginBottom: '40px', fontSize: '13px' }}>
+                <li>
+                  一人で旅行・キャンプ・スノボ・ライブへ行く
+                </li>
+                <li>お酒</li>
+                <li>乃木坂・櫻坂・日向坂・NMB・ももクロ</li>
+              </ul>
           </div>
         </div>
       </div>

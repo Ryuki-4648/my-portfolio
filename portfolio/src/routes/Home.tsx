@@ -67,8 +67,9 @@ function Home() {
                 top: '0',
                 width: '100vw',
                 height: '100vh',
-                backgroundColor: 'rgba(0, 0, 0, 0.4)'
-              }}></div>
+                backgroundColor: 'rgba(0, 0, 0, 0.4)',
+              }}
+              onClick={onClose}></div>
             <div 
               className="modal-content"
               style={{
@@ -92,7 +93,8 @@ function Home() {
                   transition: 'all .3s',
                   position: 'absolute',
                   right: '60px',
-                  top: '-15px'
+                  top: '-15px',
+
                 }}
                 onClick={onClose}>Close
               </button>
