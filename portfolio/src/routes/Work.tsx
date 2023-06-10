@@ -14,25 +14,135 @@ function Work() {
     クリックされた要素のデータをStateに保存 
     モーダルが開かれたときに表示する内容を動的に変更
   */
-  // const [selectedWork, setSelectedWork] = useState<any>(null);
+  const [selectedWork, setSelectedWork] = useState<any>(null);
 
-  // const [isOpenModal, setIsOpenModal] = useState(false);
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   return (
     <>
-    <div>
-      <div>
-        <h1>WORKS</h1>
-        <h2>制作実績</h2>
-        <p>クリックするとモーダルが開き、詳細が表示されます</p>
+    <div
+    style={{
+      backgroundColor: mainColor,
+      padding: '100px 0',
+      position: "relative",
+      maxWidth: "100%",
+      margin: "0",
+      marginInlineEnd: "0",
+      paddingInlineEnd: "0"
+    }}>
+      <div
+        style={{
+          backgroundColor: "#fff",
+          borderRadius: "30px",
+          maxWidth: '1400px', 
+          margin: "0 auto",
+          padding: "60px 40px"
+        }}>
+        <h1 style={{
+          color: mainColor, 
+          fontSize: '6.8rem',
+          textAlign: 'center'
+        }}>WORKS
+        </h1>
+        <h2 style={{
+          fontSize: '1.6rem',
+          fontWeight: 'bold',
+          textAlign: 'center', 
+          margin: '0 auto 20px'
+        }}>制作実績</h2>
+        <p style={{
+          fontSize: '1.5rem',
+          textAlign: 'center',
+          margin: '0 auto 80px'
+        }}>クリックするとモーダルが開き、詳細が表示されます</p>
 
-        <h3>System / App / Site</h3>
-        <ul>
-          <li>
-            <img src="" alt="" />
-            <p></p>
-            <p></p>
+        <h3 style={{
+          fontSize: '2.8rem',
+          textAlign: 'center',
+          margin: '0 auto 30px'
+        }}>System / App / Site</h3>
+        <ul style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap'
+        }}>
+          {jsonWorkListData.map((workListData) => (
+          <li key={workListData.id} 
+          style={{
+            cursor: "pointer",
+            margin: '0 0 60px',
+            width: '30%',
+          }}
+          onClick={() => {setSelectedWork(workListData); setIsOpenModal(true)}}>
+            <img 
+            style={{margin: '0 auto 10px'}}
+            src={workListData.thumbnail} 
+            alt={workListData.name} />
+            <p 
+            style={{
+              fontSize: '1.3rem',
+              borderColor: `{${workListData}.label}`,
+              borderWidth: "1px",
+              width: "120px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              margin: "0 0 15px",
+              borderRadius: "15px"}}>{workListData.type}
+            </p>
+            <p style={{
+              fontSize: '1.6rem', 
+              fontWeight: "bold"}}>{workListData.name}
+            </p>
           </li>
+          ))}
+          {selectedWork && (
+            <div>
+              <img src={selectedWork.thumbnail} 
+                alt={selectedWork.name}
+                style={{
+                  height: "250px",
+                  margin: "0 auto 20px",
+              }}/>
+              <table>
+                <tbody>
+                  <tr>
+                    <th>サイト名</th>
+                    <td>{selectedWork.name}</td>
+                  </tr>
+                  <tr>
+                    <th>URL</th>
+                    <td>
+                      <a href={selectedWork.url} style={{
+                        color: mainColor,
+                        textDecoration: "underline"
+                      }}>{selectedWork.url}</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>制作期間</th>
+                    <td>{selectedWork.period}</td>
+                  </tr>
+                  <tr>
+                    <th>作成箇所</th>
+                    <td>{selectedWork.page}</td>
+                  </tr>
+                  <tr>
+                    <th>使用ツール・言語</th>
+                    <td>{selectedWork.tool}</td>
+                  </tr>
+                  <tr>
+                    <th>サイトの説明</th>
+                    <td>{selectedWork.explain}</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          )}
         </ul>
       </div>
     </div>

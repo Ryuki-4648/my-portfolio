@@ -94,7 +94,6 @@ function Home() {
                   position: 'absolute',
                   right: '60px',
                   top: '-15px',
-
                 }}
                 onClick={onClose}>Close
               </button>
