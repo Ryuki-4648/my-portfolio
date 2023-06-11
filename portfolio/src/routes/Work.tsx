@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, Heading, Img, Link, Modal, ModalContent, ModalOverlay, Table, Text } from "@chakra-ui/react";
+import { Modal, ModalContent, ModalOverlay, Table, Text, useDisclosure } from "@chakra-ui/react";
 import { useState } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import '../App.css';
@@ -9,6 +9,8 @@ function Work() {
 
     // Color
     const mainColor = "#236e9d";
+
+    const { isOpen, onOpen, onClose } = useDisclosure();
 
   /* 
     クリックされた要素のデータをStateに保存 
@@ -97,7 +99,21 @@ function Work() {
           </li>
           ))}
           {selectedWork && (
-            <div>
+            <Modal isOpen={isOpen} onClose={onClose}>
+              <div className="modal-overlay"
+              style={{
+                position: 'fixed',
+                left: '0',
+                top: '0',
+                width: '100vw',
+                height: '100vh',
+                backgroundColor: 'rgba(0, 0, 0, 0.4)',
+              }}
+              onClick={onClose}></div>
+            <div 
+            style={
+              {padding: "40px",
+              maxWidth: '70%'}}>
               <img src={selectedWork.thumbnail} 
                 alt={selectedWork.name}
                 style={{
@@ -142,8 +158,44 @@ function Work() {
                 </tbody>
               </table>
             </div>
+            </Modal>
           )}
         </ul>
+
+        <h2
+          style={{
+          marginBottom: '2.8rem',
+          textAlign: 'center',
+            margin: "0 auto 20px"}}>
+            Design
+          </h2>
+          <div 
+          style={{textAlign: "center"}}>
+            <a
+              style={{
+                borderBottom: "2px solid #236e9d",
+                color: mainColor,
+                display: "inline-block",
+                fontSize: "1.8rem",
+                fontWeight: "bold",
+                margin: "0 auto",
+                textDecoration: "none"
+              }}
+              href="https://www.pinterest.jp/yuki_017/portfolio/"
+              target="_blank"
+              rel="noopener noreferrer">Pinterest
+              <p 
+              style={{ 
+                color: mainColor,
+                display: "inline",
+                fontSize: '1.3rem',
+                margin: "0 2px"
+                }}>をみる
+              </p>
+              <FaExternalLinkAlt display="inline" fontSize="15px" />
+            </a>
+          </div>
+
       </div>
     </div>
       {/* <Container
