@@ -1,4 +1,4 @@
-import { Modal, ModalContent, ModalOverlay, Table, Text, useDisclosure } from "@chakra-ui/react";
+import { Modal, useDisclosure } from "@chakra-ui/react";
 import { useState } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import '../App.css';
@@ -22,16 +22,16 @@ function Work() {
 
   return (
     <>
-    <div
-    style={{
-      backgroundColor: mainColor,
-      padding: '100px 0',
-      position: "relative",
-      maxWidth: "100%",
-      margin: "0",
-      marginInlineEnd: "0",
-      paddingInlineEnd: "0"
-    }}>
+      <div
+      style={{
+        backgroundColor: mainColor,
+        padding: '100px 0',
+        position: "relative",
+        maxWidth: "100%",
+        margin: "0",
+        marginInlineEnd: "0",
+        paddingInlineEnd: "0"
+      }}>
       <div
         style={{
           backgroundColor: "#fff",
@@ -75,7 +75,7 @@ function Work() {
             margin: '0 0 60px',
             width: '30%',
           }}
-          onClick={() => {setSelectedWork(workListData); setIsOpenModal(true)}}>
+          onClick={() => {setSelectedWork(workListData); setIsOpenModal(true); onOpen()}}>
             <img 
             style={{margin: '0 auto 10px'}}
             src={workListData.thumbnail} 
@@ -109,55 +109,56 @@ function Work() {
                 height: '100vh',
                 backgroundColor: 'rgba(0, 0, 0, 0.4)',
               }}
-              onClick={onClose}></div>
-            <div 
-            style={
-              {padding: "40px",
-              maxWidth: '70%'}}>
-              <img src={selectedWork.thumbnail} 
-                alt={selectedWork.name}
-                style={{
-                  height: "250px",
-                  margin: "0 auto 20px",
-              }}/>
-              <table>
-                <tbody>
-                  <tr>
-                    <th>サイト名</th>
-                    <td>{selectedWork.name}</td>
-                  </tr>
-                  <tr>
-                    <th>URL</th>
-                    <td>
-                      <a href={selectedWork.url} style={{
-                        color: mainColor,
-                        textDecoration: "underline"
-                      }}>{selectedWork.url}</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>制作期間</th>
-                    <td>{selectedWork.period}</td>
-                  </tr>
-                  <tr>
-                    <th>作成箇所</th>
-                    <td>{selectedWork.page}</td>
-                  </tr>
-                  <tr>
-                    <th>使用ツール・言語</th>
-                    <td>{selectedWork.tool}</td>
-                  </tr>
-                  <tr>
-                    <th>サイトの説明</th>
-                    <td>{selectedWork.explain}</td>
-                  </tr>
-                  <tr>
-                    <th></th>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+              onClick={onClose}>
+              </div>
+              <div 
+              style={
+                {padding: "40px",
+                maxWidth: '70%'}}>
+                <img src={selectedWork.thumbnail} 
+                  alt={selectedWork.name}
+                  style={{
+                    height: "250px",
+                    margin: "0 auto 20px",
+                }}/>
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>サイト名</th>
+                      <td>{selectedWork.name}</td>
+                    </tr>
+                    <tr>
+                      <th>URL</th>
+                      <td>
+                        <a href={selectedWork.url} style={{
+                          color: mainColor,
+                          textDecoration: "underline"
+                        }}>{selectedWork.url}</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>制作期間</th>
+                      <td>{selectedWork.period}</td>
+                    </tr>
+                    <tr>
+                      <th>作成箇所</th>
+                      <td>{selectedWork.page}</td>
+                    </tr>
+                    <tr>
+                      <th>使用ツール・言語</th>
+                      <td>{selectedWork.tool}</td>
+                    </tr>
+                    <tr>
+                      <th>サイトの説明</th>
+                      <td>{selectedWork.explain}</td>
+                    </tr>
+                    <tr>
+                      <th></th>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </Modal>
           )}
         </ul>
@@ -197,6 +198,19 @@ function Work() {
           </div>
 
       </div>
+
+      <a 
+        style={{
+          color: "#fff",
+          fontSize : '4.2rem',
+          fontWeight: "bold",
+          left: '-130px', 
+          textTransform: "uppercase", 
+          top : '160px',
+          position: 'fixed',
+          transform: 'rotate(90deg)'
+        }} href="/">Back to top
+      </a>
     </div>
       {/* <Container
         backgroundColor={mainColor}
