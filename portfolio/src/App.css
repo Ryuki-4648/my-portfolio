@@ -2,6 +2,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 body, html, p {
   margin: 0;
   padding: 0;
@@ -237,4 +241,20 @@ ul, li {
 }
 .scroll::-webkit-scrollbar-thumb {
   background-color: #236e9d;
+}
+
+.work-modal-table {
+  letter-spacing: .08em;
+}
+.work-modal-table tr {
+  margin: 0 auto 5px;
+  display: block;
+}
+.work-modal-table th {
+  text-align: left;
+  font-size: 15px;
+  width: 200px;
+}
+.work-modal-table td {
+  font-size: 14px;
 }

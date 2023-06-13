@@ -7,6 +7,14 @@ import React from 'react';
 
 function Work() {
 
+  interface WorkData {
+    id: number;
+    thumbnail: string;
+    name: string;
+    label: string;
+    type: string;
+  }
+  
     // Color
     const mainColor = "#236e9d";
 
@@ -18,14 +26,17 @@ function Work() {
   */
   const [selectedWork, setSelectedWork] = useState<any>(null);
 
-  const [isOpenModal, setIsOpenModal] = useState(false);
+  const openModal = (workListData: WorkData) => {
+    setSelectedWork(workListData);
+    onOpen();
+  };
 
   return (
     <>
       <div
       style={{
         backgroundColor: mainColor,
-        padding: '100px 0',
+        padding: '120px 0',
         position: "relative",
         maxWidth: "100%",
         margin: "0",
@@ -38,20 +49,28 @@ function Work() {
           borderRadius: "30px",
           maxWidth: '1400px', 
           margin: "0 auto",
-          padding: "60px 40px"
+          padding: "150px 50px 100px 50px",
+          position: "relative",
         }}>
         <h1 style={{
           color: mainColor, 
-          fontSize: '6.8rem',
-          textAlign: 'center'
+          fontSize: '12rem',
+          textAlign: 'center',
+          fontWeight: '700',
+          lineHeight: '1',
+          margin: '0 auto 15px',
+          position: 'absolute',
+          top: '-25px',
         }}>WORKS
         </h1>
         <h2 style={{
-          fontSize: '1.6rem',
+          fontSize: '2.1rem',
           fontWeight: 'bold',
           textAlign: 'center', 
-          margin: '0 auto 20px'
-        }}>制作実績</h2>
+          margin: '0 auto 30px',
+          letterSpacing: '0.1em'
+        }}>制作実績
+        </h2>
         <p style={{
           fontSize: '1.5rem',
           textAlign: 'center',
@@ -59,10 +78,12 @@ function Work() {
         }}>クリックするとモーダルが開き、詳細が表示されます</p>
 
         <h3 style={{
-          fontSize: '2.8rem',
+          fontSize: '2.6rem',
           textAlign: 'center',
-          margin: '0 auto 30px'
-        }}>System / App / Site</h3>
+          margin: '0 auto 30px',
+          fontWeight: 'bold',
+          color: '#222'
+        }}>System ・ App ・ Web Site</h3>
         <ul style={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -75,9 +96,9 @@ function Work() {
             margin: '0 0 60px',
             width: '30%',
           }}
-          onClick={() => {setSelectedWork(workListData); setIsOpenModal(true); onOpen()}}>
+          onClick={() => openModal(workListData)}>
             <img 
-            style={{margin: '0 auto 10px'}}
+            style={{margin: '0 auto 20px'}}
             src={workListData.thumbnail} 
             alt={workListData.name} />
             <p 
@@ -89,12 +110,14 @@ function Work() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              margin: "0 0 15px",
-              borderRadius: "15px"}}>{workListData.type}
+              margin: "0 0 10px",
+              borderRadius: "15px"}}>
+                {workListData.type}
             </p>
             <p style={{
-              fontSize: '1.6rem', 
-              fontWeight: "bold"}}>{workListData.name}
+              fontSize: '1.5rem', 
+              fontWeight: "bold"}}
+              >{workListData.name}
             </p>
           </li>
           ))}
@@ -112,16 +135,23 @@ function Work() {
               onClick={onClose}>
               </div>
               <div 
-              style={
-                {padding: "40px",
-                maxWidth: '70%'}}>
+              style={{
+                padding: "60px 40px",
+                width: '60%',
+                backgroundColor: "#fff",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                position: "fixed",
+                borderRadius: "30px",
+                }}>
                 <img src={selectedWork.thumbnail} 
                   alt={selectedWork.name}
                   style={{
                     height: "250px",
-                    margin: "0 auto 20px",
+                    margin: "0 auto 40px",
                 }}/>
-                <table>
+                <table className="work-modal-table">
                   <tbody>
                     <tr>
                       <th>サイト名</th>
@@ -156,6 +186,14 @@ function Work() {
                       <th></th>
                       <td></td>
                     </tr>
+                    <tr>
+                      <th></th>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th></th>
+                      <td></td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -165,9 +203,12 @@ function Work() {
 
         <h2
           style={{
-          marginBottom: '2.8rem',
-          textAlign: 'center',
-            margin: "0 auto 20px"}}>
+            fontSize: '2.6rem',
+            textAlign: 'center',
+            margin: '40px auto 30px',
+            fontWeight: 'bold',
+            color: '#222'
+          }}>
             Design
           </h2>
           <div 
@@ -206,7 +247,7 @@ function Work() {
           fontWeight: "bold",
           left: '-130px', 
           textTransform: "uppercase", 
-          top : '160px',
+          bottom : '160px',
           position: 'fixed',
           transform: 'rotate(90deg)'
         }} href="/">Back to top
