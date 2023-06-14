@@ -23,9 +23,21 @@ function Home() {
           overflow='hidden' 
           display='flex'>
 
-          <p className="content-sitename">r-yuki works Portfolio</p>
+          <p className="content-sitename"
+          style={{
+            fontWeight: 'bold',
+            color: '#fff',
+            position: 'absolute',
+            letterSpacing: '0.1em',
+          }}>r-yuki works Portfolio</p>
 
-          <div className="box01">
+          <div className="box01"
+          style={{
+            alignItems: 'center',
+            display: 'flex',
+            justifyContent: 'center',
+            margin: '0 auto',
+          }}>
             <a
               style={{ overflow: 'hidden', position: 'relative' }}
               className="wrap-work"
@@ -79,7 +91,6 @@ function Home() {
                 top: '50%',
                 left: '50%',
                 height: 'auto',
-                width: '70%',
                 transform: 'translate(-50%, -50%)',
                 position: 'absolute',
                 zIndex: 100,
@@ -88,13 +99,11 @@ function Home() {
               <button
                 style={{
                   color: mainColor,
-                  fontSize: '36px',
                   fontWeight: 'bold',
                   transition: 'all .3s',
                   position: 'absolute',
-                  right: '60px',
-                  top: '-15px',
                 }}
+                className="modal-button"
                 onClick={onClose}>Close
               </button>
             </div>
