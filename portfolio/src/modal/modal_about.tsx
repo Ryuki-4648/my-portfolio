@@ -24,6 +24,7 @@ const ModalAbout = () => {
             style={{
               justifyContent: 'space-between',
               flexWrap: 'wrap',
+              padding: '10px 20px',
             }}
           >
 
@@ -55,7 +56,7 @@ const ModalAbout = () => {
               <p style={{ fontSize: '14px', lineHeight: '1.8', letterSpacing: '0.05em' }}>1993年生まれ</p>
               <p style={{ fontSize: '14px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '40px' }}>
                 現在、神戸のWeb制作会社で働いています。<br />
-                企業サイトのコーディング、CMS組み込み、バナー制作のほか、コーダーの新人教育を行っています。<br /><br />
+                企業サイトのコーディング・CMS組み込み・バナー制作のほか、コーダーの新人教育を行っています。<br /><br />
                 社外では、ReactやTypeScriptなどを用いたシステム開発の経験があります。<br />
                 今後のキャリアを考え、モダンなフロントエンド技術を用いたシステム・アプリ開発への転職を考えています。
               </p>
@@ -95,7 +96,8 @@ const ModalAbout = () => {
 
               <h2 className="about-index" style={{ color: '#777', padding: '0 0 0 10px', fontSize: '21px', letterSpacing: '0.08em' }}>Strength</h2>
               <p style={{ fontSize: '13px', lineHeight: '1.8', letterSpacing: '0.05em', marginBottom: '10px' }}>
-                Web制作やデザイン、モダンなフロントエンド技術を独学で勉強してきました。<br />
+                Web制作やデザインを独学で勉強してきました。<br />
+                現在はモダンなフロントエンド技術を勉強中です。<br /><br />
                 休日は大阪や神戸の勉強会に参加し、他社のエンジニアの方と交流をしています。<br />
                 また、エンジニアコミュニティの運営やSNS運用を行っています。
               </p>
@@ -112,7 +114,7 @@ const ModalAbout = () => {
               <ul className='list-border' style={{ listStyleType: 'none', marginLeft: '0', marginBottom: '40px', fontSize: '13px' }}>
                 <li>個人でデザインの仕事をする</li>
                 <li>モダンな技術を用いたシステムやアプリの開発</li>
-                <li>社内外問わず技術とデザインの情報を発信していく</li>
+                <li>社内外問わず、技術とデザインの情報を発信する</li>
                 <li>勉強会で知り合ったメンバーと開発を行う</li>
               </ul>
 

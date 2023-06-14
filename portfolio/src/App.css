@@ -128,18 +128,6 @@ ul, li {
   left: 200px; /* '0px', '0px', '110px', '200px' */
   width: 48%; /* 85%','90%','100%','48%' */
 }
-@media screen and (max-width: 1300px) {
-  .wrap-work {
-    width: 100%;
-    left: 30px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .wrap-work {
-    left: 0;
-    height: 35vh;
-  }
-}
 
 .wrap-work:hover {
   background-color: #236e9d;
@@ -154,12 +142,26 @@ ul, li {
   color: #236e9d;
   left: -48px; /* base: '-30px', md: '-48px' */
   top: 40px; /* base: '15px', md: '40px' */
-  font-size: 120px; /* '58px', '80px', '100px', '120px' */
+  font-size: 120px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1300px) {
+  .wrap-work {
+    width: 100%;
+    left: 30px;
+  }
   .wrap-work p {
     font-size: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrap-work {
+    left: 0;
+    height: 35vh;
+  }
+  .wrap-work p {
+    font-size: 80px;
     top: 20px;
+    left: -35px;
   }
 }
 @media screen and (max-width: 599px) {
@@ -200,13 +202,21 @@ ul, li {
 .wrap-about p {
   color: #fff;
   font-weight: 700;
-  right: 40px; /* base: '20px', md: '40px' */
-  bottom: -48px; /* base: '-26px', sm: '-35px', md: '-48px' */
-  font-size: 120px; /* '58px', '80px', '100px', '120px' */
+  right: 40px;
+  bottom: -48px;
+  font-size: 120px;
+}
+@media screen and (max-width: 1300px) {
+  .wrap-about p {
+    font-size: 100px;
+    bottom: -40px;
+    right: 35px;
+  }
 }
 @media screen and (max-width: 768px) {
   .wrap-about p {
-    font-size: 100px;
+    font-size: 80px;
+    bottom: -32px;
   }
 }
 @media screen and (max-width: 599px) {
@@ -326,6 +336,11 @@ ul, li {
 @media screen and (max-width: 768px) {
   .modal-content-scroll {
     height: 80vh;
+  }
+}
+@media screen and (max-width: 599px) {
+  .modal-content-scroll {
+    height: 85vh;
   }
 }
 
