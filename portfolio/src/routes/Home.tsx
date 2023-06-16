@@ -80,6 +80,7 @@ function Home() {
                 width: '100vw',
                 height: '100vh',
                 backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                cursor: 'pointer',
               }}
               onClick={onClose}></div>
             <div 
@@ -98,7 +99,6 @@ function Home() {
               <ModalAbout />
               <button
                 style={{
-                  color: mainColor,
                   fontWeight: 'bold',
                   transition: 'all .3s',
                   position: 'absolute',

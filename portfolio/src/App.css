@@ -13,15 +13,19 @@ body, html, p {
 
 p, a {
   letter-spacing: 0.05em;
+}
+p {
   color: #333;
 }
-
 svg {
   display: inline;
 }
 
 a {
   text-decoration: none;
+}
+a:hover {
+  color: #135178;
 }
 
 a:hover {
@@ -255,6 +259,9 @@ ul, li {
   left: 0;
   top: 50%;
 }
+.list-border li a:hover {
+  color: #236e9d;
+}
 
 /* .modal-close-button {
   margin: 40px auto 0;
@@ -294,15 +301,19 @@ ul, li {
   background-color: transparent;
 }
 
-.modal-content button:hover {
+/* .modal-content button:hover {
   background-color: transparent;
   color: #236e9d;
-}
+} */
 
 .modal-button {
   font-size: 36px;
   right: 60px;
   top: -15px;
+  color: #236e9d;
+}
+.modal-button:hover {
+  color: #135178;
 }
 @media screen and (max-width: 768px) {
   .modal-button {
@@ -347,6 +358,7 @@ ul, li {
 .about-name {
   font-size: 36px;
   margin-bottom: 40px;
+  color: #236e9d;
 }
 @media screen and (max-width: 768px) {
   .about-name {

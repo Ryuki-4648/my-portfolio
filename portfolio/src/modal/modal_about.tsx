@@ -33,7 +33,6 @@ const ModalAbout = () => {
                 target='_blank'
                 className='about-name'
                 style={{
-                  color: mainColor,
                   display: 'inline-block',
                   fontWeight: 'bold',
                   textDecoration: 'none',
@@ -44,7 +43,6 @@ const ModalAbout = () => {
                 <span
                   style={{
                     borderBottom: `3px solid ${mainColor}`,
-                    color: mainColor,
                     display: 'inline-block',
                   }}
                 >
@@ -64,7 +62,6 @@ const ModalAbout = () => {
               <h2 className='about-index' style={{ color: '#777', padding: '0 0 0 10px', fontSize: '21px', letterSpacing: '0.08em' }}>History</h2>
               <a className='modal-about-link' href='./assets/pdf/timeline.pdf' 
               style={{ 
-                color: mainColor, 
                 marginBottom: '15px',
                 fontSize: '13px',
                 textDecoration: 'none',
