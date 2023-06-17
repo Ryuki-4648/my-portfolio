@@ -18,12 +18,13 @@ function Work() {
     period: string;
     explain: string;
     url: string;
-    sammary: string;
+    summary: string;
     image01: string;
     image02: string;
     image03: string;
     image04: string;
     image05: string;
+    github: string;
   }
   
     // Color
@@ -179,7 +180,7 @@ function Work() {
                             <th>URL</th>
                             <td>
                               {selectedWork.url ? (
-                                <a href={selectedWork.url} style={{ color: mainColor, textDecoration: 'underline' }}>
+                                <a href={selectedWork.url} target='_blank' style={{ color: mainColor, textDecoration: 'underline' }} rel="noreferrer">
                                   {selectedWork.url}
                                 </a>
                               ) : (
@@ -208,23 +209,23 @@ function Work() {
                             <td>{selectedWork.explain}</td>
                           </tr>
                           <tr>
+                            <th>コード</th>
+                            <td>
+                              {selectedWork.github ? (
+                                <a href={selectedWork.github} target='_blank' style={{ color: mainColor, textDecoration: 'underline' }} rel="noreferrer">
+                                  {selectedWork.github}
+                                </a>
+                              ) : (
+                                'なし'
+                              )}
+                            </td>
+                          </tr>
+                          <tr>
                             <th>画面</th>
                             <td>
-                            {selectedWork.image01 && (
-                              <img src={selectedWork.image01} alt="作成ページの画像" />
-                            )}
-                            {selectedWork.image02 && (
-                              <img src={selectedWork.image02} alt="作成ページの画像" />
-                            )}
-                            {selectedWork.image03 && (
-                              <img src={selectedWork.image03} alt="作成ページの画像" />
-                            )}
-                            {selectedWork.image04 && (
-                              <img src={selectedWork.image04} alt="作成ページの画像" />
-                            )}
-                            {selectedWork.image05 && (
-                              <img src={selectedWork.image05} alt="作成ページの画像" />
-                            )}
+                            {Array.from({ length: 5 }, (_, i) => selectedWork[`image0${i + 1}`]).map((image, index) => (
+                              image && <img key={index} src={image} alt="作成ページの画像" style={{ marginBottom: '20px' }} />
+                            ))}
                             </td>
                           </tr>
                           <tr>
