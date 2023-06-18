@@ -48,7 +48,7 @@ function Home() {
                   position: 'absolute',
                   writingMode: 'vertical-rl',
                 }}>
-                WORKS
+                WORK
               </p>
             </a>
             <div

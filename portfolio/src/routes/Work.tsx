@@ -17,6 +17,7 @@ function Work() {
     type: string;
     period: string;
     explain: string;
+    notice: string;
     url: string;
     summary: string;
     image01: string;
@@ -111,27 +112,30 @@ function Work() {
               }}
             onClick={() => openModal(workListData)}>
               <img 
-              style={{margin: '0 auto 20px'}}
+              className='work-list-item-thumb'
+              style={{margin: '0 auto 20px', transition: 'all .3s'}}
               src={workListData.thumbnail} 
               alt={workListData.name} />
-              <p 
-              style={{
-                fontSize: '1.3rem',
-                borderColor: `{${workListData}.label}`,
-                borderWidth: '1px',
-                width: '120px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                margin: '0 0 10px',
-                borderRadius: '15px'}}>
-                  {workListData.type}
-              </p>
-              <p style={{
-                fontSize: '1.5rem', 
-                fontWeight: 'bold'}}
-                >{workListData.name}
-              </p>
+              <div className='work-list-item-text-wrap'>
+                <p 
+                style={{
+                  fontSize: '1.3rem',
+                  borderColor: `{${workListData}.label}`,
+                  borderWidth: '1px',
+                  width: '120px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  margin: '0 0 10px',
+                  borderRadius: '15px'}}>
+                    {workListData.type}
+                </p>
+                <p style={{
+                  fontSize: '1.5rem', 
+                  fontWeight: 'bold'}}
+                  >{workListData.name}
+                </p>
+              </div>
             </li>
             ))}
             {selectedWork && (
@@ -209,6 +213,10 @@ function Work() {
                             <td>{selectedWork.explain}</td>
                           </tr>
                           <tr>
+                          <th>注釈</th>
+                          <td>{selectedWork.notice || ""}</td>
+                        </tr>
+                          <tr>
                             <th>コード</th>
                             <td>
                               {selectedWork.github ? (
@@ -220,11 +228,11 @@ function Work() {
                               )}
                             </td>
                           </tr>
-                          <tr>
+                          <tr className='work-modal-table-image'>
                             <th>画面</th>
                             <td>
                             {Array.from({ length: 5 }, (_, i) => selectedWork[`image0${i + 1}`]).map((image, index) => (
-                              image && <img key={index} src={image} alt="作成ページの画像" style={{ marginBottom: '20px' }} />
+                              image && <img key={index} src={image} alt="作成ページの画像" style={{ border: '1px solid #dbdbdb' }} />
                             ))}
                             </td>
                           </tr>
@@ -286,9 +294,9 @@ function Work() {
         <a 
           className='work-content-back'
           style={{
-            color: '#fff',
             fontWeight: 'bold',
             textTransform: 'uppercase',
+            transition: 'all .3s',
           }} href='/'>Back to top
         </a>
 

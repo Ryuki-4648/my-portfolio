@@ -35,7 +35,7 @@ const ModalAbout = () => {
                   display: 'inline-block',
                   fontWeight: 'bold',
                   textDecoration: 'none',
-                  transition: '3s',
+                  transition: 'all .3s',
                 }} rel='noreferrer'
               >
                 @

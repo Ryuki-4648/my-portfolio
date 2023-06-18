@@ -28,7 +28,7 @@ a {
 }
 
 a:hover {
-  color: #135178;
+  color: #093a59;
 }
 
 a:hover {
@@ -105,7 +105,7 @@ ul, li {
 }
 
 .content-sns li:hover svg {
-  fill: #124e73;
+  fill: #093a59;
 }
 
 .content-sns li:not(:last-child) {
@@ -248,8 +248,8 @@ ul, li {
   border-bottom: 1px solid #236e9d;
 }
 .modal-about-link:hover {
-  color: #124e73;
-  border-bottom: 1px solid #124e73;
+  color: #093a59;
+  border-bottom: 1px solid #093a59;
 }
 .modal-about-link svg {
   display: inline-block;
@@ -296,7 +296,7 @@ ul, li {
 }
 
 .modal-close-button:hover {
-  color: #124e73;
+  color: #093a59;
 }
 
 .modal-content {
@@ -316,7 +316,7 @@ ul, li {
   color: #236e9d;
 }
 .modal-button:hover {
-  color: #135178;
+  color: #093a59;
 }
 .modal-content-scroll {
   height: 65vh;
@@ -388,6 +388,10 @@ ul, li {
   max-width: 1400px;
   width: 80%;
 }
+
+.work-list-item-text-wrap {
+  margin-top: auto;
+}
 .work-modal-table {
   letter-spacing: .08em;
 }
@@ -407,6 +411,12 @@ ul, li {
 .work-list-item {
   width: 30%;
   margin: 0 0 60px;
+  display: flex;
+  flex-direction: column;
+  fle-wrap: wrap;
+}
+.work-list-item:hover img {
+  opacity: .8;
 }
 .work-content-title {
   font-size: 12rem;
@@ -445,6 +455,10 @@ ul, li {
   left: -130px;
   font-size: 4.2rem;
   position: fixed;
+  color: #fff;
+}
+.work-content-back:hover {
+  color: #093a59;
 }
 .work-modal-content {
   padding: 60px 30px;
@@ -461,6 +475,10 @@ ul, li {
 }
 .work-list {
   margin: 0 auto 20px;
+}
+.work-modal-table-image img {
+  padding: 20px;
+  margin: 0 auto 40px;
 }
 @media screen and (max-width: 768px) {
   .work-content {
@@ -557,6 +575,10 @@ ul, li {
   }
   .work-modal-table td {
     font-size: 1.3rem;
+  }
+  .work-modal-table-image img {
+    padding: 10px;
+    margin: 0 auto 30px;
   }
   .work-content-back {
     bottom: -4px;
