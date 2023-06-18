@@ -82,13 +82,14 @@ const ModalAbout = () => {
               </p>
 
               <h2 className='modal-about-index' style={{ color: '#777', padding: '0 0 0 10px', fontSize: '21px', letterSpacing: '0.08em' }}>Skill</h2>
-              <ul className='list-border' style={{ listStyleType: 'none', marginLeft: '0', marginBottom: '40px', fontSize: '14px' }}>
+              <ul className='list-border' style={{ listStyleType: 'none', marginLeft: '0', marginBottom: '10px', fontSize: '14px' }}>
                 <li>HTML5/CSS3, JavaScript, jQuery, React.js, TypeScript, Next.js, Node.js, Gulp</li>
                 <li>GitHubやGitLabを使ったチーム開発（業務システム等）</li>
                 <li>Figma, Adobe (Photoshop, Illustrator, XD, PremirePro)</li>
                 <li>デザイン（Webサイト、広告バナー、素材、イラスト）</li>
                 <li>CMS組み込み（WordPress, MovableType, PowerCMS）</li>
               </ul>
+              <p className='modal-about-text02' style={{ marginBottom: '40px' }}>* 勉強中のものも含みます。</p>
 
               <h2 className='modal-about-index' style={{ color: '#777', padding: '0 0 0 10px', fontSize: '21px', letterSpacing: '0.08em' }}>Strength</h2>
               <p className='modal-about-text01' style={{ marginBottom: '10px' }}>
