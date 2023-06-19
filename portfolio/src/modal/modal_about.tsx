@@ -127,6 +127,9 @@ const ModalAbout = () => {
                 <li>
                   <a href="https://qiita.com/Ryuki4648" target='_blank' rel='noopener noreferrer'>Qiita</a>
                 </li>
+                <li>
+                  <a href="https://connpass.com/user/Ryuki_4648/" target='_blank' rel='noopener noreferrer'>connpass</a>
+                </li>
               </ul>
 
               <h2 className='modal-about-index' style={{ color: '#777', padding: '0 0 0 10px', fontSize: '21px', letterSpacing: '0.08em' }}>Hobby</h2>

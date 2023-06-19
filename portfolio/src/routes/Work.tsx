@@ -33,6 +33,12 @@ function Work() {
 
     const { isOpen, onOpen, onClose } = useDisclosure();
 
+    // 改行を生成
+    const changeLineBreaks = (text: string) => {
+      const lines = text.split('\n');
+      return lines.map((line, index) => <React.Fragment key={index}>{line}<br /></React.Fragment>);
+    };
+
   /* 
     クリックされた要素のデータをStateに保存 
     モーダルが開かれたときに表示する内容を動的に変更
@@ -210,7 +216,7 @@ function Work() {
                           </tr>
                           <tr>
                             <th>説明</th>
-                            <td>{selectedWork.explain}</td>
+                            <td>{changeLineBreaks(selectedWork.explain)}</td>
                           </tr>
                           <tr>
                           <th>注釈</th>
