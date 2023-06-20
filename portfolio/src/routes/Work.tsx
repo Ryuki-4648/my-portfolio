@@ -4,6 +4,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import '../App.css';
 import jsonWorkListData from '../list/workList.json';
 import React from 'react';
+import {BiLinkExternal} from 'react-icons/bi';
 
 function Work() {
 
@@ -190,9 +191,12 @@ function Work() {
                             <th>URL</th>
                             <td>
                               {selectedWork.url ? (
-                                <a href={selectedWork.url} target='_blank' style={{ color: mainColor, textDecoration: 'underline' }} rel="noreferrer">
-                                  {selectedWork.url}
-                                </a>
+                                <>
+                                  <a href={selectedWork.url} target='_blank' style={{ color: mainColor, textDecoration: 'underline' }} rel="noreferrer">
+                                    {selectedWork.url}
+                                  </a>
+                                  <BiLinkExternal style={{ marginLeft: '10px', fontSize: '1.4rem' }} />
+                                </>
                               ) : (
                                 <span>なし</span>
                               )}
@@ -218,17 +222,22 @@ function Work() {
                             <th>説明</th>
                             <td>{changeLineBreaks(selectedWork.explain)}</td>
                           </tr>
-                          <tr>
-                          <th>注釈</th>
-                          <td>{selectedWork.notice || ""}</td>
-                        </tr>
+                          {selectedWork.notice && (
+                            <tr>
+                              <th>注釈</th>
+                              <td>{selectedWork.notice}</td>
+                            </tr>
+                          )}
                           <tr>
                             <th>コード</th>
                             <td>
                               {selectedWork.github ? (
-                                <a href={selectedWork.github} target='_blank' style={{ color: mainColor, textDecoration: 'underline' }} rel="noreferrer">
-                                  {selectedWork.github}
-                                </a>
+                                <>
+                                  <a href={selectedWork.github} target='_blank' style={{ color: mainColor, textDecoration: 'underline' }} rel="noreferrer">
+                                    {selectedWork.github}
+                                  </a>
+                                  <BiLinkExternal style={{ marginLeft: '10px', fontSize: '1.4rem' }} />
+                                </>
                               ) : (
                                 'なし'
                               )}
