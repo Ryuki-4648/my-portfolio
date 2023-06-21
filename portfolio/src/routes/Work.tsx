@@ -4,7 +4,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import '../App.css';
 import jsonWorkListData from '../list/workList.json';
 import React from 'react';
-import {BiLinkExternal} from 'react-icons/bi';
+import {BiLinkExternal, BiArrowFromBottom} from 'react-icons/bi';
 
 function Work() {
 
@@ -55,6 +55,7 @@ function Work() {
     <>
       <div
         className='work-content'
+        id='top'
         style={{
           backgroundColor: mainColor,
           position: 'relative',
@@ -103,7 +104,7 @@ function Work() {
               textAlign: 'center',
               fontWeight: 'bold',
               color: '#222'
-            }}>System ・ App ・ Web Site</h3>
+            }}>System ・ Web</h3>
           <ul
             className='work-list'
             style={{
@@ -188,6 +189,10 @@ function Work() {
                             <td>{selectedWork.name}</td>
                           </tr>
                           <tr>
+                            <th>使用技術や言語</th>
+                            <td>{selectedWork.tool}</td>
+                          </tr>
+                          <tr>
                             <th>URL</th>
                             <td>
                               {selectedWork.url ? (
@@ -214,10 +219,7 @@ function Work() {
                             <th>担当箇所</th>
                             <td>{selectedWork.page}</td>
                           </tr>
-                          <tr>
-                            <th>使用技術や言語</th>
-                            <td>{selectedWork.tool}</td>
-                          </tr>
+
                           <tr>
                             <th>説明</th>
                             <td>{changeLineBreaks(selectedWork.explain)}</td>
@@ -280,9 +282,9 @@ function Work() {
             <div 
             style={{textAlign: 'center'}}>
               <a
+                className='work-content-link'
                 style={{
                   borderBottom: '2px solid #236e9d',
-                  color: mainColor,
                   display: 'inline-block',
                   fontSize: '1.8rem',
                   fontWeight: 'bold',
@@ -293,8 +295,7 @@ function Work() {
                 target='_blank'
                 rel='noopener noreferrer'>Pinterest
                 <p 
-                style={{ 
-                  color: mainColor,
+                style={{
                   display: 'inline',
                   fontSize: '1.4rem',
                   margin: '0 2px'
@@ -312,7 +313,11 @@ function Work() {
             fontWeight: 'bold',
             textTransform: 'uppercase',
             transition: 'all .3s',
-          }} href='/'>Back to top
+          }} href='/'>Back to home
+        </a>
+
+        <a className='work-content-top' href='#top'>
+          <BiArrowFromBottom />
         </a>
 
       </div>

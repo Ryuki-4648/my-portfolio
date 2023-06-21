@@ -395,7 +395,7 @@ ul, li {
   overflow: hidden;
 }
 .work-content-inner {
-  padding: 150px 50px 100px 50px;
+  padding: 180px 50px 100px 50px;
   border-radius: 30px;
   max-width: 1400px;
   width: 80%;
@@ -445,32 +445,39 @@ ul, li {
 .work-content-text01::before {
   content: '';
   position: absolute;
-  height: 80px;
-  width: 2px;
+  height: 90px;
+  width: 5px;
   background-color: #236e9d;
   left: 50%;
   transform: translateX(-50%);
-  top: 50px;
+  top: 60px;
+  border-radius: 4px;
 }
 .work-content-index01 {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   margin: 0 auto 30px;
+  color: #222;
 }
 .work-content-index02 {
   font-size: 2.6rem;
-  margin: 0 auto 30px;
-  letter-spacing: .08em;
+  margin: 0 auto 40px;
+  letter-spacing: .05em;
 }
 .work-content-back {
   transform: rotate(90deg);
   bottom: 160px;
-  left: -130px;
+  left: -155px;
   font-size: 4.2rem;
+}
+.work-content-top {
+  right: 20px;
+  bottom: 10px;
+  font-size: 4rem;
+  transition: all .3s;
+}
+.work-content-back, .work-content-top {
   position: fixed;
   color: #fff;
-}
-.work-content-back:hover {
-  color: #093a59;
 }
 .work-modal-content {
   padding: 60px 30px;
@@ -486,18 +493,28 @@ ul, li {
   margin: 0 auto 40px;
 }
 .work-list {
-  margin: 0 auto 20px;
+  margin: 0 auto 60px;
 }
 .work-modal-table-image img {
   padding: 20px;
   margin: 0 auto 40px;
 }
+.work-content-link, .work-content-link p {
+  color: #236e9d;
+  transition: all .3s;
+}
+.work-content-link:hover , .work-content-link:hover p {
+  color: #093a59;
+}
 @media screen and (max-width: 768px) {
   .work-content {
-    padding: 80px 0;
+    padding: 80px 0 100px;
   }
   .work-content-inner {
     padding: 100px 40px 100px 40px;
+  }
+  .work-list {
+    margin: 0 auto 30px;
   }
   .work-list-item {
     width: 48%;
@@ -510,7 +527,7 @@ ul, li {
     margin: 0 auto 20px;
   }
   .work-content-index02 {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     margin: 0 auto 20px;
   }
   .work-content-text01 {
@@ -525,8 +542,14 @@ ul, li {
     bottom: -5px;
     left: 30px;
     font-size: 3rem;
-    position: absolute;
     line-height: 1;
+  }
+  .work-content-back, .work-content-top {
+    position: absolute;
+  }
+  .work-content-top {
+    right: 10px;
+    bottom: 0;
   }
   .work-modal-content {
     padding: 50px 20px;
@@ -555,7 +578,7 @@ ul, li {
   }
   .work-content-title {
     left: 0;
-    font-size: 6.5rem;
+    font-size: 7.2rem;
     top: -15px;
   }
   .work-content-text01 {
@@ -568,9 +591,6 @@ ul, li {
   .work-content-text01::before {
     height: 50px;
     top: 55px;
-  }
-  .work-content-index02 {
-    font-size: 2rem;
   }
   .work-modal-content-mv {
     height: auto;
@@ -595,6 +615,6 @@ ul, li {
   .work-content-back {
     bottom: -4px;
     left: 20px;
-    font-size: 2.6rem;
+    font-size: 3rem;
   }
 }
