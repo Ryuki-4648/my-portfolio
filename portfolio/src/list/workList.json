@@ -198,5 +198,25 @@
     "image04": "",
     "image05": "",
     "github": "https://github.com/Ryuki-4648/home-ranian"
+  },
+  {
+    "id": 11,
+    "name": "guess pokemon",
+    "url": "https://www.yuki-017.com/guess-pokemon/",
+    "type": "Web",
+    "label": "#236e9d",
+    "summary": "ポケモンずかんの文章から、なんのポケモンか当てるクイズ。",
+    "period": "2023年4月〜",
+    "page": "全て",
+    "thumbnail": "/assets/img/work/img_work_app02_01.png",
+    "tool": "React.js, TypeScript, TailwindCSS",
+    "explain": "簡単なクイズゲームを作成しようと思い、作りました。",
+    "notice": "",
+    "image01": "/assets/img/work/img_work_app02_02.png",
+    "image02": "",
+    "image03": "",
+    "image04": "",
+    "image05": "",
+    "github": "https://github.com/Ryuki-4648/guess-pokemon"
   }
 ]
