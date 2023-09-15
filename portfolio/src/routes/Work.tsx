@@ -18,6 +18,7 @@ function Work() {
     type: string;
     period: string;
     explain: string;
+    task: string;
     notice: string;
     url: string;
     summary: string;
@@ -224,6 +225,12 @@ function Work() {
                             <th>説明</th>
                             <td>{changeLineBreaks(selectedWork.explain)}</td>
                           </tr>
+                          {selectedWork.task && (
+                            <tr>
+                              <th>今後の課題</th>
+                              <td>{changeLineBreaks(selectedWork.task)}</td>
+                            </tr>
+                          )}
                           {selectedWork.notice && (
                             <tr>
                               <th>注釈</th>
@@ -252,14 +259,6 @@ function Work() {
                               image && <img key={index} src={image} alt="作成ページの画像" style={{ border: '1px solid #dbdbdb' }} />
                             ))}
                             </td>
-                          </tr>
-                          <tr>
-                            <th></th>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <th></th>
-                            <td></td>
                           </tr>
                         </tbody>
                       </table>
