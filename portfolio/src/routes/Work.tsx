@@ -129,8 +129,8 @@ function Work() {
                 <p 
                 style={{
                   fontSize: '1.3rem',
-                  borderColor: `{${workListData}.label}`,
                   borderWidth: '1px',
+                  borderColor: mainColor,
                   width: '120px',
                   display: 'flex',
                   justifyContent: 'center',
@@ -139,6 +139,12 @@ function Work() {
                   borderRadius: '15px'}}>
                     {workListData.type}
                 </p>
+                <p style={{
+                  fontSize: '1.3rem',
+                  marginBottom: '15px',
+                  letterSpacing: '0.05em',
+                  color: '#777',
+                  }}>{workListData.tool}</p>
                 <p style={{
                   fontSize: '1.5rem', 
                   fontWeight: 'bold'}}
