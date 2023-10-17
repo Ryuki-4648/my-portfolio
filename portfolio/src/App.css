@@ -425,7 +425,7 @@ ul, li {
   margin: 0 0 60px;
   display: flex;
   flex-direction: column;
-  fle-wrap: wrap;
+  flex-wrap: wrap;
 }
 .work-list-item:hover img {
   opacity: .8;
@@ -494,6 +494,12 @@ ul, li {
 }
 .work-list {
   margin: 0 auto 60px;
+}
+.work-list::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 0;
 }
 .work-modal-table-image img {
   padding: 20px;

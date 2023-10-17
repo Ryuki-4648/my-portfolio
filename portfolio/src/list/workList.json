@@ -271,5 +271,26 @@
     "image04": "",
     "image05": "",
     "github": "https://github.com/Ryuki-4648/chocomint-deleter"
+  },
+  {
+    "id": 14,
+    "name": "ねこねこメーカー",
+    "url": "https://www.yuki-017.com/nekoneko-maker/",
+    "type": "Web",
+    "label": "#236e9d",
+    "summary": "じぶんだけのオリジナルねこをつくろう。",
+    "period": "2023年10月",
+    "page": "全て、イラスト作成",
+    "thumbnail": "/assets/img/work/img_work_app06_01.png",
+    "tool": "Vue.js(Vue3)",
+    "explain": "久しぶりにVueを触ろうと思って作りました。\nスマホアプリ「ねこあつめ」やウェブアプリ「うちのこメーカー」のような、かわいい猫のサイトをイメージしています。",
+    "task": "デザインが寂しいので修正したいと思います。",
+    "notice": "",
+    "image01": "/assets/img/work/img_work_app06_02.png",
+    "image02": "",
+    "image03": "",
+    "image04": "",
+    "image05": "",
+    "github": "https://github.com/Ryuki-4648/nekoneko-maker"
   }
 ]
