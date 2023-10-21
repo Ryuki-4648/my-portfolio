@@ -292,5 +292,26 @@
     "image04": "",
     "image05": "",
     "github": "https://github.com/Ryuki-4648/nekoneko-maker"
+  },
+  {
+    "id": 15,
+    "name": "今日の宇宙（そら）模様",
+    "url": "https://www.yuki-017.com/todays-sora-moyou/",
+    "type": "Web",
+    "label": "#236e9d",
+    "summary": "今日の宇宙を見上げてみよう。",
+    "period": "2023年10月",
+    "page": "全て（背景の星空は素材）",
+    "thumbnail": "/assets/img/work/img_work_app07_01.png",
+    "tool": "Astro, NASA Open APIs",
+    "explain": "NASAのオープンAPIとAstroを使ってみたかったので作成しました。\nデザインはコニカミノルタのプラネタリウムのサイトを参考にしています。",
+    "task": "",
+    "notice": "",
+    "image01": "/assets/img/work/img_work_app07_02.png",
+    "image02": "",
+    "image03": "",
+    "image04": "",
+    "image05": "",
+    "github": "https://github.com/Ryuki-4648/todays-sora-moyou"
   }
 ]
