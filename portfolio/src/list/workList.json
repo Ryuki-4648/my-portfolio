@@ -313,5 +313,26 @@
     "image04": "",
     "image05": "",
     "github": "https://github.com/Ryuki-4648/todays-sora-moyou"
+  },
+  {
+    "id": 16,
+    "name": "sakamichi order list",
+    "url": "https://www.yuki-017.com/shop-order/",
+    "type": "Web",
+    "label": "#236e9d",
+    "summary": "sakamichi shopの注文リスト",
+    "period": "2023年12月〜2024年2月",
+    "page": "全て",
+    "thumbnail": "/assets/img/work/img_work_site05_01.png",
+    "tool": "Vue.js(Vue3), TailwindCSS",
+    "explain": "Vue.jsの練習用に作成しました。",
+    "task": "",
+    "notice": "",
+    "image01": "/assets/img/work/img_work_site05_02.png",
+    "image02": "",
+    "image03": "",
+    "image04": "",
+    "image05": "",
+    "github": "https://github.com/Ryuki-4648/vue-order-list"
   }
 ]

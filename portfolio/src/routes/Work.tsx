@@ -29,17 +29,16 @@ function Work() {
     image05: string;
     github: string;
   }
-  
-    // Color
-    const mainColor = '#236e9d';
 
-    const { isOpen, onOpen, onClose } = useDisclosure();
+  const mainColor = '#236e9d';
 
-    // 改行を生成
-    const changeLineBreaks = (text: string) => {
-      const lines = text.split('\n');
-      return lines.map((line, index) => <React.Fragment key={index}>{line}<br /></React.Fragment>);
-    };
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  // 改行を生成
+  const changeLineBreaks = (text: string) => {
+    const lines = text.split('\n');
+    return lines.map((line, index) => <React.Fragment key={index}>{line}<br /></React.Fragment>);
+  };
 
   /* 
     クリックされた要素のデータをStateに保存 
