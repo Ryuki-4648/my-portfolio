@@ -17,9 +17,9 @@ function Work() {
     thumbnail: string;
     name: string;
     label: string;
-    tool: string;
+    tool: string[];
     page: string;
-    type: string;
+    type: string[];
     period: string;
     explain: string;
     task: string;
@@ -32,11 +32,11 @@ function Work() {
     image04: string;
     image05: string;
     github: string;
+    release: string;
   }
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
 
-  // 改行を生成
+  /* 改行を生成 */
   const changeLineBreaks = (text: string) => {
     const lines = text.split('\n');
     return lines.map((line, index) => <React.Fragment key={index}>{line}<br /></React.Fragment>);
@@ -46,7 +46,12 @@ function Work() {
     クリックされた要素のデータをStateに保存 
     モーダルが開かれたときに表示する内容を動的に変更
   */
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedWork, setSelectedWork] = useState<any>(null);
+  // const [filteredWorks, setFilteredWorks] = useState<any>(null);
+  const [filteredWorks, setFilteredWorks] = useState<WorkData[]>(jsonWorkListData);
+  const [activeFilterType, setActiveFilterType] = useState<string>('すべて'); // 選択中の項目
+  const [activeFilterTech, setActiveFilterTech] = useState<string>('すべて');
 
   const openModal = (workListData: WorkData) => {
     setSelectedWork(workListData);
@@ -59,6 +64,25 @@ function Work() {
       top: 0,
       behavior: 'smooth'
     });
+  }
+
+  /** 絞り込み検索 */
+  const handleFilterType = (filter: string) => {
+    setActiveFilterType(filter);
+    if (filter === 'すべて') {
+      setFilteredWorks(jsonWorkListData);
+    } else {
+      setFilteredWorks(jsonWorkListData.filter(work => work.type.includes(filter)));
+    }
+  }
+
+  const handleFilterTech = (filter: string) => {
+    setActiveFilterTech(filter);
+    if (filter === 'すべて') {
+      setFilteredWorks(jsonWorkListData);
+    } else {
+      setFilteredWorks(jsonWorkListData.filter(work => work.tool.includes(filter)));
+    }
   }
 
   return (
@@ -75,30 +99,36 @@ function Work() {
             <div className='c-work__search'>
               <p className='c-work__searchCategory'>Type :</p>
               <ul className='c-work__searchList'>
-                <li className='c-work__searchItem'>すべて</li>
-                <li className='c-work__searchItem'>個人開発</li>
-                <li className='c-work__searchItem'>チーム開発</li>
-                <li className='c-work__searchItem'>ハッカソン</li>
+                {['すべて', '個人開発', 'チーム開発', 'ハッカソン'].map((type) => (
+                  <li key={type} className={`c-work__searchItem ${activeFilterType === type ? 'is-active' : ''}`} onClick={() => handleFilterType(type)}>{type}</li>
+                ))}
               </ul>
             </div>
 
             <div className='c-work__search'>
               <p className='c-work__searchCategory'>Tech :</p>
               <ul className='c-work__searchList'>
-                <li className='c-work__searchItem'>React.js（Next.js）</li>
-                <li className='c-work__searchItem'>Vue.js（Nuxt）</li>
-                <li className='c-work__searchItem'>TypeScript</li>
-                <li className='c-work__searchItem'>API</li>
+                {['すべて', 'React.js（Next.js）', 'Vue.js（Nuxt.js）', 'TypeScript'].map((tech) => (
+                  <li key={tech} className={`c-work__searchItem ${activeFilterTech === tech ? 'is-active': '' }`} onClick={() => handleFilterTech(tech)}>{tech}</li>
+                ))}
               </ul>
             </div>
 
             <ul className='c-work__list'>
-              {jsonWorkListData.map((workListData) => (
+              {filteredWorks.map((workListData) => (
               <li key={workListData.id} className='c-work__item' onClick={() => openModal(workListData)}>
                 <img className='c-work__thumb' src={workListData.thumbnail} alt={workListData.name} />
                 <div className='c-work__itemTextWrap'>
-                  <p className='c-work__itemLabel'>{workListData.type}</p>
-                  <p className='c-work__itemTool'>{workListData.tool}</p>
+                  <ul className='c-work__itemType'>
+                    {workListData.type.map((item, index) => (
+                      <li key={index} className='c-work__itemTypeItem'>{item}</li>
+                    ))}
+                  </ul>
+                  <ul className='c-work__itemTool'>
+                  {workListData.tool.map((item, index) => (
+                    <li key={index} className='c-work__itemToolItem'>{item}</li>
+                  ))}
+                  </ul>
                   <h3 className='c-work__itemTitle'>{workListData.name}</h3>
                   <p className='c-work__itemRelease'>{dayjs(workListData.release).format('YYYY/MM')}</p>
                 </div>
@@ -210,12 +240,12 @@ function Work() {
             
           <section className='p-work__section'>
             <h3 className='c-work__index02'>Graphic design</h3>
-            <div className='c-work__linkWrap'>
+            {/* <div className='c-work__linkWrap'>
               <a className='c-work__link' href='https://www.pinterest.jp/yuki_017/portfolio/graphic/' target='_blank' rel='noopener noreferrer'>
                 Pinterest<p className='c-work__linkText'>をみる</p>
                 <FaExternalLinkAlt className='c-work__linkExternal' />
               </a>
-            </div>
+            </div> */}
           </section>
 
           

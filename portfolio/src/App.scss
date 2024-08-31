@@ -600,6 +600,12 @@
         @media screen and (max-width: 599px) {
           font-size: 1.3rem;
         }
+        &.is-active {
+          color: var(--color-accent);
+          &::after {
+            color: var(--color-text);
+          }
+        }
         &:hover {
           color: var(--color-accent);
           &::after {
@@ -667,13 +673,44 @@
         margin: 0 0 1rem;
         border-radius: 1.5rem;
       }
+      &Type {
+        display: flex;
+        margin: 0 0 1rem;
+        &Item {
+          font-size: 1.3rem;
+          border: 1px solid var(--color-accent);
+          width: 10rem;
+          height: 2.4rem;
+          letter-spacing: .05em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:not(:last-child) {
+            margin: 0 1rem 0 0;
+          }
+        }
+      }
       &Tool {
-        font-size: 1.3rem;
-        margin-bottom: 1.5rem;
-        letter-spacing: 0.05em;
-        font-family: var(--font-accent);
-        font-weight: 500;
-        color: var(--color-text-lighter);
+        display: flex;
+        flex-wrap: wrap;
+        &Item {
+          font-size: 1.3rem;
+          margin-bottom: 1.5rem;
+          letter-spacing: 0.05em;
+          font-family: var(--font-accent);
+          font-weight: 500;
+          color: var(--color-text-lighter);
+          &:not(:last-child) {
+            margin: 0 1.2rem 0 0;
+            position: relative;
+            &::after {
+              content: ',';
+              position: absolute;
+              right: -0.8rem;
+              top: 0;
+            }
+          }
+        }
       }
       &Title {
         font-size: 1.6rem;
@@ -778,8 +815,8 @@
       text-transform: uppercase;
       transition: var(--transition01);
       transform: rotate(90deg);
-      bottom: 13rem;
-      left: -16rem;
+      bottom: 15rem;
+      left: -14rem;
       font-size: 4.2rem;
       position: fixed;
       @media screen and (max-width: 1024px) {
