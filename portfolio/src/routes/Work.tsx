@@ -7,6 +7,7 @@ import {BiLinkExternal, BiArrowFromBottom} from 'react-icons/bi';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 import jsonWorkListData from '../list/workList.json';
+import jsonWorkGraphicData from '../list/workGraphicList.json';
 import '../App.scss';
 import '../index.css';
 
@@ -91,7 +92,7 @@ function Work() {
         <div className='p-work__inner'>
           <h1 className='c-work__title'>WORKS</h1>
           <h2 className='c-work__index01'>制作実績</h2>
-          <p className='c-work__text01'>クリックするとモーダルが開き、<br></br>詳細が表示されます。</p>
+          <p className='c-work__text01'>クリックするとモーダルが開き、<br></br>実績詳細が表示されます。</p>
 
           <section className='p-work__section'>
             <h3 className='c-work__index02'>System<span>/</span>Web</h3>
@@ -99,7 +100,7 @@ function Work() {
             <div className='c-work__search'>
               <p className='c-work__searchCategory'>Type :</p>
               <ul className='c-work__searchList'>
-                {['すべて', '個人開発', 'チーム開発', 'ハッカソン'].map((type) => (
+                {['すべて', '個人開発', 'チーム開発', '実案件', 'ハッカソン'].map((type) => (
                   <li key={type} className={`c-work__searchItem ${activeFilterType === type ? 'is-active' : ''}`} onClick={() => handleFilterType(type)}>{type}</li>
                 ))}
               </ul>
@@ -108,7 +109,7 @@ function Work() {
             <div className='c-work__search'>
               <p className='c-work__searchCategory'>Tech :</p>
               <ul className='c-work__searchList'>
-                {['すべて', 'React.js（Next.js）', 'Vue.js（Nuxt.js）', 'TypeScript'].map((tech) => (
+                {['すべて', 'React.js（Next.js）', 'Vue.js（Nuxt.js）', 'TypeScript', 'JavaScript'].map((tech) => (
                   <li key={tech} className={`c-work__searchItem ${activeFilterTech === tech ? 'is-active': '' }`} onClick={() => handleFilterTech(tech)}>{tech}</li>
                 ))}
               </ul>
