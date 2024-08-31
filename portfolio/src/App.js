@@ -1,4 +1,5 @@
-import './App.css';
+import './App.scss';
+import './index.css';
 import Work from './routes/Work';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NotFound from './routes/NotFound';

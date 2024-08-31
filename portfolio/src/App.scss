@@ -1,339 +1,8 @@
 
-/* トップ */
-// .content .box01 {
-//   height: unset;
-//   flex-wrap: unset;
-//   width: 80%;
-// }
-// @media screen and (max-width: 1300px) {
-//   .content .box01 {
-//     width: 90%;
-//   }
-// }
-// @media screen and (max-width: 1024px) {
-//   .content .box01 {
-//     height: 80vh;
-//     flex-wrap: wrap;
-//   }
-// } 
-
-// .content-sitename {
-//   writing-mode: vertical-lr;
-//   font-size: 1.6rem;
-//   text-align: center;
-//   display: block;
-//   left: 30px;
-//   transform: translateY(-50%);
-//   text-transform: uppercase;
-//   width: 100%;
-//   top: 50%;
-// }
-// @media screen and (max-width: 1024px) {
-//   .content-sitename {
-//     writing-mode: horizontal-tb;
-//     left: 50%;
-//     top: 20px;
-//     transform: translateX(-50%);
-//   }
-// }
-
-
-// .content-sns {
-//   display: unset;
-//   left: unset;
-//   bottom: unset;
-//   right: 30px;
-//   top: 50%;
-//   transform: translateY(-50%);
-// }
-// @media screen and (max-width: 1024px) {
-//   .content-sns {
-//     display: flex;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     right: unset;
-//     bottom: 20px;
-//     top: unset;
-//   }
-// }
-
-// .content-sns li svg {
-//   width: 20px;
-//   height: 20px;
-//   fill: var(--color--base);
-//   transition: var(--transition01);
-// }
-
-// .content-sns li:hover svg {
-//   fill: #093a59;
-// }
-
-// .content-sns li:not(:last-child) {
-//   margin-bottom: 30px;
-// }
-// @media screen and (max-width: 1024px) {
-//   .content-sns li {
-//     margin-bottom: 0;
-//   }
-//   .content-sns li:not(:last-child) {
-//     margin: 0 20px 0 0;
-//   }
-// }
-
-// .wrap-work {
-//   transition: var(--transition01);
-//   clip-path: polygon(0 100%, 100% 0, 0% 0%);
-//   background-color: var(--color--base);
-//   height: 70vh;
-//   left: 200px;
-//   width: 48%;
-// }
-
-// .wrap-work:hover {
-//   background-color: var(--color-accent);
-//   border: 1px solid var(--color--base);
-// }
-
-// .wrap-work:hover p {
-//   color: var(--color--base);
-// }
-
-// .wrap-work p {
-//   color: var(--color-accent);
-//   left: -48px;
-//   top: 40px;
-//   font-size: 12rem;
-// }
-// @media screen and (max-width: 1300px) {
-//   .wrap-work {
-//     width: 100%;
-//     left: 30px;
-//   }
-//   .wrap-work p {
-//     font-size: 10rem;
-//   }
-// }
-// @media screen and (max-width: 1024px) {
-//   .wrap-work {
-//     left: 0;
-//     height: 35vh;
-//   }
-//   .wrap-work p {
-//     font-size: 8rem;
-//     top: 20px;
-//     left: -35px;
-//   }
-// }
-// @media screen and (max-width: 599px) {
-//   .wrap-work p {
-//     font-size: 5.8rem;
-//     left: -31px;
-//   }
-// }
-
-// .wrap-about {
-//   height: 70vh;
-//   right: 200px;
-//   width: 48%;
-// }
-
-// .wrap-about:hover {
-//   background-color: var(--color--base);
-//   border: 1px solid var(--color-accent);
-// }
-
-// .wrap-about:hover p {
-//   color: var(--color-accent);
-// }
-
-// .wrap-about p {
-//   color: var(--color--base);
-//   font-weight: 700;
-//   right: 40px;
-//   bottom: -48px;
-//   font-size: 12rem;
-// }
-
-// @media screen and (max-width: 1300px) {
-//   .wrap-about {
-//     width: 100%;
-//     right: 30px;
-//   }
-//   .wrap-about p {
-//     font-size: 10rem;
-//     bottom: -40px;
-//     right: 35px;
-//   }
-// }
-// @media screen and (max-width: 1024px) {
-//   .wrap-about {
-//     clip-path: polygon(100% 100%, 0 100%, 100% 100%);
-//     right: 0;
-//     height: 35vh;
-//   }
-//   .wrap-about p {
-//     font-size: 8rem;
-//     bottom: -32px;
-//   }
-// }
-
-// @media screen and (max-width: 599px) {
-//   .wrap-about p {
-//     font-size: 5.8rem;
-//     bottom: -24px;
-//     right: 20px;
-//   }
-// }
-
-
-/* ABOUT（モーダル） */
-// .modal-about-link {
-//   color: var(--color-accent);
-//   border-bottom: 1px solid var(--color-accent);
-// }
-// .modal-about-link:hover {
-//   color: #093a59;
-//   border-bottom: 1px solid #093a59;
-// }
-// .modal-about-link svg {
-//   display: inline-block;
-//   margin: 0 0 0 5px;
-// }
-
-// .modal-about-index {
-//   border-left: 6px solid var(--color-accent);
-//   font-size: 2.1rem;
-//   line-height: 1;
-//   font-weight: bold;
-//   margin: 0 auto 20px;
-//   text-transform: uppercase;
-// }
-// .modal-about-text01 {
-//   font-size: 1.4rem;
-//   line-height: 1.8;
-//   letter-spacing: .08em;
-// }
-// .modal-about-text02 {
-//   font-size: 1.2rem;
-//   line-height: 1.8;
-//   letter-spacing: .08em;
-//   color: #777;
-// }
-// .modal-about-name {
-//   font-size: 3.6rem;
-//   margin-bottom: 40px;
-//   color: var(--color-accent);
-// }
-
-// .list-border li {
-//   padding: 0 0 0 15px;
-//   position: relative;
-//   letter-spacing: 0.08em;
-//   line-height: 1.8;
-//   font-size: 1.4rem;
-// }
-// .list-border li:not(:last-child) {
-//   margin-bottom: 3px;
-// }
-// .list-border li:before {
-//   content: "";
-//   width: 8px;
-//   height: 2px;
-//   background-color: var(--color-accent);
-//   position: absolute;
-//   left: 0;
-//   top: 10px;
-// }
-// .list-border li a:hover {
-//   color: var(--color-accent);
-// }
-
-.modal-close-button:hover {
-  color: #093a59;
-}
-
-// .modal-content {
-//   height: auto;
-//   width: 70%;
-// }
-// .modal-content-inner {
-//   padding: 60px 30px 100px 50px;
-//   height: 80vh;
-//   border-radius: 50px;
-// }
-
-// .modal-button {
-//   font-size: 3.6rem;
-//   right: 60px;
-//   top: -15px;
-//   color: var(--color-accent);
-// }
-// .modal-button:hover {
-//   color: #093a59;
-// }
-// .modal-content-scroll {
-//   height: 65vh;
-// }
-
-@media screen and (max-width: 1024px) {
-  // .modal-about-text01 {
-  //   font-size: 1.3rem;
-  //   line-height: 1.7;
-  // }
-  // .modal-about-text02 {
-  //   font-size: 1.1rem;
-  // }
-  // .modal-about-name {
-  //   font-size: 2.8rem;
-  //   margin-bottom: 30px;
-  // }
-  // .modal-content {
-  //   width: 80%;
-  //   height: 85vh;
-  // }
-  // .modal-content-inner {
-  //   padding: 40px 10px 20px 20px;
-  //   height: 85vh;
-  //   border-radius: 30px;
-  // }
-  // .modal-button {
-  //   font-size: 3rem;
-  //   right: 30px;
-  //   top: -12px;
-  // }
-  // .modal-content-scroll {
-  //   height: 80vh;
-  // }
-}
-@media screen and (max-width: 599px) {
-  // .modal-content {
-  //   width: 90%;
-  // }
-  // .modal-content-inner {
-  //   border-radius: 20px;
-  // }
-  // .modal-about-index {
-  //   margin: 0 auto 15px;
-  // }
-  // .modal-about-name {
-  //   font-size: 2.4rem;
-  //   margin: 20px auto 30px;
-  // }
-  // .list-border li {
-  //   font-size: 1.3rem;
-  // }
-  // .modal-content-scroll {
-  //   height: 78vh;
-  // }
-  // .modal-button {
-  //   font-size: 2.4rem;
-  //   right: 20px;
-  //   top: -10px;
-  // }
-}
-
-
 .p- {
+  /* 
+    トップ
+  */
   &home {
     position: relative;
     height: 100vh;
@@ -346,21 +15,22 @@
       font-weight: 600;
       color: var(--color--base);
       position: absolute;
-      letter-spacing: .01em;
+      letter-spacing: .1em;
       writing-mode: vertical-lr;
       font-size: 1.6rem;
       text-align: center;
       display: block;
-      left: 30px;
+      left: 3rem;
       transform: translateY(-50%);
       text-transform: uppercase;
-      width: 100%;
+      width: 3rem;
       top: 50%;
       @media screen and (max-width: 1024px) {
         writing-mode: horizontal-tb;
         left: 50%;
-        top: 20px;
+        top: 2rem;
         transform: translateX(-50%);
+        width: 100%;
       }
     }
     &__wrap {
@@ -390,7 +60,7 @@
       width: 48%;
       @media screen and (max-width: 1300px) {
         width: 100%;
-        left: 30px;
+        left: 3rem;
       }
       @media screen and (max-width: 1024px) {
         left: 0;
@@ -411,14 +81,14 @@
         font-family: var(--font-accent);
         font-weight: 700;
         left: -48px;
-        top: 40px;
+        top: 4rem;
         font-size: 12rem;
         @media screen and (max-width: 1300px) {
           font-size: 10rem;
         }
         @media screen and (max-width: 1024px) {
           font-size: 8rem;
-          top: 20px;
+          top: 2rem;
           left: -35px;
         }
         @media screen and (max-width: 599px) {
@@ -431,7 +101,7 @@
       height: 70vh;
       right: 200px;
       width: 48%;
-      border: 1px solid #fff;
+      border: 1px solid var(--color--base);
       clip-path: polygon(100% 0, 0 100%, 100% 100%);
       cursor: pointer;
       overflow: hidden;
@@ -439,7 +109,7 @@
       transition: var(--transition01);
       @media screen and (max-width: 1300px) {
         width: 100%;
-        right: 30px;
+        right: 3rem;
       }
       @media screen and (max-width: 1024px) {
         // clip-path: polygon(100% 100%, 0 100%, 100% 100%);
@@ -458,7 +128,7 @@
         font-family: var(--font-accent);
         font-weight: 700;
         color: var(--color--base);
-        right: 40px;
+        right: 4rem;
         bottom: -48px;
         font-size: 12rem;
         font-weight: bold;
@@ -475,11 +145,15 @@
         @media screen and (max-width: 599px) {
           font-size: 5.8rem;
           bottom: -24px;
-          right: 20px;
+          right: 2rem;
         }
       }
     }
   }
+
+  /* 
+    About
+  */
   &about {
     &__modal {
       &Overlay {
@@ -492,33 +166,53 @@
         cursor: pointer;
       }
       &Button {
-        font-family: var(--font-accent);
-        font-size: 3.6rem;
-        right: 60px;
-        top: -15px;
-        color: var(--color-accent);
+        right: 8rem;
+        top: 4rem;
         transition: var(--transition01);
         font-weight: bold;
         transition: all 0.3s;
         position: absolute;
+        width: 4rem;
+        height: 4rem;
+        border: 2px solid var(--color-accent);
+        background-color: var(--color--base);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @media screen and (max-width: 1024px) {
           font-size: 3rem;
-          right: 30px;
-          top: -12px;
+          right: 4rem;
+          top: 4rem;
         }
         @media screen and (max-width: 599px) {
-          font-size: 2.4rem;
-          right: 20px;
-          top: -10px;
+          width: 3.5rem;
+          height: 3.5rem;
+          right: 1.5rem;
+          bottom: 2rem;
+          top: unset;
         }
         &:hover {
-          color: var(--color-accent-dark);
+          background-color: var(--color-accent);
+          .p-about__modalButtonText {
+            color: var(--color--base);
+          }
+        }
+        &Text {
+          font-size: 3.5rem;
+          color: var(--color-accent);
+          font-weight: 400;
+          margin-bottom: .4rem;
+          transition: var(--transition01);
+          @media screen and (max-width: 599px) {
+            font-size: 3rem;
+          }
         }
       }
       &Content {
         height: auto;
         width: 70%;
-        border-radius: 20px;
+        border-radius: 2rem;
         max-width: unset;
         margin: 0 auto;
         top: 50%;
@@ -535,12 +229,13 @@
           width: 90%;
           height: 90vh;
         }
-        &Inner {
-
-        }
       }
     }
   }
+
+  /* 
+    Work
+  */
   &work {
     background-color: var(--color-accent);
     position: relative;
@@ -582,11 +277,14 @@
 
 .c- {
   &home {
+  /* 
+    トップ：アカウントリスト
+  */
     &__account {
       display: unset;
       left: unset;
       bottom: unset;
-      right: 30px;
+      right: 3rem;
       top: 50%;
       transform: translateY(-50%);
       position: absolute;
@@ -596,7 +294,7 @@
         left: 50%;
         transform: translateX(-50%);
         right: unset;
-        bottom: 20px;
+        bottom: 2rem;
         top: unset;
       }
       &Item {
@@ -604,41 +302,46 @@
           margin-bottom: 0;
         }
         svg {
-          width: 20px;
-          height: 20px;
+          width: 2rem;
+          height: 2rem;
           fill: var(--color--base);
           transition: var(--transition01);
         }
         &:not(:last-child) {
-          margin-bottom: 30px;
+          margin-bottom: 3rem;
           @media screen and (max-width: 1024px) {
-            margin: 0 20px 0 0;
+            margin: 0 2rem 0 0;
           }
         }
         &:hover {
           svg {
-            fill: #093a59;
+            fill: var(--color-accent-dark);
           }
         }
       }
     }
   }
+
   &about {
+    /* 
+      About：モーダル
+    */
     &__modal {
       background-color: var(--color--base);
-      padding: 60px 30px 100px 50px;
+      padding: 6rem 3rem 10rem;
       height: 80vh;
-      border-radius: 50px;
+      border-radius: 5rem;
       @media screen and (max-width: 1024px) {
-        padding: 40px 10px 20px 20px;
+        padding: 3rem 1rem 2rem 1.6rem;
         height: 85vh;
-        border-radius: 30px;
+        border-radius: 3rem;
       }
       @media screen and (max-width: 599px) {
-        border-radius: 20px;
+        border-radius: 2rem;
+        height: 90vh;
       }
       &Scroll {
-        height: 65vh;
+        height: 70vh;
         @media screen and (max-width: 1024px) {
           height: 80vh;
         }
@@ -649,7 +352,7 @@
       &Content {
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 0 20px 0 0;
+        padding: 0 2rem 0 0;
       }
       &Name {
         display: inline-block;
@@ -657,15 +360,15 @@
         text-decoration: none;
         transition: all 0.3s;
         font-size: 3.6rem;
-        margin-bottom: 40px;
+        margin-bottom: 4rem;
         color: var(--color-accent);
         @media screen and (max-width: 1024px) {
           font-size: 2.8rem;
-          margin-bottom: 30px;
+          margin-bottom: 3rem;
         }
         @media screen and (max-width: 599px) {
           font-size: 2.4rem;
-          margin: 20px auto 30px;
+          margin: 2rem auto 3rem;
         }
         &Text {
           border-bottom: 3px solid var(--color-accent);
@@ -679,14 +382,13 @@
         font-size: 2.1rem;
         line-height: 1;
         font-weight: bold;
-        margin: 0 auto 20px;
+        margin: 0 auto 2rem;
         text-transform: uppercase;
-        color: #777;
-        padding: 0 0 0 10px;
-        font-size: 21px;
+        color: var(--color-text-lighter);
+        padding: 0 0 0 1rem;
         letter-spacing: 0.08em;
         @media screen and (max-width: 599px) {
-          margin: 0 auto 15px;
+          margin: 0 auto 1.5rem;
         }   
       }
       &Text {
@@ -703,7 +405,7 @@
           font-size: 1.2rem;
           line-height: 1.8;
           letter-spacing: .08em;
-          color: #777;
+          color: var(--color-text-lighter);
           @media screen and (max-width: 1024px) {
             font-size: 1.1rem;
           }
@@ -712,33 +414,33 @@
       &Link {
         color: var(--color-accent);
         border-bottom: 1px solid var(--color-accent);
-        margin-bottom: 15px;
-        font-size: 13px;
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
         text-decoration: none;
-        margin: 0 auto 20px;
+        margin: 0 auto 2rem;
         font-weight: bold;
-        letter-spacing: 0.05em;
+        letter-spacing: .05em;
         display: inline-block;
         transition: var(--transition01);
         &:hover {
-          color: #093a59;
-          border-bottom: 1px solid #093a59;
+          color: var(--color-accent-dark);
+          border-bottom: 1px solid var(--color-accent-dark);
         }
         svg {
           display: inline-block;
-          margin: 0 0 0 5px;
+          margin: 0 0 0 .5rem;
         }
       }
       &List {
         list-style-type: none;
         margin-left: 0;
-        margin-bottom: 40px;
-        font-size: 13px;
+        margin-bottom: 4rem;
+        font-size: 1.3rem;
       }
       &Item {
-        padding: 0 0 0 15px;
+        padding: 0 0 0 1.5rem;
         position: relative;
-        letter-spacing: 0.08em;
+        letter-spacing: .08em;
         line-height: 1.8;
         font-size: 1.4rem;
         @media screen and (max-width: 599px) {
@@ -749,12 +451,12 @@
         }
         &::before {
           content: "";
-          width: 8px;
-          height: 2px;
+          width: .8rem;
+          height: .2rem;
           background-color: var(--color-accent);
           position: absolute;
           left: 0;
-          top: 10px;
+          top: 1rem;
         }
         &Link {
           transition: var(--transition01);
@@ -765,6 +467,10 @@
       }
     }
   }
+
+  /* 
+    Work
+  */
   &work {
     &__title {
       font-family: var(--font-accent);
@@ -775,14 +481,15 @@
       position: absolute;
       font-size: 14rem;
       margin: 0 auto;
-      top: -25px;
+      top: -2.5rem;
+      left: 3rem;
       @media screen and (max-width: 1024px) {
         font-size: 10rem;
       }
       @media screen and (max-width: 599px) {
         left: 0;
         font-size: 7.2rem;
-        top: -15px;
+        top: -1.5rem;
       }
     }
     &__index {
@@ -804,11 +511,11 @@
         font-weight: 600;
         color: var(--color-text);
         font-size: 2.6rem;
-        margin: 0 auto 40px;
+        margin: 0 auto 4rem;
         letter-spacing: .02em;
         @media screen and (max-width: 1024px) {
           font-size: 2.4rem;
-          margin: 0 auto 20px;
+          margin: 0 auto 2rem;
         }
         @media screen and (max-width: 599px) {
           font-size: 2rem;
@@ -827,11 +534,11 @@
         font-size: 1.5rem;
         margin: 0 auto 160px;
         @media screen and (max-width: 1024px) {
-          margin: 0 auto 100px;
+          margin: 0 auto 10rem;
         }
         @media screen and (max-width: 599px) {
           font-size: 1.4rem;
-          margin: 0 auto 80px;
+          margin: 0 auto 8rem;
         }
         br {
           display: none;
@@ -842,20 +549,20 @@
         &::befeore {
           content: '';
           position: absolute;
-          height: 90px;
-          width: 5px;
+          height: 9rem;
+          width: .5rem;
           background-color: var(--color-accent);
           left: 50%;
           transform: translateX(-50%);
-          top: 60px;
+          top: 6rem;
           border-radius: 4px;
           @media screen and (max-width: 1024px) {
-            height: 60px;
-            top: 40px;
+            height: 6rem;
+            top: 4rem;
           }
           @media screen and (max-width: 599px) {
-            height: 50px;
-            top: 55px
+            height: 5rem;
+            top: 5.5rem;
           }
         }
       }
@@ -904,7 +611,7 @@
             content: '/';
             position: absolute;
             right: 0;
-            top: 0.1rem;
+            top: .1rem;
             font-size: 1.3rem;
           }
         }
@@ -953,20 +660,20 @@
       &Label {
         font-size: 1.3rem;
         border: 1px solid var(--color-accent);
-        width: 120px;
+        width: 12rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0 0 10px;
-        border-radius: 15px;
+        margin: 0 0 1rem;
+        border-radius: 1.5rem;
       }
       &Tool {
         font-size: 1.3rem;
-        margin-bottom: 15px;
+        margin-bottom: 1.5rem;
         letter-spacing: 0.05em;
         font-family: var(--font-accent);
         font-weight: 500;
-        color: #777;
+        color: var(--color-text-lighter);
       }
       &Title {
         font-size: 1.6rem;
@@ -975,11 +682,11 @@
       }
       &Release {
         font-size: 1.2rem;
-        color: #777;
+        color: var(--color-text-lighter);
       }
     }
     &__thumb {
-      margin: 0 auto 20px;
+      margin: 0 auto 2rem;
       transition: var(--transition01);
       
     }
@@ -992,7 +699,7 @@
           @media screen and (max-width: 1024px) {
             display: flex;
             flex-wrap: wrap;
-            margin: 0 auto 15px;
+            margin: 0 auto 1.5rem;
           }
         }
         th {
@@ -1019,7 +726,7 @@
           img {
             padding: 2rem;
             margin: 0 auto 4rem;
-            border: 1px solid #dbdbdb;
+            border: 1px solid var(--color-border);
             @media screen and (max-width: 599px) {
               padding: 1rem;
               margin: 0 auto 3rem;
@@ -1031,12 +738,12 @@
         color: var(--color-accent);
         transition: var(--transition01);
         &:hover {
-          color: #093a59;
+          color: var(--color-accent-dark);
         }
       }
     }
     &__link {
-      border-bottom: 2px solid #236e9d;
+      border-bottom: 2px solid var(--color-accent);
       display: inline-block;
       font-size: 1.8rem;
       font-weight: bold;
@@ -1056,7 +763,7 @@
       &Text {
         display: inline;
         font-size: 1.4rem;
-        margin: 0 2px;
+        margin: 0 .2rem;
         color: var(--color-accent);
         transition: var(--transition01);
       }
@@ -1106,6 +813,9 @@
     }
   }
 
+  /* 
+    モーダルの共通すタイル
+  */
   &modal {
     &__overlay {
       position: fixed;
@@ -1137,16 +847,16 @@
       }
       &Wrap {
         height: 76vh;
-        padding: 0 20px;
+        padding: 0 2rem;
         @media screen and (max-width: 599px) {
-          padding: 0 10px;
+          padding: 0 1rem;
         }
       }
       &Mv {
-        margin: 0 auto 40px;
+        margin: 0 auto 4rem;
         @media screen and (max-width: 599px) {
           height: auto;
-          margin: 0 auto 30px;
+          margin: 0 auto 3rem;
         }
       }
     }
@@ -1154,49 +864,17 @@
       overflow-y: scroll;
       /* モーダル共通 */
       &::-webkit-scrollbar {
-        width: 14px;
+        width: 1.4rem;
         @media screen and (max-width: 599px) {
-          width: 8px;
+          width: .8rem;
         }
       }
       &::-webkit-scrollbar-track {
-        background-color: #ddd;
+        background-color: var(--color-text-light);
       }
       &::-webkit-scrollbar-thumb {
         background-color: var(--color-accent);
       }
     }
-  }
-}
-.work-content-top {
-  right: 20px;
-  bottom: 10px;
-  font-size: 4rem;
-  transition: var(--transition01);
-}
-
-@media screen and (max-width: 1024px) {
-  .work-content {
-    padding: 80px 0 100px;
-  }
-  .work-content-inner {
-    padding: 100px 40px 100px 40px;
-  }
-
-  .work-content-title {
-    font-size: 10rem;
-  }
-}
-@media screen and (max-width: 599px)  {
-
-  .work-content-inner {
-    padding: 100px 20px 60px 20px;
-    width: 90%;
-    border-radius: 20px;
-  }
-  .work-content-title {
-    left: 0;
-    font-size: 7.2rem;
-    top: -15px;
   }
 }
