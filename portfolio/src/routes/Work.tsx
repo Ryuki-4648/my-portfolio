@@ -1,10 +1,14 @@
-import { Modal, useDisclosure } from '@chakra-ui/react';
-import { useState } from 'react';
-import { FaExternalLinkAlt } from 'react-icons/fa';
-import '../App.css';
-import jsonWorkListData from '../list/workList.json';
 import React from 'react';
+import { useState } from 'react';
+import dayjs from 'dayjs';
+
+import { Modal, useDisclosure } from '@chakra-ui/react';
 import {BiLinkExternal, BiArrowFromBottom} from 'react-icons/bi';
+import { FaExternalLinkAlt } from 'react-icons/fa';
+
+import jsonWorkListData from '../list/workList.json';
+import '../App.scss';
+import '../index.css';
 
 function Work() {
 
@@ -30,8 +34,6 @@ function Work() {
     github: string;
   }
 
-  const mainColor = '#236e9d';
-
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   // 改行を生成
@@ -51,278 +53,176 @@ function Work() {
     onOpen();
   };
 
+  /** トップへ戻るボタン */
+  const handleBackTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
   return (
     <>
-      <div
-        className='work-content'
-        id='top'
-        style={{
-          backgroundColor: mainColor,
-          position: 'relative',
-          maxWidth: '100%',
-          margin: '0',
-          marginInlineEnd: '0',
-          paddingInlineEnd: '0'
-        }}>
-          
-        <div
-          className='work-content-inner'
-          style={{
-            backgroundColor: '#fff',
-            margin: '0 auto',
-            position: 'relative',
-          }}>
-          <h1
-            className='work-content-title'
-            style={{
-              color: mainColor, 
-              textAlign: 'center',
-              fontWeight: '700',
-              lineHeight: '1',
-              position: 'absolute',
-            }}>WORKS
-          </h1>
-          <h2
-            className='work-content-index01'
-            style={{
-            fontWeight: 'bold',
-            textAlign: 'center', 
-            letterSpacing: '0.1em'
-          }}>制作実績
-          </h2>
-          <p
-            className='work-content-text01'
-            style={{
-              textAlign: 'center',
-              position: 'relative',
-            }}>クリックするとモーダルが開き、<br></br>詳細が表示されます。
-          </p>
+      <div className='p-work' id='top'>
+        <div className='p-work__inner'>
+          <h1 className='c-work__title'>WORKS</h1>
+          <h2 className='c-work__index01'>制作実績</h2>
+          <p className='c-work__text01'>クリックするとモーダルが開き、<br></br>詳細が表示されます。</p>
 
-          <h3
-            className='work-content-index02'
-            style={{
-              textAlign: 'center',
-              fontWeight: 'bold',
-              color: '#222'
-            }}>System ・ Web</h3>
-          <ul
-            className='work-list'
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              flexWrap: 'wrap'
-            }}>
-            {jsonWorkListData.map((workListData) => (
-            <li key={workListData.id} 
-              className='work-list-item'
-              style={{
-                cursor: 'pointer',
-              }}
-            onClick={() => openModal(workListData)}>
-              <img 
-              className='work-list-item-thumb'
-              style={{margin: '0 auto 20px', transition: 'all .3s'}}
-              src={workListData.thumbnail} 
-              alt={workListData.name} />
-              <div className='work-list-item-text-wrap'>
-                <p 
-                style={{
-                  fontSize: '1.3rem',
-                  borderWidth: '1px',
-                  borderColor: mainColor,
-                  width: '120px',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  margin: '0 0 10px',
-                  borderRadius: '15px'}}>
-                    {workListData.type}
-                </p>
-                <p style={{
-                  fontSize: '1.3rem',
-                  marginBottom: '15px',
-                  letterSpacing: '0.05em',
-                  color: '#777',
-                  }}>{workListData.tool}</p>
-                <p style={{
-                  fontSize: '1.5rem', 
-                  fontWeight: 'bold'}}
-                  >{workListData.name}
-                </p>
-              </div>
-            </li>
-            ))}
-            {selectedWork && (
-              <Modal isOpen={isOpen} onClose={onClose}>
-                <div className='modal-overlay'
-                style={{
-                  position: 'fixed',
-                  left: '0',
-                  top: '0',
-                  width: '100vw',
-                  height: '100vh',
-                  backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                  cursor: 'pointer',
-                }}
-                onClick={onClose}>
-                </div>
-                <div
-                  className='work-modal-content'
-                  style={{
-                    backgroundColor: '#fff',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    position: 'fixed',
-                    borderRadius: '30px',
-                    }}>
-                  <div 
-                  className='modal-scroll'
-                  style={{
-                  overflowY: 'scroll',
-                  }}>
-                    <div
-                      className='work-modal-content-wrap'>
-                        <img
-                        className='work-modal-content-mv'
-                        src={selectedWork.thumbnail} 
-                        alt={selectedWork.name}
-                      />
-                      <table className='work-modal-table'>
-                        <tbody>
-                          <tr>
-                            <th>サイト名</th>
-                            <td>{selectedWork.name}</td>
-                          </tr>
-                          <tr>
-                            <th>使用技術や言語</th>
-                            <td>{selectedWork.tool}</td>
-                          </tr>
-                          <tr>
-                            <th>URL</th>
-                            <td>
-                              {selectedWork.url ? (
-                                <>
-                                  <a href={selectedWork.url} target='_blank' style={{ color: mainColor, textDecoration: 'underline' }} rel="noreferrer">
-                                    {selectedWork.url}
-                                  </a>
-                                  <BiLinkExternal style={{ marginLeft: '10px', fontSize: '1.4rem' }} />
-                                </>
-                              ) : (
-                                <span>なし</span>
-                              )}
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>概要</th>
-                            <td>{selectedWork.summary}</td>
-                          </tr>
-                          <tr>
-                            <th>制作期間</th>
-                            <td>{selectedWork.period}</td>
-                          </tr>
-                          <tr>
-                            <th>担当箇所</th>
-                            <td>{selectedWork.page}</td>
-                          </tr>
+          <section className='p-work__section'>
+            <h3 className='c-work__index02'>System<span>/</span>Web</h3>
 
-                          <tr>
-                            <th>説明</th>
-                            <td>{changeLineBreaks(selectedWork.explain)}</td>
-                          </tr>
-                          {selectedWork.task && (
-                            <tr>
-                              <th>今後の課題</th>
-                              <td>{changeLineBreaks(selectedWork.task)}</td>
-                            </tr>
-                          )}
-                          {selectedWork.notice && (
-                            <tr>
-                              <th>注釈</th>
-                              <td>{selectedWork.notice}</td>
-                            </tr>
-                          )}
-                          <tr>
-                            <th>コード</th>
-                            <td>
-                              {selectedWork.github ? (
-                                <>
-                                  <a href={selectedWork.github} target='_blank' style={{ color: mainColor, textDecoration: 'underline' }} rel="noreferrer">
-                                    {selectedWork.github}
-                                  </a>
-                                  <BiLinkExternal style={{ marginLeft: '10px', fontSize: '1.4rem' }} />
-                                </>
-                              ) : (
-                                'なし'
-                              )}
-                            </td>
-                          </tr>
-                          <tr className='work-modal-table-image'>
-                            <th>画面</th>
-                            <td>
-                            {Array.from({ length: 5 }, (_, i) => selectedWork[`image0${i + 1}`]).map((image, index) => (
-                              image && <img key={index} src={image} alt="作成ページの画像" style={{ border: '1px solid #dbdbdb' }} />
-                            ))}
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </Modal>
-            )}
-          </ul>
-
-          <h3
-            className='work-content-index02'
-            style={{
-              textAlign: 'center',
-              fontWeight: 'bold',
-              color: '#222'
-            }}>
-              Design
-            </h3>
-            <div 
-            style={{textAlign: 'center'}}>
-              <a
-                className='work-content-link'
-                style={{
-                  borderBottom: '2px solid #236e9d',
-                  display: 'inline-block',
-                  fontSize: '1.8rem',
-                  fontWeight: 'bold',
-                  margin: '0 auto',
-                  textDecoration: 'none'
-                }}
-                href='https://www.pinterest.jp/yuki_017/portfolio/'
-                target='_blank'
-                rel='noopener noreferrer'>Pinterest
-                <p 
-                style={{
-                  display: 'inline',
-                  fontSize: '1.4rem',
-                  margin: '0 2px'
-                  }}>をみる
-                </p>
-                <FaExternalLinkAlt display='inline' fontSize='15px' />
-              </a>
+            <div className='c-work__search'>
+              <p className='c-work__searchCategory'>Type :</p>
+              <ul className='c-work__searchList'>
+                <li className='c-work__searchItem'>すべて</li>
+                <li className='c-work__searchItem'>個人開発</li>
+                <li className='c-work__searchItem'>チーム開発</li>
+                <li className='c-work__searchItem'>ハッカソン</li>
+              </ul>
             </div>
 
+            <div className='c-work__search'>
+              <p className='c-work__searchCategory'>Tech :</p>
+              <ul className='c-work__searchList'>
+                <li className='c-work__searchItem'>React.js（Next.js）</li>
+                <li className='c-work__searchItem'>Vue.js（Nuxt）</li>
+                <li className='c-work__searchItem'>TypeScript</li>
+                <li className='c-work__searchItem'>API</li>
+              </ul>
+            </div>
+
+            <ul className='c-work__list'>
+              {jsonWorkListData.map((workListData) => (
+              <li key={workListData.id} className='c-work__item' onClick={() => openModal(workListData)}>
+                <img className='c-work__thumb' src={workListData.thumbnail} alt={workListData.name} />
+                <div className='c-work__itemTextWrap'>
+                  <p className='c-work__itemLabel'>{workListData.type}</p>
+                  <p className='c-work__itemTool'>{workListData.tool}</p>
+                  <h3 className='c-work__itemTitle'>{workListData.name}</h3>
+                  <p className='c-work__itemRelease'>{dayjs(workListData.release).format('YYYY/MM')}</p>
+                </div>
+              </li>
+              ))}
+              {selectedWork && (
+                <Modal isOpen={isOpen} onClose={onClose}>
+                  <div className='c-modal__overlay' onClick={onClose}></div>
+                  <div className='c-modal__content'>
+                    <div 
+                    className='c-modal__scroll'>
+                      <div className='c-modal__contentWrap'>
+                        <img className='c-modal__contentMv' src={selectedWork.thumbnail} alt={selectedWork.name}/>
+                        <table className='work-modal-table c-work__modalTable'>
+                          <tbody>
+                            <tr>
+                              <th>サイト名</th>
+                              <td>{selectedWork.name}</td>
+                            </tr>
+                            <tr>
+                              <th>使用技術や言語</th>
+                              <td>{selectedWork.tool}</td>
+                            </tr>
+                            <tr>
+                              <th>URL</th>
+                              <td>
+                                {selectedWork.url ? (
+                                  <>
+                                    <a className='c-work__modalLink' href={selectedWork.url} target='_blank' rel="noreferrer">
+                                      {selectedWork.url}
+                                    </a>
+                                    <BiLinkExternal style={{ marginLeft: '10px', fontSize: '1.4rem' }} />
+                                  </>
+                                ) : (
+                                  <p>なし</p>
+                                )}
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>概要</th>
+                              <td>{selectedWork.summary}</td>
+                            </tr>
+                            <tr>
+                              <th>制作期間</th>
+                              <td>{selectedWork.period}</td>
+                            </tr>
+                            <tr>
+                              <th>担当箇所</th>
+                              <td>{selectedWork.page}</td>
+                            </tr>
+                            <tr>
+                              <th>説明</th>
+                              <td>{changeLineBreaks(selectedWork.explain)}</td>
+                            </tr>
+                            {selectedWork.task && (
+                              <tr>
+                                <th>今後の課題</th>
+                                <td>{changeLineBreaks(selectedWork.task)}</td>
+                              </tr>
+                            )}
+                            {selectedWork.notice && (
+                              <tr>
+                                <th>注釈</th>
+                                <td>{selectedWork.notice}</td>
+                              </tr>
+                            )}
+                            <tr>
+                              <th>コード（GitHub）</th>
+                              <td>
+                                {selectedWork.github ? (
+                                  <>
+                                    <a className='c-work__modalLink' href={selectedWork.github} target='_blank' rel="noreferrer">
+                                      {selectedWork.github}
+                                    </a>
+                                    <BiLinkExternal style={{ marginLeft: '10px', fontSize: '1.4rem' }} />
+                                  </>
+                                ) : (
+                                  'なし'
+                                )}
+                              </td>
+                            </tr>
+                            <tr className='c-work__modalTableImage'>
+                              <th>キャプチャ</th>
+                              <td>
+                              {Array.from({ length: 5 }, (_, i) => selectedWork[`image0${i + 1}`]).map((image, index) => (
+                                image && <img key={index} src={image} alt="作成ページの画像" />
+                              ))}
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </Modal>
+              )}
+            </ul>
+          </section>
+
+          <section className='p-work__section'>
+            <h3 className='c-work__index02'>Web Design</h3>
+            <div className='c-work__linkWrap'>
+              <a className='c-work__link' href='https://www.pinterest.jp/yuki_017/portfolio/' target='_blank' rel='noopener noreferrer'>
+                Pinterest<p className='c-work__linkText'>をみる</p>
+                <FaExternalLinkAlt className='c-work__linkExternal' />
+              </a>
+            </div>
+          </section>
+            
+          <section className='p-work__section'>
+            <h3 className='c-work__index02'>Graphic design</h3>
+            <div className='c-work__linkWrap'>
+              <a className='c-work__link' href='https://www.pinterest.jp/yuki_017/portfolio/graphic/' target='_blank' rel='noopener noreferrer'>
+                Pinterest<p className='c-work__linkText'>をみる</p>
+                <FaExternalLinkAlt className='c-work__linkExternal' />
+              </a>
+            </div>
+          </section>
+
+          
         </div>
 
-        <a 
-          className='work-content-back'
-          style={{
-            fontWeight: 'bold',
-            textTransform: 'uppercase',
-            transition: 'all .3s',
-          }} href='/'>Back to home
-        </a>
-
-        <a className='work-content-top' href='#top'>
-          <BiArrowFromBottom />
-        </a>
+        <a className='c-work__back' href='/'>Back to home</a>
+        <p className='c-work__top' onClick={handleBackTop}><BiArrowFromBottom /></p>
 
       </div>
     </>
