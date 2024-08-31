@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "name": "Wedding Invitation",
+    "outline": "結婚式の招待状（本状・出欠ハガキ）",
+    "mainimage": "/assets/img/work/graphic/wedding-invitation/img01.jpg",
+    "image01": "/assets/img/work/graphic/wedding-invitation/img02.jpg",
+    "image02": "/assets/img/work/graphic/wedding-invitation/img03.jpg",
+    "image03": "/assets/img/work/graphic/wedding-invitation/img03.jpg",
+    "image04": "",
+    "tool": ["Adobe Illustrator", "印刷"],
+    "concept": "普段からお世話になっている親戚の方々に郵送することをイメージしました。\nやわらかめの色を使い、上品なデザインにしました。\n使う色の数を抑え、伝えたい情報がすぐに分かるようにしました。\n招待状は本状・地図が別々のことが多いですが、情報を整理して1枚にまとめました。",
+    "color": "白、グレー、くすみピンク"
+  }
+]
