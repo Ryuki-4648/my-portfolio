@@ -151,7 +151,14 @@ function Work() {
                             </tr>
                             <tr>
                               <th>使用技術や言語</th>
-                              <td>{selectedWork.tool}</td>
+                              <td>
+                                {selectedWork.tool.map((item:string, index:number) => (
+                                  <span key={index}>
+                                    {item}
+                                    {index < selectedWork.tool.length -1 && ', '}
+                                  </span>
+                                ))}
+                                </td>
                             </tr>
                             <tr>
                               <th>URL</th>
