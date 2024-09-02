@@ -1,3 +1,4 @@
+@import './index.scss';
 
 .p- {
   /* 
@@ -34,9 +35,7 @@
       }
     }
     &__wrap {
-      align-items: center;
-      display: flex;
-      justify-content: center;
+      @include flex01;
       margin: 0 auto;
       height: unset;
       flex-wrap: unset;
@@ -177,9 +176,7 @@
         border: 2px solid var(--color-accent);
         background-color: var(--color--base);
         border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex01;
         @media screen and (max-width: 1024px) {
           font-size: 3rem;
           right: 4rem;
@@ -682,9 +679,7 @@
         font-size: 1.3rem;
         border: 1px solid var(--color-accent);
         width: 12rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex01;
         margin: 0 0 1rem;
         border-radius: 1.5rem;
       }
@@ -698,9 +693,7 @@
           width: 10rem;
           height: 2.4rem;
           letter-spacing: .05em;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include flex01;
           @media screen and (max-width: 768px) {
             font-size: 1.2rem;
             height: 2rem;
@@ -876,7 +869,7 @@
   }
 
   /* 
-    モーダルの共通すタイル
+    モーダルの共通スタイル
   */
   &modal {
     &__overlay {

@@ -46,11 +46,16 @@ svg {
   display: inline;
 }
 
-
 a:hover {
   color: var(--color-accent-dark);
 }
 
 a:hover {
   text-decoration: none!important;
+}
+
+@mixin flex01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

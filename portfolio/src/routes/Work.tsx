@@ -6,36 +6,16 @@ import { Modal, useDisclosure } from '@chakra-ui/react';
 import {BiLinkExternal, BiArrowFromBottom} from 'react-icons/bi';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
+import { WorkData } from '../types/WorkData';
+import { GraphicWorkData  } from '../types/GraphicWorkData';
+
 import jsonWorkListData from '../list/workList.json';
 import jsonWorkGraphicData from '../list/workGraphicList.json';
 import '../App.scss';
-import '../index.css';
+import '../index.scss';
+
 
 function Work() {
-
-  interface WorkData {
-    id: number;
-    thumbnail: string;
-    name: string;
-    label: string;
-    tool: string[];
-    page: string;
-    type: string[];
-    period: string;
-    explain: string;
-    task: string;
-    notice: string;
-    url: string;
-    summary: string;
-    image01: string;
-    image02: string;
-    image03: string;
-    image04: string;
-    image05: string;
-    github: string;
-    release: string;
-  }
-
 
   /* 改行を生成 */
   const changeLineBreaks = (text: string) => {
@@ -49,7 +29,6 @@ function Work() {
   */
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedWork, setSelectedWork] = useState<any>(null);
-  // const [filteredWorks, setFilteredWorks] = useState<any>(null);
   const [filteredWorks, setFilteredWorks] = useState<WorkData[]>(jsonWorkListData);
   const [activeFilterType, setActiveFilterType] = useState<string>('すべて'); // 選択中の項目
   const [activeFilterTech, setActiveFilterTech] = useState<string>('すべて');
@@ -256,7 +235,6 @@ function Work() {
             </div> */}
           </section>
 
-          
         </div>
 
         <a className='c-work__back' href='/'>Back to home</a>
