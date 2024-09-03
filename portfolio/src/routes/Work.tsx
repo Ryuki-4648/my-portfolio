@@ -17,6 +17,9 @@ import '../index.scss';
 
 function Work() {
 
+  // 作品データの型（ユニオン型）
+  type WorkItemData = WorkData | GraphicWorkData
+
   /* 改行を生成 */
   const changeLineBreaks = (text: string) => {
     const lines = text.split('\n');
@@ -33,7 +36,7 @@ function Work() {
   const [activeFilterType, setActiveFilterType] = useState<string>('すべて'); // 選択中の項目
   const [activeFilterTech, setActiveFilterTech] = useState<string>('すべて');
 
-  const openModal = (workListData: WorkData) => {
+  const openModal = (workListData: WorkItemData) => {
     setSelectedWork(workListData);
     onOpen();
   };
@@ -233,6 +236,22 @@ function Work() {
                 <FaExternalLinkAlt className='c-work__linkExternal' />
               </a>
             </div> */}
+            <ul className='c-work__list'>
+              {jsonWorkGraphicData.map((workListData) => (
+                <li key={workListData.id} className='c-work__item' onClick={() => openModal(workListData)}>
+                  <img className='c-work__thumb' src={workListData.mainimage} alt={workListData.name} />
+                  <div className='c-work__itemTextWrap'>
+                    <ul className='c-work__itemTool'>
+                    {workListData.tool.map((item, index) => (
+                      <li key={index} className='c-work__itemToolItem'>{item}</li>
+                    ))}
+                    </ul>
+                    <h3 className='c-work__itemTitle'>{workListData.name}</h3>
+                    <p className='c-work__itemRelease'>{dayjs(workListData.release).format('YYYY/MM')}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </section>
 
         </div>
