@@ -179,26 +179,22 @@ function Work() {
                             ))}
                           </td>
                         </tr>
+                        {selectedWork.url && (
                         <tr>
                           <th>URL</th>
                           <td>
-                            {selectedWork.url ? (
-                              <>
-                                <a
-                                  className='c-work__modalLink'
-                                  href={selectedWork.url}
-                                  target='_blank'
-                                  rel='noreferrer'
-                                >
-                                  {selectedWork.url}
-                                </a>
-                                <BiLinkExternal style={{ marginLeft: '10px', fontSize: '1.4rem' }} />
-                              </>
-                            ) : (
-                              <p>なし</p>
-                            )}
+                            <a
+                              className='c-work__modalLink'
+                              href={selectedWork.url}
+                              target='_blank'
+                              rel='noreferrer'
+                            >
+                              {selectedWork.url}
+                            </a>
+                            <BiLinkExternal style={{ marginLeft: '10px', fontSize: '1.4rem' }} />
                           </td>
                         </tr>
+                        )}
                         <tr>
                           <th>概要</th>
                           <td>{selectedWork.summary}</td>
@@ -211,6 +207,18 @@ function Work() {
                           <th>担当箇所</th>
                           <td>{selectedWork.page}</td>
                         </tr>
+                        {selectedWork.concept && (
+                          <tr>
+                            <th>コンセプト</th>
+                            <td>{changeLineBreaks(selectedWork.concept)}</td>
+                          </tr>
+                        )}
+                        {selectedWork.color && (
+                          <tr>
+                            <th>カラー</th>
+                            <td>{changeLineBreaks(selectedWork.color)}</td>
+                          </tr>
+                        )}
                         {selectedWork.explain && (
                           <tr>
                             <th>説明</th>
@@ -229,26 +237,21 @@ function Work() {
                             <td>{selectedWork.notice}</td>
                           </tr>
                         )}
+                        {selectedWork.github && (
                         <tr>
                           <th>コード（GitHub）</th>
                           <td>
-                            {selectedWork.github ? (
-                              <>
-                                <a
-                                  className='c-work__modalLink'
-                                  href={selectedWork.github}
-                                  target='_blank'
-                                  rel='noreferrer'
-                                >
-                                  {selectedWork.github}
-                                </a>
-                                <BiLinkExternal style={{ marginLeft: '10px', fontSize: '1.4rem' }} />
-                              </>
-                            ) : (
-                              'なし'
-                            )}
-                          </td>
+                            <a
+                              className='c-work__modalLink'
+                              href={selectedWork.github}
+                              target='_blank'
+                              rel='noreferrer'
+                            >
+                              {selectedWork.github}
+                            </a>
+                            <BiLinkExternal style={{ marginLeft: '10px', fontSize: '1.4rem' }} /></td>
                         </tr>
+                        )}
                         <tr className='c-work__modalTableImage'>
                           <th>キャプチャ</th>
                           <td>

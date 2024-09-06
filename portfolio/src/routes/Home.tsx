@@ -1,4 +1,4 @@
-import { Box, useDisclosure, Modal } from '@chakra-ui/react';
+import { useDisclosure, Modal } from '@chakra-ui/react';
 import React from 'react';
 import ModalAbout from '../components/ModalAbout';
 import AccountList from '../components/accountList';
