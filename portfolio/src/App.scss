@@ -399,6 +399,7 @@
           font-size: 1.4rem;
           line-height: 1.8;
           letter-spacing: .08em;
+          margin: 0 auto 1.4rem;
           @media screen and (max-width: 1024px) {
             font-size: 1.3rem;
             line-height: 1.7;
@@ -436,8 +437,7 @@
       }
       &List {
         list-style-type: none;
-        margin-left: 0;
-        margin-bottom: 4rem;
+        margin: 0 0 2.4rem;
         font-size: 1.3rem;
       }
       &Item {
@@ -460,6 +460,9 @@
           position: absolute;
           left: 0;
           top: 1rem;
+        }
+        .c-about__modalLink {
+          margin-bottom: 0;
         }
         &Link {
           transition: var(--transition01);
@@ -641,10 +644,10 @@
       justify-content: space-between;
       display: grid;
       gap: 6rem 3rem;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(3, auto);
       @media screen and (max-width: 1024px) {
         gap: 6rem 2rem;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
       }
       @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
@@ -668,11 +671,6 @@
       &:hover {
         img {
           opacity: .8;
-        }
-      }
-      &Text {
-        &Wrap {
-        
         }
       }
       &Label {
@@ -743,7 +741,7 @@
       transition: var(--transition01);
       border-radius: .6rem;
       height: 220px;
-      object-fit: fill;
+      object-fit: contain;
     }
     &__modal {
       &Table {

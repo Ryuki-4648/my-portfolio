@@ -2,14 +2,19 @@
   {
     "id": 1,
     "name": "Wedding Invitation",
-    "outline": "結婚式の招待状（本状・出欠ハガキ）",
-    "mainimage": "/assets/img/work/graphic/wedding-invitation/img01.jpg",
-    "image01": "/assets/img/work/graphic/wedding-invitation/img02.jpg",
-    "image02": "/assets/img/work/graphic/wedding-invitation/img03.jpg",
-    "image03": "/assets/img/work/graphic/wedding-invitation/img03.jpg",
+    "summary": "結婚式の招待状（本状・出欠ハガキ）",
+    "period": "2024年8月20日〜8月25日",
+    "mainimage": "/assets/img/work/graphic/wedding-invitation/img01.png",
+    "image01": "/assets/img/work/graphic/wedding-invitation/img02.png",
+    "image02": "/assets/img/work/graphic/wedding-invitation/img03.png",
+    "image03": "/assets/img/work/graphic/wedding-invitation/img04.png",
     "image04": "",
-    "tool": ["Adobe Illustrator", "印刷"],
-    "concept": "普段からお世話になっている親戚の方々に郵送することをイメージしました。\nやわらかめの色を使い、上品なデザインにしました。\n使う色の数を抑え、伝えたい情報がすぐに分かるようにしました。\n招待状は本状・地図が別々のことが多いですが、情報を整理して1枚にまとめました。",
-    "color": "白、グレー、くすみピンク"
+    "image05": "",
+    "page": "すべて",
+    "tool": ["グラフィック", "Adobe Illustrator", "印刷"],
+    "explain": "普段からお世話になっている親戚の方々に郵送することをイメージしました。\nターゲットは40代以上の親戚の方々です。\n\nフォントサイズや余白を工夫し、伝えたい情報がすぐに分かるようにしました。\n招待状は本状・地図が別々のことが多いですが、情報を整理して1枚にまとめました。",
+    "concept": "使う色の数を抑え、やわらかい印象の色を使い、上品なデザインにしました。",
+    "color": "白、グレー、くすみピンク",
+    "release": "2024/09/02"
   }
 ]
