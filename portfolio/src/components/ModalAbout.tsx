@@ -9,9 +9,9 @@ const ModalAbout = () => {
       <div className='c-about__modal'>
         <div className='c-about__modalScroll c-modal__scroll'>
           <div className='c-about__modalContent'>
-            <a className='c-about__modalName' href="https://twitter.com/Ryuki_4648" target='_blank' rel='noreferrer'>
+            {/* <a className='c-about__modalName' href="https://twitter.com/Ryuki_4648" target='_blank' rel='noreferrer'>
               @<span className='c-about__modalNameText'>Ryuki_4648</span>
-            </a>
+            </a> */}
             
             <h2 className='c-about__modalIndex'>Profile</h2>
             <p className='c-about__modalText01'>
@@ -28,9 +28,6 @@ const ModalAbout = () => {
             </p>
 
             <h2 className='c-about__modalIndex'>History</h2>
-            {/* <a className='c-about__modalLink' href='./assets/pdf/timeline.pdf' target='_blank' rel='noopener noreferrer'>
-              職務経歴書はこちら(PDF)<FaExternalLinkAlt />
-            </a> */}
             <p className='c-about__modalText01'>
               小学生の頃からパソコンが好きで、ホームページ作成やお絵描き（絵板・絵チャ）をしていました。<br />
               医療系の資格を取得したあと、ものづくりができる仕事に就きたいと考えていました。
@@ -54,7 +51,6 @@ const ModalAbout = () => {
               <li className='c-about__modalItem'>デザイン（Webサイト、広告バナー、素材、イラスト）</li>
               <li className='c-about__modalItem'>CMS組み込み（WordPress, MovableType, PowerCMS）</li>
             </ul>
-            {/* <p className='modal-about-text02' style={{ marginBottom: '40px' }}>* 勉強中のものも含みます。</p> */}
 
             <h2 className='c-about__modalIndex'>Event</h2>
             <p className='c-about__modalText01'>勉強会やエンジニアイベントが好きで、スタッフとして参加することもあります。</p>
@@ -117,8 +113,9 @@ const ModalAbout = () => {
 
             <h2 className='c-about__modalIndex'>Hobby</h2>
             <ul className='c-about__modalList'>
-              <li className='c-about__modalItem'>一人で旅行・キャンプ・スノボ・ライブへ行く</li>
-              <li className='c-about__modalItem'>お酒・野球観戦・映画・サウナ</li>
+              <li className='c-about__modalItem'>ひとり旅</li>
+              <li className='c-about__modalItem'>ソロキャン・スノボ・ライブ・握手会・お酒・映画・サウナ</li>
+              <li className='c-about__modalItem'>野球観戦（阪神・オリックス）</li>
               <li className='c-about__modalItem'>乃木坂・櫻坂（欅坂）・日向坂・NMB・ももクロ</li>
             </ul>
           </div>
