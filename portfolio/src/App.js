@@ -1,10 +1,13 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Box } from '@chakra-ui/react';
+
 import './App.scss';
 import './index.scss';
+
 import Work from './routes/Work';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NotFound from './routes/NotFound';
-import { Box } from '@chakra-ui/react';
 import Home from './routes/Home';
+import JobHistory from './routes/JobHistory';
 
 function App() {
   return (
@@ -15,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/work" element={<Work />} />
+            <Route path="/job-history" element={<JobHistory />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         
