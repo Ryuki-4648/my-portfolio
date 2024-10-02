@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const NotFound = () => {
+export default function NotFound () {
   return (
     <>
       <div>
@@ -11,5 +11,3 @@ const NotFound = () => {
     </>
   );
 }
-
-export default NotFound;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-const ModalAbout = () => {
+export default function ModalAbout () {
 
   return (
 
@@ -28,6 +28,9 @@ const ModalAbout = () => {
             </p>
 
             <h2 className='c-about__modalIndex'>History</h2>
+            <a className='c-about__modalLink' href='/job-history' rel='noopener noreferrer'>
+              職務経歴書はこちら（Basic認証あり）
+            </a>
             <p className='c-about__modalText01'>
               小学生の頃からパソコンが好きで、ホームページ作成やお絵描き（絵板・絵チャ）をしていました。<br />
               医療系の資格を取得したあと、ものづくりができる仕事に就きたいと考えていました。
@@ -126,5 +129,3 @@ const ModalAbout = () => {
     
   );
 };
-
-export default ModalAbout;

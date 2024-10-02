@@ -3,7 +3,7 @@ import React from 'react';
 import ModalAbout from '../components/ModalAbout';
 import AccountList from '../components/accountList';
 
-function Home() {
+export default function Home() {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
@@ -39,5 +39,3 @@ function Home() {
     </>
   )
 }
-
-export default Home;

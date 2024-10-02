@@ -15,7 +15,7 @@ import '../App.scss';
 import '../index.scss';
 
 
-function Work() {
+export default function Work() {
 
   const typeList = ['すべて', '個人開発', 'チーム開発', '実案件', 'ハッカソン'];
   const techList = ['すべて', 'React.js（Next.js）', 'Vue.js（Nuxt.js）', 'TypeScript', 'JavaScript', 'TailwindCSS'];
@@ -278,5 +278,3 @@ function Work() {
     </>
   )
 }
-
-export default Work;

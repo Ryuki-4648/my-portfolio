@@ -3,7 +3,7 @@ import React from 'react';
 import { FaCompass, FaGithub, FaPen, FaPinterest, FaTwitter } from 'react-icons/fa';
 import { MdMail } from 'react-icons/md';
 
-const AccountList: React.FC = () => {
+export default function AccountList () {
   return (
     <>
       <ul className="c-home__account">
@@ -41,5 +41,3 @@ const AccountList: React.FC = () => {
     </>
   );
 };
-
-export default AccountList;
