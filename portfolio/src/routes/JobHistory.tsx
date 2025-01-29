@@ -20,9 +20,9 @@ export default function JobHistory() {
     <>
       <div className='p-work' id='top'>
         <div className='p-work__inner'>
-          <h1 className='c-work__title'>JOB HISTORY</h1>
-          <h2 className='c-work__index01'>職務経歴書</h2>
-          <p className='c-work__text01'>HTMLコーダー、エンジニアに関する職務経歴書です。</p>
+          <h1 className='c-jobHistory__title'>RESUME</h1>
+          <h2 className='c-jobHistory__index01'>職務経歴書</h2>
+          <p className='c-jobHistory__explain'>HTMLコーダー、エンジニアに関する職務経歴書です。</p>
 
           <div className=''>
             <JobHistoryContent />

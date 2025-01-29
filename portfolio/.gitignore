@@ -24,3 +24,6 @@ yarn-error.log*
 
 # work（職務経歴書の内容）
 /src/components/JobHistoryContent.tsx
+
+.htaccess
+.htpasswd
