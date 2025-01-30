@@ -13,8 +13,26 @@
     "page": "すべて",
     "tool": ["Graphic", "Adobe Illustrator", "Printing"],
     "explain": "普段からお世話になっている親戚の方々に郵送することをイメージしました。\nターゲットは40代以上の親戚の方々です。\n\nフォントサイズや余白を工夫し、伝えたい情報がすぐに分かるようにしました。\n招待状は本状・地図が別々のことが多いですが、情報を整理して1枚にまとめました。",
-    "concept": "使う色の数を抑え、やわらかい印象の色を使い、上品なデザインにしました。",
+    "concept": "親族向けの上品なデザイン",
     "color": "白、グレー、くすみピンク",
     "release": "2024/09/02"
+  },
+  {
+    "id": 2,
+    "name": "Wedding Menu & Message",
+    "summary": "結婚式のメニュー兼メッセージカード",
+    "period": "2024年8月20日〜8月25日",
+    "mainimage": "/assets/img/work/graphic/wedding-menu/img01.png",
+    "image01": "/assets/img/work/graphic/wedding-menu/img02.png",
+    "image02": "/assets/img/work/graphic/wedding-menu/img03.png",
+    "image03": "",
+    "image04": "",
+    "image05": "",
+    "page": "すべて",
+    "tool": ["Graphic", "Adobe Illustrator", "Printing"],
+    "explain": "「結婚式の招待状（本状・出欠ハガキ）」のデザインに合わせました。\n\n参列者の名前が書かれたカード、メニュー、メッセージが別々になっていることが多いですが、ペーパーアイテムの数を減らしたかったので1枚におさまるようにデザインしました。\n\n参列者すべてにお配りすることを想定し、文字の大きさや文字間・グルーピングを意識し、読みやすくしました。\n",
+    "concept": "1つにまとめ、コンパクトに",
+    "color": "グレー、ピンク",
+    "release": "2024/12/01"
   }
 ]
