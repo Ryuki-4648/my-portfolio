@@ -6,19 +6,23 @@ body, html, p {
   margin: 0;
   padding: 0;
   font-family: 'Noto Sans JP', sans-serif;
+  font-family: YuGothic,'Yu Gothic',sans-serif;
 }
 
 :root {
   --color--base: #fafafa;
   --color-text: #333;
-  --color-text-lighter: #777;
+  --color-text-gray-lighter01: #777;
+  --color-text-gray-lighter02: #787878;
   --color-text-light: #ddd;
   --color-accent: #236e9d;
   --color-accent-dark: #093a59;
   --color-border: #dbdbdb;
   --transition01: all .3s;
-  --font--base: 'Noto Sans JP', sans-serif;
-  --font-accent: "Poppins", sans-serif;
+  // --font--base: 'Noto Sans JP', sans-serif;
+  --font--base: YuGothic,'Yu Gothic',sans-serif;
+  --font-accent: "Lexend", serif;
+  --font-en: "Lexend", serif;
 }
 
 a {
