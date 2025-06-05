@@ -11,11 +11,11 @@ export default function Home() {
       <div className='App'>
         <div className='p-home'>
 
-          <p className='p-home__sitename'>r-yuki works Portfolio</p>
+          <p className='p-home__sitename'>r-yuki works</p>
 
           <div className='p-home__wrap'>
             <a className='p-home__work' href="/work">
-              <p className='p-home__workText'>WORK</p>
+              <p className='p-home__workText'>WORKS</p>
             </a>
             <div className='p-home__about' onClick={onOpen}>
               <p className='p-home__aboutText'>ABOUT</p>

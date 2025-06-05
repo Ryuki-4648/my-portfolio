@@ -16,32 +16,16 @@ export default function ModalAbout () {
             <h2 className='c-about__modalIndex'>Profile</h2>
             <p className='c-about__modalText01'>
               1993年生まれ<br />
-              現在、大阪のシステム開発会社でフロントエンドエンジニアとして勤務しております。
-            </p>
-            <p className='c-about__modalText01'>
-              社外ではエンジニア勉強会に参加し、他社の方と交流を深めています。<br />
-              勉強会で知り合った仲間とシステム開発の経験があります。（React.js）
-            </p>
-            <p className='c-about__modalText01'>
-              上流から携わることができるシステム・アプリ開発会社への転職を考えています。<br />
-              バックエンドやインフラの技術も学び、将来的にはフルスタックエンジニアを目指しています。
+              デザインとアイドルが好きなエンジニア。
             </p>
 
             <h2 className='c-about__modalIndex'>History</h2>
-            <a className='c-about__modalLink' href='/job-history' rel='noopener noreferrer'>
-              職務経歴書はこちら（Basic認証あり）
-            </a>
+            <p className='c-about__modalText01'>
+              経歴：看護師 → Web制作会社でコーダー → フロントエンドエンジニア（2023年12月〜）
+            </p>
             <p className='c-about__modalText01'>
               小学生の頃からパソコンが好きで、ホームページ作成やお絵描き（絵板・絵チャ）をしていました。<br />
-              医療系の資格を取得したあと、ものづくりができる仕事に就きたいと考えていました。
-            </p>
-            <p className='c-about__modalText01'>
-              大学卒業後は病棟看護師として働きながら、デザインとコーディングの勉強を始めました。<br />
-              退職後、クリニックの看護師をしながら個人でWeb制作を行っていました。
-            </p>
-            <p className='c-about__modalText01'>
-              2020年から3年間、神戸のWeb制作会社でコーダーとして勤務し、<br />
-              企業サイトの制作・CMS組み込み・バナー制作・コーダーの新人教育などを行っていました。
+              大学卒業後は看護師をしながら、デザインとコーディングを独学しました。
             </p>
 
             <h2 className='c-about__modalIndex'>Skill</h2>
@@ -56,7 +40,10 @@ export default function ModalAbout () {
             </ul>
 
             <h2 className='c-about__modalIndex'>Event</h2>
-            <p className='c-about__modalText01'>勉強会やエンジニアイベントが好きで、スタッフとして参加することもあります。</p>
+            <p className='c-about__modalText01'>
+              勉強会やエンジニアイベントに参加することが好きです。<br />
+              スタッフとして参加することもあります。
+            </p>
             <ul className='c-about__modalList'>
               <li className='c-about__modalItem'>
                 <a className='c-about__modalLink' href="https://2024.kphpug.jp/" target='_blank' rel="noreferrer">PHPカンファレンス関西2024<FaExternalLinkAlt /></a> 当日スタッフ（2024年2月11日）
@@ -67,9 +54,18 @@ export default function ModalAbout () {
               <li className='c-about__modalItem'>
                 <a className='c-about__modalLink' href="https://vuefes.jp/2024/" target='_blank' rel="noreferrer">Vue Fes Japan 2024<FaExternalLinkAlt /></a> コアスタッフ＆Webデザイナースタッフ（2024年3月〜10月）
               </li>
+              <li className='c-about__modalItem'>
+                <a className='c-about__modalLink' href="https://frontend-conf.osaka.jp/" target='_blank' rel="noreferrer">フロントエンドカンファレンス関西2025<FaExternalLinkAlt /></a> コアスタッフ＆グラフィック制作スタッフ（2025年5月〜11月）
+              </li>
             </ul>
 
             <h2 className='c-about__modalIndex'>Strength</h2>
+            <ul className='c-about__modalList'>
+              <li className='c-about__modalItem'>学ぶ姿勢</li>
+              <li className='c-about__modalItem'>社外での活動</li>
+              <li className='c-about__modalItem'>人との関わり</li>
+              <li className='c-about__modalItem'>デザイン</li>
+            </ul>
             <p className='c-about__modalText01'>
               Web制作が得意で、デザインからコーディングまで一貫して行うことができます。
             </p>
@@ -79,22 +75,14 @@ export default function ModalAbout () {
               学びたいことがあれば、まず手を動かすことから始めます。
             </p>
             <p className='c-about__modalText01'>
-              勉強会に積極的に参加し、他社の方々と交流を深めています。<br />
-              コミュニケーションを大切にしています。
+              積極的にエンジニア勉強会に参加しています。<br />いろんな方々とのコミュニケーションを大切にしています。
             </p>
-            <ul className='c-about__modalList'>
-              <li className='c-about__modalItem'>学ぶ姿勢</li>
-              <li className='c-about__modalItem'>人との関わり</li>
-              <li className='c-about__modalItem'>社外での活動</li>
-            </ul>
-
             <h2 className='c-about__modalIndex'>Future</h2>
             <p className='c-about__modalText01'>デザインもできるエンジニアを目指しています。<br /></p>
             <ul className='c-about__modalList'>
               <li className='c-about__modalItem'>モダンな技術を用いたシステムやアプリの開発</li>
-              <li className='c-about__modalItem'>上流から下流までの一連の開発に携わりたい</li>
               <li className='c-about__modalItem'>バックエンドの技術にも触れ、フルスタックエンジニアになる</li>
-              <li className='c-about__modalItem'>社内外問わず、技術とデザインの情報を発信したりLTをする</li>
+              <li className='c-about__modalItem'>社内外問わず、情報を発信する（勉強会開催やLT）</li>
               <li className='c-about__modalItem'>個人でデザインやイラストの仕事をする</li>
             </ul>
 
@@ -108,6 +96,9 @@ export default function ModalAbout () {
               </li>
               <li className='c-about__modalItem'>
                 <a className='c-about__modalItemLink' href="https://qiita.com/Ryuki4648" target='_blank' rel='noopener noreferrer'>Qiita</a>
+              </li>
+              <li className='c-about__modalItem'>
+                <a className='c-about__modalItemLink' href="https://note.com/ryuki_4648" target='_blank' rel='noopener noreferrer'>note</a>
               </li>
               <li className='c-about__modalItem'>
                 <a className='c-about__modalItemLink' href="https://connpass.com/user/Ryuki_4648/" target='_blank' rel='noopener noreferrer'>connpass</a>

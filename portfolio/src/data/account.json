@@ -11,16 +11,21 @@
   },
   {
     "id": 3,
-    "url": "https://connpass.com/user/Ryuki_4648/",
-    "icon": "FaCompass"
-  },
-  {
-    "id": 4,
     "url": "https://qiita.com/Ryuki4648",
     "icon": "SiQiita"
   },
   {
+    "id": 4,
+    "url": "https://note.com/ryuki_4648",
+    "icon": "SlNotebook"
+  },
+  {
     "id": 5,
+    "url": "https://connpass.com/user/Ryuki_4648/",
+    "icon": "FaCompass"
+  },
+  {
+    "id": 6,
     "url": "https://docs.google.com/forms/d/e/1FAIpQLSe5RJxhW1gDHo5JDDYZaLQrQS8Ip2kTloIIk4l9EhR2yrfHUA/viewform?usp=sf_link",
     "icon": "MdMail"
   }

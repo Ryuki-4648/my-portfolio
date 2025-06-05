@@ -1,8 +1,9 @@
 import { Icon } from '@chakra-ui/react';
 import React from 'react';
 import { FaCompass, FaGithub, FaPen, FaPinterest, FaTwitter } from 'react-icons/fa';
-import { MdMail } from 'react-icons/md';
+import { MdMail, MdEditNote } from 'react-icons/md';
 import { SiQiita } from "react-icons/si";
+import { SlNotebook } from 'react-icons/sl';
 import accountData from '../data/account.json';
 
 // ReactIcons名をオブジェクトとしてマッピング
@@ -11,6 +12,8 @@ const iconMap: { [key: string]: React.ElementType } = {
   FaPinterest,
   FaCompass,
   SiQiita,
+  SlNotebook,
+  MdEditNote,
   MdMail
 };
 
@@ -22,7 +25,7 @@ export default function AccountList () {
           const IconComponent = iconMap[data.icon]; // 文字列をアイコンコンポーネントに変換
           return (
             <li key={data.id} className='c-home__accountItem'>
-              <a href={data.url}>
+              <a href={data.url} target='_blank' rel='noreferrer'>
                 {IconComponent ? <Icon as={IconComponent} /> : null}
               </a>
             </li>
