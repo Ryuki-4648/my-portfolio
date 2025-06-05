@@ -9,8 +9,8 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import { WorkData } from '../types/WorkData';
 import { GraphicWorkData  } from '../types/GraphicWorkData';
 
-import jsonWorkListData from '../list/workList.json';
-import jsonWorkGraphicData from '../list/workGraphicList.json';
+import jsonWorkListData from '../data/workList.json';
+import jsonWorkGraphicData from '../data/workGraphicList.json';
 import '../App.scss';
 import '../index.scss';
 
@@ -80,7 +80,7 @@ export default function Work() {
           <p className='c-work__text01'>クリックするとモーダルが開き、<br></br>実績詳細が表示されます。</p>
 
           <section className='p-work__section p-workWeb'>
-            <h3 className='c-work__index02'>System<span>/</span>Web</h3>
+            <h3 className='c-work__index02'>System<span>/</span>Web app</h3>
 
             <div className='c-work__search'>
               <p className='c-work__searchCategory'>Type :</p>
@@ -125,7 +125,7 @@ export default function Work() {
           </section>
 
           <section className='p-work__section p-workDesign'>
-            <h3 className='c-work__index02'>Design</h3>
+            <h3 className='c-work__index02'>Graphic Design</h3>
             <ul className='c-work__list'>
               {jsonWorkGraphicData.map((workListData) => (
                 <li key={workListData.id} className='c-work__item' onClick={() => openModal(workListData)}>

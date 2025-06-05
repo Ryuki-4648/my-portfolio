@@ -80,10 +80,12 @@
         font-family: var(--font-accent);
         font-weight: 700;
         left: -48px;
-        top: 4rem;
+        top: 3.5rem;
         font-size: 12rem;
-        @media screen and (max-width: 1300px) {
+        @media screen and (max-width: 1700px) {
           font-size: 10rem;
+        }
+        @media screen and (max-width: 1300px) {
         }
         @media screen and (max-width: 1024px) {
           font-size: 8rem;
@@ -92,7 +94,7 @@
         }
         @media screen and (max-width: 599px) {
           font-size: 5.8rem;
-          left: -31px;
+          left: -26px;
         }
       }
     }
@@ -132,8 +134,11 @@
         font-size: 12rem;
         font-weight: bold;
         position: absolute;
-        @media screen and (max-width: 1300px) {
+        @media screen and (max-width: 1700px) {
           font-size: 10rem;
+          bottom: -42px;
+        }
+        @media screen and (max-width: 1300px) {
           bottom: -40px;
           right: 35px;
         }
@@ -240,26 +245,37 @@
     margin: 0;
     margin: 0;
     padding: 0;
-    padding: 12rem 0;
+    padding: 24rem 0 12rem;
     overflow: hidden;
     @media screen and (max-width: 1024px) {
-      padding: 6rem 0 8rem;
+      padding: 16rem 0 8rem;
     }
     &__inner {
       background-color: var(--color--base);
       margin: 0 auto;
       position: relative;
-      padding: 12rem 5rem 10rem 5rem;
-      border-radius: 3rem;
+      padding: 20rem 5rem 10rem 5rem;
+      // border-radius: 3rem;
       max-width: 1400px;
       width: 80%;
       @media screen and (max-width: 1024px) {
-        padding: 8rem 2.8rem 8rem;
+        padding: 12rem 2.8rem 8rem;
         width: 90%;
       }
       @media screen and (max-width: 599px) {
-        padding: 6rem 1.6rem 6rem;
-      } 
+        padding: 9rem 1.6rem 6rem;
+      }
+      &::before {
+        content: '';
+        clip-path: polygon(100% 46%, 100% 100%, 0% 100%);
+        background-color: var(--color--base);
+        height: 200px;
+        width: 100%;
+        top: -200px;
+        left: 0;
+        display: block;
+        position: absolute;
+      }
     }
     &__section {
       &:not(:last-child) {
@@ -296,22 +312,28 @@
       position: absolute;
       margin: 0;
       @media screen and (max-width: 1024px) {
-        display: flex;
+        display: grid;
         left: 50%;
         transform: translateX(-50%);
         right: unset;
         bottom: 2rem;
         top: unset;
+        grid-auto-flow: column;
+        gap: 0 1.5rem;
       }
       &Item {
         @media screen and (max-width: 1024px) {
           margin-bottom: 0;
         }
         svg {
-          width: 2rem;
-          height: 2rem;
+          width: 2.4rem;
+          height: 2.4rem;
           fill: var(--color--base);
           transition: var(--transition01);
+          @media screen and (max-width: 1024px) {
+            width: 2.1rem;
+            height: 2.1rem;
+          }
         }
         &:not(:last-child) {
           margin-bottom: 3rem;
@@ -390,7 +412,7 @@
         font-weight: bold;
         margin: 0 auto 2rem;
         text-transform: uppercase;
-        color: var(--color-text-lighter);
+        color: var(--color-text-gray-lighter01);
         padding: 0 0 0 1rem;
         letter-spacing: 0.08em;
         @media screen and (max-width: 599px) {
@@ -418,7 +440,7 @@
           font-size: 1.2rem;
           line-height: 1.8;
           letter-spacing: .08em;
-          color: var(--color-text-lighter);
+          color: var(--color-text-gray-lighter01);
           @media screen and (max-width: 1024px) {
             font-size: 1.1rem;
           }
@@ -496,26 +518,26 @@
       position: absolute;
       font-size: 14rem;
       margin: 0 auto;
-      top: -2.5rem;
+      top: 3.5rem;
       left: 3rem;
       @media screen and (max-width: 1024px) {
         font-size: 10rem;
       }
       @media screen and (max-width: 599px) {
-        left: 0;
+        left: 1rem;
         font-size: 7.2rem;
-        top: -1.5rem;
+        top: 2rem;
       }
     }
     &__index {
       &01 {
         font-weight: bold;
         text-align: left;
-        letter-spacing: 0.1em;
+        letter-spacing: .15em;
         font-size: 2.8rem;
         margin: 1.6rem auto 1rem;
         font-weight: 400;
-        color: var(--color-text);
+        color: var(--color-text-gray-lighter02);
         @media screen and (max-width: 1024px) {
           font-size: 2.4rem;
           margin: 1.6rem auto 2rem;
@@ -535,12 +557,14 @@
           margin: 0 auto 2rem;
         }
         @media screen and (max-width: 599px) {
-          font-size: 2rem;
         }
         span {
-          font-size: 1.6rem;
+          font-size: 2.2rem;
           margin: 0 .8rem;
           vertical-align: middle;
+          @media screen and (max-width: 599px) {
+            font-size: 2rem;
+          }
         }
       }
     }
@@ -549,7 +573,7 @@
         text-align: left;
         position: relative;
         font-size: 1.5rem;
-        margin: 0 auto 14rem;
+        margin: 0 auto 10rem;
         @media screen and (max-width: 1024px) {
           margin: 0 auto 10rem;
         }
@@ -592,7 +616,7 @@
         margin: 0 auto 1rem;
       }
       &:nth-of-type(2) {
-        margin: 0 auto 4rem;
+        margin: 0 auto 6rem;
       }
       &Category {
         font-family: var(--font-accent);
@@ -618,7 +642,8 @@
           padding: 0 1.2rem 0 0;
         }
         @media screen and (max-width: 599px) {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
+          line-height: 2;
         }
         &.is-active {
           color: var(--color-accent);
@@ -652,8 +677,8 @@
     &__list {
       justify-content: space-between;
       display: grid;
-      gap: 6rem 3rem;
-      grid-template-columns: repeat(3, auto);
+      gap: 7.8rem 3rem;
+      grid-template-columns: repeat(2, auto);
       @media screen and (max-width: 1024px) {
         gap: 6rem 2rem;
         grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
@@ -663,7 +688,7 @@
       }
       @media screen and (max-width: 599px) {
         grid-template-columns: 1fr;
-        gap: 4rem 0;
+        gap: 6rem 0;
       }
       &::after {
         content: "";
@@ -693,7 +718,7 @@
       &Type {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 0 1rem;
+        margin: 0 auto;
         &Item {
           font-size: 1.3rem;
           border: 1px solid var(--color-accent);
@@ -718,8 +743,8 @@
           margin-bottom: 1.5rem;
           letter-spacing: 0.05em;
           font-family: var(--font-accent);
-          font-weight: 500;
-          color: var(--color-text-lighter);
+          font-weight: 400;
+          color: var(--color-text-gray-lighter01);
           &:not(:last-child) {
             margin: 0 1.2rem 0 0;
             position: relative;
@@ -735,6 +760,7 @@
       &Title {
         font-size: 1.7rem;
         font-weight: bold;
+        letter-spacing: .05em;
         margin: 0 auto 1rem;
         @media screen and (max-width: 1024px) {
           font-size: 1.6rem;
@@ -742,15 +768,17 @@
       }
       &Release {
         font-size: 1.2rem;
-        color: var(--color-text-lighter);
+        color: var(--color-text-gray-lighter01);
       }
     }
     &__thumb {
       margin: 0 0 2rem;
       transition: var(--transition01);
       border-radius: .6rem;
-      height: 220px;
       object-fit: contain;
+      @media screen and (max-width: 768px) {
+
+      }
     }
     &__modal {
       &Table {
@@ -807,12 +835,13 @@
     &__link {
       border-bottom: 2px solid var(--color-accent);
       display: inline-block;
-      font-size: 1.8rem;
+      font-size: 3.2rem;
       font-weight: bold;
       margin: 0 auto;
       text-decoration: none;
       color: var(--color-accent);
       transition: var(--transition01);
+      font-family: var(--font-accent);
       &:hover {
         color: var(--color-accent-dark);
         p {
@@ -821,10 +850,11 @@
       }
       &Wrap {
         text-align: center;
+        margin: 8rem auto 0;
       }
       &Text {
         display: inline;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         margin: 0 .2rem;
         color: var(--color-accent);
         transition: var(--transition01);
